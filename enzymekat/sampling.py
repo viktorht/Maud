@@ -101,7 +101,8 @@ def sample(
         warmup_iters=n_warmup,
         max_treedepth=15,
         adapt_delta=0.8,
-        save_warmup=True
+        save_warmup=True,
+        metric='dense'
     )
 
     infd_posterior = (
