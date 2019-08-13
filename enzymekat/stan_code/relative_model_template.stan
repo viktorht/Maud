@@ -8,8 +8,8 @@ data {
   int<lower=1> N_known_real;
   int<lower=1> N_flux_measurement;
   int<lower=1> N_concentration_measurement;
-  // position of balanced and unbalanced metabolites in overall metabolite array 
-  int<lower=1,upper=N_balanced+N_unbalanced> pos_balanced[N_balanced];      
+  // position of balanced and unbalanced metabolites in overall metabolite array
+  int<lower=1,upper=N_balanced+N_unbalanced> pos_balanced[N_balanced];
   int<lower=1,upper=N_balanced+N_unbalanced> pos_unbalanced[N_unbalanced];
   // which measurement goes with which experiment
   int<lower=1,upper=N_experiment> ix_experiment_concentration_measurement[N_concentration_measurement];
@@ -45,6 +45,8 @@ transformed data {
 parameters {
   real<lower=0> kinetic_parameter[N_kinetic_parameter];
   real<lower=0> concentration_unbalanced[N_unbalanced, N_experiment];
+  real<lower=0> scaling_factor_unbalanced[N_unbalanced, N_experiment];
+  real<lower=0> scaling_factor_balanced[N_balanced, N_experiment]
 }
 transformed parameters {
   real concentration[N_balanced+N_unbalanced, N_experiment];
@@ -67,7 +69,7 @@ transformed parameters {
 model {
   kinetic_parameter ~ lognormal(prior_location_kinetic_parameter, prior_scale_kinetic_parameter);
   for (e in 1:N_experiment){
-    prior_location_unbalanced[,e] ~ lognormal(log(concentration_unbalanced[,e]), prior_scale_unbalanced[,e]);
+    concentration_unbalanced[,e] ~ lognormal(prior_location_unbalanced[,e], prior_scale_unbalanced[,e])./scaling_factor_unbalanced[,e];
   }
   if (LIKELIHOOD == 1){
     real concentration_hat[N_concentration_measurement];
@@ -79,7 +81,7 @@ model {
     for (mf in 1:N_flux_measurement){
       flux_hat[mf] = flux[ix_reaction_flux_measurement[mf], ix_experiment_flux_measurement[mf]];
     }
-    concentration_measurement ~ lognormal(log(concentration_hat), concentration_measurement_scale);
+    concentration_measurement ~ lognormal(log(concentration_hat), concentration_measurement_scale)./scaling_factor_balanced[,e];
     flux_measurement ~ normal(flux_hat, flux_measurement_scale);
   }
 }

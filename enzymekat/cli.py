@@ -10,8 +10,8 @@ SAMPLING_DEFAULTS = {
     'abs_tol': 1e-12,
     'max_steps': int(1e9),
     'likelihood': 1,
-    'n_samples': 5,
-    'n_warmup': 5,
+    'n_samples': 200,
+    'n_warmup': 150,
     'n_chains': 4,
     'n_cores': 4,
     'steady_state_time': 1000
@@ -71,11 +71,9 @@ def simulate(data_path, **kwargs):
     """Simulate measurements given parameter values from data_path."""
     stanfit, simulations = simulation.simulate(data_path, **kwargs)
     print('\nSimulated flux measurements:\n',
-          simulations['flux_measurements'].round(2))
+          simulations['flux_measurements'])
     print('\nSimulated metabolite concentration measurements:\n',
-          simulations['concentration_measurements'].round(2))
-    print('\nSimulated metabolite fluxes (at steady state these are zero):\n',
-          simulations['metabolite_fluxes'].round(2))
+          simulations['concentration_measurements'])
 
 
 @cli.command()
@@ -102,4 +100,31 @@ def simulate(data_path, **kwargs):
 def sample_CV(data_path, **kwargs):
     """Sample from the model defined by the data at data_path."""
     stanfit = sampling_CV.sample(data_path, **kwargs)
+    print(stanfit.summary())
+
+
+@cli.command()
+@click.option('--rel_tol', default=SAMPLING_DEFAULTS['rel_tol'],
+              help="ODE solver's relative tolerance parameter")
+@click.option('--abs_tol', default=SAMPLING_DEFAULTS['abs_tol'],
+              help="ODE solver's absolute tolerance parameter")
+@click.option('--max_steps', default=SAMPLING_DEFAULTS['max_steps'],
+              help="ODE solver's maximum steps parameter")
+@click.option('--likelihood', default=SAMPLING_DEFAULTS['likelihood'],
+              help="Whether (1) or not (0) to run the model in likelihood mode")
+@click.option('--n_samples', default=SAMPLING_DEFAULTS['n_samples'],
+              help="Number of post-warmup posterior samples")
+@click.option('--n_warmup', default=SAMPLING_DEFAULTS['n_warmup'],
+              help="Number of warmup samples")
+@click.option('--n_chains', default=SAMPLING_DEFAULTS['n_chains'],
+              help="Number of MCMC chains")
+@click.option('--n_cores', default=SAMPLING_DEFAULTS['n_cores'],
+              help="Number of chains to run in parallel")
+@click.option('--steady_state_time', default=SAMPLING_DEFAULTS['steady_state_time'],
+              help="Number of time units to simulate ODEs for")
+@click.argument('data_path', type=click.Path(exists=True, dir_okay=False),
+                default=get_example_path(RELATIVE_PATH_EXAMPLE))
+def sample_relative(data_path, **kwargs):
+    """Sample from the model defined by the data at data_path."""
+    stanfit = sampling.sampling_relative(data_path, **kwargs)
     print(stanfit.summary())
