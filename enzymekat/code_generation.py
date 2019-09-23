@@ -1,9 +1,7 @@
 """
     Functions for generating Stan programs from EnzymeKatInput objects.
-
     The only function that should be used outside this module is
     `create_stan_program`.
-
 """
 
 import os
@@ -23,14 +21,38 @@ JINJA_TEMPLATE_FILES = [
 MECHANISM_TEMPLATES = {
     'uniuni': Template(
         "uniuni(m[{{S0}}], m[{{P0}}], p[{{enz}}]*p[{{Kcat1}}], p[{{enz}}]*p[{{Kcat2}}], p[{{Ka}}], p[{{Keq}}])"
-    )
+    ),
+    'ordered_unibi': Template(
+        """ordered_unibi(m[{{S0}}], m[{{P0}}], m[{{P1}}], 
+                         p[{{enz}}]*p[{{Kcat1}}], p[{{enz}}]*p[{{Kcat2}}], 
+                         p[{{Ka}}], p[{{Kp}}], p[{{Kq}}],
+                         p[{{Kia}}], p[{{Kip}}], p[{{Kiq}}],
+                         p[{{Keq}}]"""),
+    'ordered_bibi': Template(
+        """ordered_bibi(m[{{S0}}], m[{{S1}}], m[{{P0}}], m[{{P1}}], 
+                        p[{{enz}}]*p[{{Kcat1}}], p[{{enz}}]*p[{{Kcat2}}], 
+                        p[{{Ka}}], p[{{Kb}}], p[{{Kp}}], p[{{Kq}}],
+                        p[{{Kia}}], p[{{Kib}}], p[{{Kip}}], p[{{Kiq}}],
+                        p[{{Keq}}]"""),
+    'pingpong': Template(
+        """pingpong(m[{{S0}}], m[{{S1}}], m[{{P0}}], m[{{P1}}], 
+                    p[{{enz}}]*p[{{Kcat1}}], p[{{enz}}]*p[{{Kcat2}}], 
+                    p[{{Ka}}], p[{{Kb}}], p[{{Kp}}], p[{{Kq}}],
+                    p[{{Kia}}], p[{{Kib}}], p[{{Kip}}], p[{{Kiq}}],
+                    p[{{Keq}}]"""),
+    'ordered_terbi': Template(
+        """ordered_terbi(m[{{S0}}], m[{{S1}}], m[{{S2}}], m[{{P0}}], m[{{P1}}], 
+                         p[{{enz}}]*p[{{Kcat1}}], p[{{enz}}]*p[{{Kcat2}}], 
+                         p[{{Ka}}], p[{{Kb}}], p[{{Kc}}], p[{{Kp}}], p[{{Kq}}],
+                         p[{{Kia}}], p[{{Kib}}], p[{{Kic}}], p[{{Kip}}], p[{{Kiq}}],
+                         p[{{Keq}}]"""),
+                        
 }
 
 
 def create_stan_program(eki: EnzymeKatInput, model_type: str, time_step=0.05) -> str:
     """
     Create a stan program from an EnzymeKatInput.
-
     :param eki: an EnzymeKatInput object
     :param model_type: String describing the model, e.g. 'inference', 
         'simulation'. So far only 'inference' is implemented.
@@ -122,18 +144,17 @@ def create_steady_state_function(
         unbalanced_codes=unbalanced_codes
     )
 
-
 def create_Kip_ordered_unibi_line(param_codes: dict, rxn_id: str) -> str:
     template = Template(
         "real {{rxn_id}}_Kip = get_Kip_ordered_unibi({{Keq}}, {{Ka}}, {{Kp}}, {{Kcat1}}, {{Kcat2}});"
     )
     return template.render(
         rxn_id=rxn_id,
-        Keq=param_codes[rxn_id + '_Keq'],
-        Kia=param_codes[rxn_id + 'Kia'],
-        Kq=param_codes[rxn_id + 'Kq'],
-        Kcat1=param_codes[rxn_id + 'Kcat1'],
-        Kcat2=param_codes[rxn_id + 'Kcat2'],
+        Keq=param_codes[rxn_id + '_' + 'Keq'],
+        Kia=param_codes[rxn_id + '_' + 'Kia'],
+        Kq=param_codes[rxn_id + '_' + 'Kq'],
+        Kcat1=param_codes[rxn_id + '_' + 'Kcat1'],
+        Kcat2=param_codes[rxn_id + '_' + 'Kcat2']
     )
 
 
@@ -143,19 +164,100 @@ def create_Kiq_ordered_unibi_line(param_codes: dict, rxn_id: str) -> str:
     )
     return template.render(
         rxn_id=rxn_id,
-        Keq=param_codes[rxn_id + 'Keq'],
-        Kia=param_codes[rxn_id + 'Kia'],
-        Kq=param_codes[rxn_id + 'Kq'],
-        Kcat1=param_codes[rxn_id + 'Kcat1'],
-        Kcat2=param_codes[rxn_id + 'Kcat2'],
+        Keq=param_codes[rxn_id + '_' + 'Keq'],
+        Kia=param_codes[rxn_id + '_' + 'Kia'],
+        Kq=param_codes[rxn_id + '_' + 'Kq'],
+        Kcat1=param_codes[rxn_id + '_' + 'Kcat1'],
+        Kcat2=param_codes[rxn_id + '_' + 'Kcat2']
     )
 
+def create_Kia_ordered_bibi_line(param_codes: dict, rxn_id: str) -> str:
+    template = Template(
+        "real {{rxn_id}}_Kia = get_Kiq_ordered_unibi({{Keq}}, {{Ka}}, {{Kq}}, {{Kib}}, {{V1}}, {{V2}});"
+    )
+    return template.render(
+        rxn_id=rxn_id,
+        Keq=param_codes[rxn_id + '_' + 'Keq'],
+        Ka=param_codes[rxn_id + '_' + 'Kia'],
+        Kq=param_codes[rxn_id + '_' + 'Kq'],
+        Kib=param_codes[rxn_id + '_' + 'Kib'],
+        Kcat1=param_codes[rxn_id + '_' + 'Kcat1'],
+        Kcat2=param_codes[rxn_id + '_' + 'Kcat2']
+    )
+
+def create_Kip_ordered_bibi_line(param_codes: dict, rxn_id: str) -> str:
+    template = Template(
+        "real {{rxn_id}}_Kia = get_Kiq_ordered_unibi({{Keq}}, {{Kb}}, {{Kp}}, {{Kiq}}, {{V1}}, {{V2}});"
+    )
+    return template.render(
+        rxn_id=rxn_id,
+        Keq=param_codes[rxn_id + '_' + 'Keq'],
+        Kb=param_codes[rxn_id + '_' + 'Kb'],
+        Kp=param_codes[rxn_id + '_' + 'Kp'],
+        Kiq=param_codes[rxn_id + '_' + 'Kiq'],
+        Kcat1=param_codes[rxn_id + '_' + 'Kcat1'],
+        Kcat2=param_codes[rxn_id + '_' + 'Kcat2']
+    )
+
+def create_Kip_pingpong_line(param_codes: dict, rxn_id: str) -> str:
+    template = Template(
+        "real {{rxn_id}}_Kia = get_Kiq_ordered_unibi({{Keq}}, {{Ka}}, {{Kb}}, {{Kq}}, {{V1}}, {{V2}});"
+    )
+    return template.render(
+        rxn_id=rxn_id,
+        Keq=param_codes[rxn_id + '_' + 'Keq'],
+        Ka=param_codes[rxn_id + '_' + 'Ka'],
+        Kb=param_codes[rxn_id + '_' + 'Kb'],
+        Kq=param_codes[rxn_id + '_' + 'Kq'],
+        Kcat1=param_codes[rxn_id + '_' + 'Kcat1'],
+        Kcat2=param_codes[rxn_id + '_' + 'Kcat2']
+    )
+
+def create_Kip_ordered_terbi_line(param_codes: dict, rxn_id: str) -> str:
+    template = Template(
+        "real {{rxn_id}}_Kia = get_Kiq_ordered_unibi({{Keq}}, {{Kc}}, {{Kia}}, {{Kib}}, {{Kiq}}, {{V2}}, {{V2}});"
+    )
+    return template.render(
+        rxn_id=rxn_id,
+        Keq=param_codes[rxn_id + '_' + 'Keq'],
+        Kc=param_codes[rxn_id + '_' + 'Kc'],
+        Kia=param_codes[rxn_id + '_' + 'Kia'],
+        Kib=param_codes[rxn_id + '_' + 'Kib'],
+        Kiq=param_codes[rxn_id + '_' + 'Kiq'],
+        Kcat1=param_codes[rxn_id + '_' + 'Kcat1'],
+        Kcat2=param_codes[rxn_id + '_' + 'Kcat2']
+    )
+
+def create_Kp_ordered_terbi_line(param_codes: dict, rxn_id: str) -> str:
+    template = Template(
+        "real {{rxn_id}}_Kia = get_Kiq_ordered_unibi({{Keq}}, {{Kia}}, {{Kib}}, {{Kic}}, {{Kiq}});"
+    )
+    return template.render(
+        rxn_id=rxn_id,
+        Keq=param_codes[rxn_id + '_' + 'Keq'],
+        Kia=param_codes[rxn_id + '_' + 'Kia'],
+        Kib=param_codes[rxn_id + '_' + 'Kib'],
+        Kic=param_codes[rxn_id + '_' + 'Kic'],
+        Kiq=param_codes[rxn_id + '_' + 'Kiq']
+
+    )
 
 def create_fluxes_function(kinetic_model: KineticModel, template: Template) -> str:
     mechanism_to_haldane_functions = {
         'ordered_unibi': [
             create_Kip_ordered_unibi_line,
             create_Kiq_ordered_unibi_line
+        ],
+        'ordered_bibi': [
+            create_Kia_ordered_bibi_line,
+            create_Kip_ordered_bibi_line
+        ],
+        'pingpong': [
+            create_Kip_pingpong_line
+        ],
+        'ordered_terbi': [
+            create_Kip_ordered_terbi_line,
+            create_Kp_ordered_terbi_line
         ],
     }
     par_codes = get_parameter_codes(kinetic_model)
