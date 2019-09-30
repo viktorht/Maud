@@ -15,7 +15,19 @@ from collections import defaultdict
 import toml
 
 MECHANISM_TO_PARAM_IDS = {
-    'uniuni': ['Keq', 'Kcat1', 'Kcat2', 'Ka']
+    'uniuni': ['Keq', 'Kcat1', 'Kcat2', 'Ka'],
+    'ordered_unibi': ['Keq', 'Kcat1', 'Kcat2',
+                      'Ka', 'Kp', 'Kq',
+                      'Kia'],
+    'ordered_bibi': ['Keq', 'Kcat1', 'Kcat2',
+                      'Ka', 'Kb', 'Kp', 'Kq',
+                      'Kib', 'Kia'],
+    'ping_pong': ['Keq', 'Kcat1', 'Kcat2',
+                      'Ka', 'Kb', 'Kp', 'Kq',
+                      'Kib', 'Kia', 'Kiq'],
+    'ordered_terbi': ['Keq', 'Kcat1', 'Kcat2',
+                      'Ka', 'Kb', 'Kc', 'Kq',
+                      'Kia', 'Kib', 'Kic', 'Kiq']
 }
 
 def load_enzymekat_input_from_toml(filepath: str, id: str ='eki') -> EnzymeKatInput:
@@ -46,10 +58,16 @@ def load_enzymekat_input_from_toml(filepath: str, id: str ='eki') -> EnzymeKatIn
     for r in parsed_toml['reactions']:
         rxn_enzymes = {}
         for e in r['enzymes']:
-            params = {
-                param_id: Parameter(param_id, e['id'])
-                for param_id in MECHANISM_TO_PARAM_IDS[e['mechanism']]
-            }
+            if e['mechanism'] == 'modular_rate_law':
+                params = {
+                    param_id['target_id']: Parameter(param_id['target_id'],e['id'])
+                    for param_id in parsed_toml['priors']['kinetic_parameters'][e['id']]
+                }
+            else:
+                params = {
+                    param_id: Parameter(param_id, e['id'])
+                    for param_id in MECHANISM_TO_PARAM_IDS[e['mechanism']]
+                }
             allosteric_inhibitors = defaultdict()
             if 'allosteric_inhibitors' in e.keys():
                 allosteric_params = {
