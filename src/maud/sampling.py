@@ -47,11 +47,17 @@ def get_full_stoichiometry(
     :param enzyme_codes: the codified enzyme codes
     :param metabolite_codes: the codified metabolite codes
     """
-    S = pd.DataFrame(index=enzyme_codes, columns=metabolite_codes)
+    enzyme_keys = [x for x in enzyme_codes.keys()]
+    metabolite_keys = [x for x in metabolite_codes.keys()]
+    S = pd.DataFrame(index=enzyme_keys + metabolite_keys, columns=metabolite_keys)
+
     for _, rxn in kinetic_model.reactions.items():
         for enz_id, _ in rxn.enzymes.items():
             for met, stoic in rxn.stoichiometry.items():
                 S.loc[enz_id, met] = stoic
+    for met in metabolite_keys:
+        if kinetic_model.metabolites[met].balanced is False:
+            S.loc[met, met] = 1
     S.fillna(0, inplace=True)
     return S
 
@@ -183,6 +189,7 @@ def get_input_data(
 
     if flux_nullspace.any():
         wegscheider_mat = null_space(np.transpose(flux_nullspace))
+        r_wegscheider_mat = wegscheider_mat[0:len(enzymes), :]
         stoichiometry_rank = np.shape(wegscheider_mat)[1]
     else:
         wegscheider_mat = np.identity(len(enzyme_codes))
@@ -222,8 +229,7 @@ def get_input_data(
         "prior_scale_unbalanced": prior_scale_unb.values,
         "prior_loc_enzyme": prior_loc_enzyme.values,
         "prior_scale_enzyme": prior_scale_enzyme.values,
-        "as_guess": [1.0 for m in range(len(balanced_metabolites))],
-        "delta_g_kernel": wegscheider_mat,
+        "delta_g_kernel": r_wegscheider_mat,
         "rtol": rel_tol,
         "ftol": f_tol,
         "steps": max_steps,
