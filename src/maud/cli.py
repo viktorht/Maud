@@ -25,7 +25,7 @@ from maud import sampling
 
 SAMPLING_DEFAULTS = {
     "f_tol_as": 1e-6,
-    "rel_tol_as": 1e-9,
+    "rel_tol_as": 1e-12,
     "abs_tol_as": 1e-12,
     "max_steps_as": int(1e9),
     "likelihood": 1,
@@ -34,6 +34,7 @@ SAMPLING_DEFAULTS = {
     "n_chains": 4,
     "n_cores": 4,
     "time_step": 0.05,
+    "optimize_initial_pars": 1,
 }
 RELATIVE_PATH_EXAMPLE = "../../data/in/linear.toml"
 
@@ -95,6 +96,11 @@ pass
     "--time_step",
     default=SAMPLING_DEFAULTS["time_step"],
     help="How far ahead the ode solver simulates",
+)
+@click.option(
+    "--optimize_initial_pars",
+    default=SAMPLING_DEFAULTS["optimize_initial_pars"],
+    help="If set to 1, runs an optimizer to get initial conditions for sampling",
 )
 @click.argument(
     "data_path",

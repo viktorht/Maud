@@ -67,6 +67,7 @@ def sample(
     n_chains: int,
     n_cores: int,
     time_step: float,
+    optimize_initial_pars: bool,
 ) -> cmdstanpy.CmdStanMCMC:
     """Sample from a posterior distribution.
 
@@ -105,8 +106,15 @@ def sample(
     model = cmdstanpy.CmdStanModel(stan_file=stan_file)
     model.compile(include_paths=[paths["stan_includes"]])
 
+    if optimize_initial_pars == 1:
+        init_cond = optimize_init_pars(model=model,
+                                          model_name=model_name,
+                                          input_data=input_data,
+                                          paths=paths,
+                                          init_cond=init_cond)
+
     return model.sample(
-        data=input_file,
+        data=input_data,
         cores=4,
         chains=n_chains,
         csv_basename=os.path.join(paths["data_out"], f"output_{model_name}.csv"),
@@ -242,3 +250,46 @@ def get_input_data(
             "enzyme_concentration": np.transpose(prior_loc_enzyme.values),
         },
     ]
+
+def optimize_init_pars(model: cmdstanpy.CmdStanMCMC,
+                          input_data,
+                          model_name: str,
+                          paths: Dict[str, str],
+                          init_cond) -> dict:
+    """Optimized the initial conditions so the sampler starts in a better place.
+    By seperating these processes the algebraic solver can operate under tighter
+    tolerances, which may be too slow when using with the sampler.
+
+    :param model: A CmdStanMCMC model which can have optimization performed on it
+    :param input_data: Sets the data and parameter distributions
+    :param model_name: Name of the model
+    :param paths: Sets output path for optimizer .csv/.txt file
+    :param init_cond: Sets initial parameter guess
+    """
+            
+    opt_input_data = input_data.copy()
+    opt_input_data.update({'steps': 10000000000})
+    optimized_pars = model.optimize(data=opt_input_data,
+                                    inits=init_cond,
+                                    csv_basename=os.path.join(paths["data_out"], f"output_optimized_{model_name}.csv"),)
+
+    unbalanced_mets = pd.DataFrame()
+    enzyme_concentration = pd.DataFrame()
+
+    for key, value in optimized_pars.optimized_params_dict.items():
+        if 'unbalanced' in key:
+            _, row_ix, col_ix = key.split('.')
+            unbalanced_mets.loc[row_ix, col_ix] = value
+        if 'enzyme_concentration' in key:
+            _, row_ix, col_ix = key.split('.')
+            enzyme_concentration.loc[row_ix, col_ix] = value
+
+
+    opt_cond = {
+        "delta_g_basis_contribution": [val for key, val in optimized_pars.optimized_params_dict.items() if 'delta_g_basis_contribution' in key],
+        "kinetic_parameters": [val for key, val in optimized_pars.optimized_params_dict.items() if 'kinetic_parameters' in key],
+        "unbalanced": unbalanced_mets.values,
+        "enzyme_concentration": enzyme_concentration.values
+    }
+
+    return opt_cond
