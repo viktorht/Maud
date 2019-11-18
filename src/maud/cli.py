@@ -25,7 +25,7 @@ from maud import sampling
 
 SAMPLING_DEFAULTS = {
     "f_tol_as": 1e-6,
-    "rel_tol_as": 1e-12,
+    "rel_tol_as": 1e-9,
     "abs_tol_as": 1e-12,
     "max_steps_as": int(1e9),
     "likelihood": 1,

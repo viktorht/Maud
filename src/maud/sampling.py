@@ -268,7 +268,8 @@ def optimize_init_pars(model: cmdstanpy.CmdStanMCMC,
     """
             
     opt_input_data = input_data.copy()
-    opt_input_data.update({'steps': 10000000000})
+    opt_input_data.update({'steps': int(1e10),
+                           'rel_tol': int(1e-12)})
     optimized_pars = model.optimize(data=opt_input_data,
                                     inits=init_cond,
                                     csv_basename=os.path.join(paths["data_out"], f"output_optimized_{model_name}.csv"),)
