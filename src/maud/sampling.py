@@ -192,6 +192,7 @@ def get_input_data(
         )
         for measurement_type in ["metabolite", "reaction", "enzyme"]
     )
+    algebra_solver = 1
     return {
         "N_balanced": len(balanced_metabolites),
         "N_unbalanced": len(unbalanced_metabolites),
@@ -240,6 +241,7 @@ def get_input_data(
         "ftol": f_tol,
         "steps": max_steps,
         "LIKELIHOOD": likelihood,
+        "alg_solver": algebra_solver,
     }
 
 
