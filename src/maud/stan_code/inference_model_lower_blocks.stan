@@ -52,18 +52,17 @@ transformed data {
 parameters {
   vector[N_metabolite] formation_energy;
   vector<lower=0>[N_kinetic_parameters] kinetic_parameters;
-  vector<lower=0>[N_enzyme] unscaled_enzyme_concentration[N_experiment];
+  vector<lower=0>[N_enzyme] enzyme_concentration[N_experiment];
   vector<lower=0>[N_unbalanced] conc_unbalanced[N_experiment];
-  vector<lower=0>[N_enzyme] enzyme_scaling[N_experiment];
 }
 transformed parameters {
   vector<lower=0>[N_mic] conc[N_experiment];
   vector[N_reaction] flux[N_experiment];
-  vector<lower=0>[N_enzyme] enzyme_concentration[N_experiment] = enzyme_scaling.*unscaled_enzyme_concentration;
   vector[N_enzyme] delta_g = stoichiometric_matrix' * formation_energy[metabolite_ix_stoichiometric_matrix];
   for (e in 1:N_experiment){
     vector[N_enzyme] keq = exp(delta_g / minus_RT);
-    vector[N_unbalanced+N_enzyme+N_enzyme+N_kinetic_parameters] theta = append_row(append_row(append_row(
+    vector[N_unbalanced+N_enzyme+N_enzyme+N_kinetic_parameters] theta;
+    theta = append_row(append_row(append_row(
       conc_unbalanced[e], enzyme_concentration[e]), keq), kinetic_parameters);
     conc[e, balanced_mic_ix] = algebra_solver(steady_state_function, as_guess[e,], theta, xr, xi, rtol, ftol, steps);
     conc[e, unbalanced_mic_ix] = conc_unbalanced[e];
@@ -75,8 +74,7 @@ model {
   formation_energy ~ normal(prior_loc_formation_energy, prior_scale_formation_energy);
   for (e in 1:N_experiment){
     conc_unbalanced[e] ~ lognormal(log(prior_loc_unbalanced[e]), prior_scale_unbalanced[e]);
-    unscaled_enzyme_concentration[e] ~ lognormal(log(prior_loc_enzyme[e]), prior_scale_enzyme[e]);
-    enzyme_scaling[e] ~ lognormal(log(0.01), 2);
+    enzyme_concentration[e] ~ lognormal(log(prior_loc_enzyme[e]), prior_scale_enzyme[e]);
   }
   if (LIKELIHOOD == 1){
     for (c in 1:N_conc_measurement){
