@@ -27,13 +27,13 @@ SAMPLING_DEFAULTS = {
     "f_tol_as": 1e-6,
     "rel_tol_as": 1e-9,
     "abs_tol_as": 1e-12,
-    "max_steps_as": int(1e9),
+    "max_steps_as": int(1e10),
     "likelihood": 1,
     "n_samples": 5,
     "n_warmup": 5,
     "n_chains": 4,
     "n_cores": 4,
-    "time_step": 0.05,
+    "time_step": 0.1,
 }
 RELATIVE_PATH_EXAMPLE = "../../data/in/linear.toml"
 

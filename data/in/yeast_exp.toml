@@ -171,6 +171,7 @@ id = 'C0_11'
 metadata = "carbon limiting, dilution rate 0.11 h-1"
 metabolite_measurements = [
   { target_id = 'g6p_c', value = 0.222, uncertainty = 0.05},
+  { target_id = 'glc-D_e', value = 4.4, uncertainty = 0.05},
   { target_id = 'fdp_c', value = 0.0338, uncertainty = 0.05},
   { target_id = '3pg_c', value = 0.0369, uncertainty = 0.05},
   { target_id = 'dhap_c', value = 0.0179, uncertainty = 0.05},
@@ -201,6 +202,7 @@ id = 'C0_16'
 metadata = "carbon limiting, dilutin rate 0.16 h-1"
 metabolite_measurements = [
   { target_id = 'g6p_c', value = 0.176, uncertainty = 0.05},
+  { target_id = 'glc-D_e', value = 4.4, uncertainty = 0.05},
   { target_id = 'fdp_c', value = 0.0268, uncertainty = 0.05},
   { target_id = '3pg_c', value = 0.0293, uncertainty = 0.05},
   { target_id = 'dhap_c', value = 0.0142, uncertainty = 0.05},
