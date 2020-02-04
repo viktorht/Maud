@@ -38,7 +38,7 @@ data {
   matrix[N_mic, N_enzyme] stoichiometric_matrix;
   int<lower=1,upper=N_metabolite> metabolite_ix_stoichiometric_matrix[N_mic];
   // configuration
-  vector<lower=0>[N_mic-N_unbalanced] as_guess;
+  vector<lower=0>[N_mic-N_unbalanced] as_guess[N_experiment];
   real rtol;
   real ftol;
   int steps;
@@ -61,9 +61,10 @@ transformed parameters {
   vector[N_enzyme] delta_g = stoichiometric_matrix' * formation_energy[metabolite_ix_stoichiometric_matrix];
   for (e in 1:N_experiment){
     vector[N_enzyme] keq = exp(delta_g / minus_RT);
-    vector[N_unbalanced+N_enzyme+N_enzyme+N_kinetic_parameters] theta = append_row(append_row(append_row(
+    vector[N_unbalanced+N_enzyme+N_enzyme+N_kinetic_parameters] theta;
+    theta = append_row(append_row(append_row(
       conc_unbalanced[e], enzyme_concentration[e]), keq), kinetic_parameters);
-    conc[e, balanced_mic_ix] = algebra_solver(steady_state_function, as_guess, theta, xr, xi, rtol, ftol, steps);
+    conc[e, balanced_mic_ix] = algebra_solver(steady_state_function, as_guess[e,], theta, xr, xi, rtol, ftol, steps);
     conc[e, unbalanced_mic_ix] = conc_unbalanced[e];
     flux[e] = get_fluxes(to_array_1d(conc[e]), to_array_1d(theta));
   }
@@ -91,6 +92,7 @@ generated quantities {
   vector[N_conc_measurement] yconc_sim;
   vector[N_enzyme_measurement] yenz_sim;
   vector[N_flux_measurement] yflux_sim;
+
   for (c in 1:N_conc_measurement){
     yconc_sim[c] = lognormal_rng(log(conc[experiment_yconc[c], mic_ix_yconc[c]]), sigma_conc[c]);
   }

@@ -112,7 +112,7 @@ def create_stan_program(mi: MaudInput, model_type: str, time_step=0.05) -> str:
     ]
     keq_position = [par_codes[par_id] for par_id in par_codes.keys() if "Keq" in par_id]
     fluxes_function = create_fluxes_function(mi, templates["fluxes_function"])
-    ode_function = create_ode_function(mi, templates["ode_function"])
+    ode_function = create_ode_function(mi, templates["ode_function"], mic_codes)
     steady_state_function = create_steady_state_function(
         kinetic_model, mic_codes, templates["steady_state_function"], time_step
     )
@@ -146,7 +146,9 @@ def get_templates(template_files: List[str] = TEMPLATE_FILES) -> Dict[str, Templ
     return out
 
 
-def create_ode_function(mi: MaudInput, template: Template) -> str:
+def create_ode_function(mi: MaudInput,
+                        template: Template,
+                        mic_codes: Dict[str, int]) -> str:
     """Get a Stan function specifying metabolite rates of change.
 
     :param mi: a MaudInput object
@@ -158,9 +160,7 @@ def create_ode_function(mi: MaudInput, template: Template) -> str:
     rxns = kinetic_model.reactions
     metabolite_lines = []
     for mic_id, mic in kinetic_model.mics.items():
-        if not mic.balanced:
-            line = "0"
-        else:
+        if mic.balanced:
             line = ""
             for rxn_id, rxn in rxns.items():
                 if mic_id in rxn.stoichiometry.keys():
@@ -168,8 +168,19 @@ def create_ode_function(mi: MaudInput, template: Template) -> str:
                     prefix = "+" if stoich > 0 and line != "" else ""
                     rxn_stan = rxn_codes[rxn_id]
                     line += prefix + str(stoich) + "*fluxes[{}]".format(rxn_stan)
-        metabolite_lines.append(line)
-    return template.render(ode_stoic=metabolite_lines, N_flux=len(rxns))
+            metabolite_lines.append(line) 
+
+    mics = kinetic_model.mics
+    balanced_codes = [mic_codes[mic_id] for mic_id, mic in mics.items() if mic.balanced]
+    unbalanced_codes = [
+        mic_codes[mic_id] for mic_id, mic in mics.items() if not mic.balanced
+        ]
+    return template.render(ode_stoic=metabolite_lines,
+                           N_flux=len(rxns),
+                           N_mic=len(mic_codes),
+                           N_unbalanced=len(unbalanced_codes),
+                           balanced_mic_ix=balanced_codes,
+                           unbalanced_mic_ix=unbalanced_codes)
 
 
 def create_steady_state_function(
