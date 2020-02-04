@@ -216,8 +216,8 @@ reaction_measurements = [
 ]
 enzyme_measurements = [
   # Glycolysis
-  {target_id='GLCt1', value=0.001, uncertainty=0.5},
-  {target_id='HEX1', value=0.028, uncertainty=0.1},
+  {target_id='GLCt1', value=0.001, uncertainty=0.05},
+  {target_id='HEX1', value=0.028, uncertainty=0.1}, # HEX2 carries some flux so I increased uncertainty to account for different expression of isoenzymes
   {target_id='PGI', value=0.077, uncertainty=0.05},
   {target_id='PFK', value=0.033, uncertainty=0.05},
   {target_id='FBA', value=0.29, uncertainty=0.05},
@@ -229,7 +229,7 @@ enzyme_measurements = [
 ###### Priors ######
 [priors.kinetic_parameters]
 GLCt1 = [
-  { target_id = 'Kcat1', location = 3.35, scale = 0.1},
+  { target_id = 'Kcat1', location = 3.35, scale = 2},
   { target_id = 'Ka', location = 0.9, scale = 0.1},
   { target_id = 'Kp', location = 0.9, scale = 0.1},
 ]
@@ -267,7 +267,7 @@ GAPD = [
   { target_id = 'Kcat1', location = 19, scale = 0.1},
   { target_id = 'Ka', location = 0.423, scale = 0.1},
   { target_id = 'Kb', location = 0.09, scale = 0.1},
-  { target_id = 'Kc', location = 0.001, scale = 0.1},
+  { target_id = 'Kc', location = 1.5, scale = 0.1},
   { target_id = 'Kp', location = 0.06, scale = 0.1},
   { target_id = 'Kq', location = 0.909, scale = 0.1},
 ]
