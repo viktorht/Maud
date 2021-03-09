@@ -43,15 +43,6 @@ id = 'r2'
 name = 'the enzyme that catalyses reaction r2'
 mechanism = 'modular_rate_law'
 
-[[reactions]]
-id = 'r3'
-name = 'reaction number 3'
-stoichiometry = { M2_c = -1, M3_c = 1}
-[[reactions.enzymes]]
-id = 'r3'
-name = 'the enzyme that catalyses reaction r3'
-mechanism = 'modular_rate_law'
-
 [[drains]]
 id = 'M3_drain'
 name = 'drain M3 out of model'
