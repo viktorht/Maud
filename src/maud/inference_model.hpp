@@ -58,90 +58,96 @@ using stan::math::pow;
 
 static int current_statement__ = 0;
 static const std::vector<string> locations_array__ = {" (found before start of program)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 92, column 2 to column 42)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 93, column 2 to column 40)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 94, column 2 to column 30)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 95, column 2 to column 24)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 96, column 2 to column 46)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 97, column 2 to column 59)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 98, column 2 to column 43)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 99, column 2 to column 63)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 100, column 2 to column 63)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 101, column 2 to column 54)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 105, column 2 to line 106, column 84)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 107, column 2 to column 72)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 108, column 2 to line 109, column 56)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 110, column 2 to column 84)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 111, column 2 to line 112, column 85)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 113, column 2 to line 114, column 85)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 115, column 2 to line 116, column 71)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 117, column 2 to column 38)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 118, column 2 to column 40)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 119, column 2 to column 53)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 129, column 2 to column 44)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 130, column 2 to column 40)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 131, column 2 to line 134, column 54)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 121, column 4 to column 75)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 122, column 4 to line 123, column 82)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 124, column 4 to line 126, column 69)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 120, column 28 to line 127, column 3)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 120, column 2 to line 127, column 3)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 136, column 11 to column 19)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 136, column 4 to column 68)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 137, column 11 to column 29)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 137, column 4 to line 164, column 74)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 165, column 4 to column 48)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 166, column 4 to column 53)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 167, column 4 to line 184, column 42)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 186, column 6 to column 91)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 187, column 6 to line 188, column 67)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 185, column 65 to line 189, column 5)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 185, column 4 to line 189, column 5)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 191, column 6 to column 78)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 192, column 6 to column 51)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 193, column 6 to column 28)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 194, column 6 to column 24)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 195, column 6 to column 26)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 196, column 6 to column 31)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 197, column 6 to column 49)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 198, column 6 to column 24)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 199, column 6 to column 71)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 200, column 6 to column 73)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 201, column 6 to column 55)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 190, column 27 to line 202, column 5)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 190, column 4 to line 202, column 5)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 135, column 27 to line 203, column 3)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 135, column 2 to line 203, column 3)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 226, column 2 to column 39)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 227, column 2 to column 39)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 228, column 2 to column 56)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 230, column 4 to column 101)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 229, column 33 to line 231, column 3)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 229, column 2 to line 231, column 3)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 233, column 4 to column 126)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 232, column 33 to line 234, column 3)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 232, column 2 to line 234, column 3)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 236, column 4 to column 97)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 235, column 33 to line 237, column 3)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 235, column 2 to line 237, column 3)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 239, column 4 to column 91)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 238, column 33 to line 240, column 3)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 238, column 2 to line 240, column 3)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 206, column 2 to column 42)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 207, column 2 to column 40)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 208, column 2 to column 40)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 209, column 2 to column 61)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 210, column 2 to column 61)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 211, column 2 to column 55)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 212, column 2 to column 50)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 213, column 2 to column 64)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 214, column 2 to column 55)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 215, column 2 to column 50)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 217, column 4 to line 218, column 75)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 219, column 4 to line 220, column 74)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 221, column 4 to line 222, column 77)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 216, column 22 to line 223, column 3)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 216, column 2 to line 223, column 3)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 102, column 2 to column 42)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 103, column 2 to column 40)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 104, column 2 to column 30)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 105, column 2 to column 24)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 106, column 2 to column 52)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 107, column 2 to column 46)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 108, column 2 to column 66)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 109, column 2 to column 59)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 110, column 2 to column 43)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 111, column 2 to column 63)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 112, column 2 to column 63)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 113, column 2 to column 54)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 117, column 2 to line 118, column 84)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 119, column 2 to column 72)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 120, column 2 to line 121, column 56)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 122, column 2 to column 84)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 123, column 2 to line 124, column 85)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 125, column 2 to line 126, column 85)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 127, column 2 to line 128, column 71)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 129, column 2 to line 130, column 77)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 131, column 2 to column 38)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 132, column 2 to column 40)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 133, column 2 to column 53)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 134, column 2 to column 67)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 146, column 2 to column 44)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 147, column 2 to column 40)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 148, column 2 to line 151, column 54)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 136, column 4 to column 75)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 137, column 4 to line 138, column 82)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 139, column 4 to line 141, column 69)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 142, column 4 to line 143, column 89)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 135, column 28 to line 144, column 3)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 135, column 2 to line 144, column 3)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 153, column 11 to column 19)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 153, column 4 to column 68)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 154, column 11 to column 36)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 154, column 4 to line 155, column 48)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 156, column 11 to column 29)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 156, column 4 to line 187, column 74)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 188, column 4 to column 48)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 189, column 4 to column 53)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 190, column 4 to line 211, column 44)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 213, column 6 to column 91)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 214, column 6 to line 215, column 67)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 212, column 65 to line 216, column 5)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 212, column 4 to line 216, column 5)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 218, column 6 to column 78)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 219, column 6 to column 51)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 220, column 6 to column 28)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 221, column 6 to column 24)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 222, column 6 to column 26)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 223, column 6 to column 31)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 224, column 6 to column 49)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 225, column 6 to column 24)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 226, column 6 to column 71)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 227, column 6 to column 73)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 228, column 6 to column 55)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 217, column 27 to line 229, column 5)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 217, column 4 to line 229, column 5)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 152, column 27 to line 230, column 3)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 152, column 2 to line 230, column 3)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 255, column 2 to column 39)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 256, column 2 to column 39)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 257, column 2 to column 42)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 258, column 2 to column 42)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 260, column 4 to column 97)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 261, column 4 to column 112)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 259, column 33 to line 262, column 3)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 259, column 2 to line 262, column 3)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 264, column 4 to column 91)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 265, column 4 to column 106)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 263, column 33 to line 266, column 3)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 263, column 2 to line 266, column 3)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 233, column 2 to column 42)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 234, column 2 to column 40)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 235, column 2 to column 40)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 236, column 2 to column 61)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 237, column 2 to column 61)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 238, column 2 to column 55)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 239, column 2 to column 50)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 240, column 2 to column 47)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 241, column 2 to column 64)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 242, column 2 to column 55)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 243, column 2 to column 58)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 244, column 2 to column 50)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 246, column 4 to line 247, column 75)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 248, column 4 to line 249, column 74)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 250, column 4 to line 251, column 77)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 245, column 22 to line 252, column 3)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 245, column 2 to line 252, column 3)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 11, column 2 to column 21)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 12, column 2 to column 28)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 13, column 2 to column 28)",
@@ -149,170 +155,200 @@ static const std::vector<string> locations_array__ = {" (found before start of p
                                                       " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 15, column 2 to column 26)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 16, column 2 to column 24)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 17, column 2 to column 23)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 18, column 2 to column 28)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 19, column 2 to column 34)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 18, column 2 to column 41)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 19, column 2 to column 28)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 20, column 2 to column 34)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 21, column 2 to column 39)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 22, column 2 to column 38)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 21, column 2 to column 34)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 22, column 2 to column 39)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 23, column 2 to column 38)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 24, column 2 to column 35)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 25, column 2 to column 36)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 27, column 45 to column 57)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 27, column 2 to column 59)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 28, column 43 to column 61)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 28, column 2 to column 63)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 29, column 51 to column 69)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 29, column 2 to column 71)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 30, column 40 to column 58)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 30, column 2 to column 60)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 31, column 13 to column 31)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 31, column 2 to column 33)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 32, column 18 to column 36)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 32, column 2 to column 49)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 33, column 51 to column 69)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 33, column 2 to column 71)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 34, column 47 to column 65)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 34, column 2 to column 67)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 35, column 13 to column 31)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 35, column 2 to column 33)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 36, column 18 to column 36)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 36, column 2 to column 49)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 37, column 50 to column 70)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 37, column 2 to column 72)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 38, column 42 to column 62)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 38, column 2 to column 64)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 39, column 12 to column 32)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 39, column 2 to column 34)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 40, column 18 to column 38)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 40, column 2 to column 50)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 42, column 9 to column 21)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 42, column 2 to column 50)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 43, column 18 to column 30)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 43, column 2 to column 61)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 44, column 9 to column 17)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 44, column 2 to column 34)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 45, column 18 to column 26)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 45, column 2 to column 45)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 46, column 9 to column 13)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 46, column 2 to column 28)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 47, column 18 to column 22)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 47, column 2 to column 39)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 48, column 9 to column 32)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 48, column 2 to column 47)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 49, column 18 to column 41)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 49, column 2 to column 58)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 50, column 9 to column 31)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 50, column 2 to column 50)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 51, column 18 to column 40)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 51, column 2 to column 61)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 52, column 9 to column 31)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 52, column 2 to column 50)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 53, column 18 to column 40)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 53, column 2 to column 61)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 54, column 18 to column 37)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 54, column 2 to column 52)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 24, column 2 to column 38)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 25, column 2 to column 35)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 26, column 2 to column 36)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 28, column 45 to column 57)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 28, column 2 to column 59)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 29, column 43 to column 61)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 29, column 2 to column 63)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 30, column 51 to column 69)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 30, column 2 to column 71)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 31, column 40 to column 58)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 31, column 2 to column 60)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 32, column 13 to column 31)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 32, column 2 to column 33)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 33, column 18 to column 36)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 33, column 2 to column 49)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 34, column 51 to column 69)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 34, column 2 to column 71)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 35, column 47 to column 65)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 35, column 2 to column 67)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 36, column 13 to column 31)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 36, column 2 to column 33)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 37, column 18 to column 36)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 37, column 2 to column 49)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 38, column 50 to column 70)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 38, column 2 to column 72)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 39, column 42 to column 62)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 39, column 2 to column 64)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 40, column 12 to column 32)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 40, column 2 to column 34)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 41, column 18 to column 38)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 41, column 2 to column 50)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 43, column 9 to column 21)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 43, column 2 to column 50)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 44, column 18 to column 30)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 44, column 2 to column 61)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 45, column 9 to column 17)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 45, column 2 to column 34)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 46, column 18 to column 26)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 46, column 2 to column 45)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 47, column 9 to column 13)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 47, column 2 to column 28)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 48, column 18 to column 22)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 48, column 2 to column 39)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 49, column 9 to column 32)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 49, column 2 to column 47)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 50, column 18 to column 41)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 50, column 2 to column 58)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 51, column 9 to column 31)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 51, column 2 to column 50)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 52, column 18 to column 40)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 52, column 2 to column 61)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 53, column 9 to column 31)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 53, column 2 to column 50)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 54, column 18 to column 40)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 54, column 2 to column 61)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 55, column 18 to column 37)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 55, column 2 to column 54)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 56, column 9 to column 21)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 56, column 23 to column 35)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 56, column 2 to column 58)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 57, column 18 to column 30)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 57, column 32 to column 44)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 57, column 2 to column 69)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 58, column 9 to column 21)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 58, column 23 to column 31)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 58, column 2 to column 50)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 55, column 2 to column 52)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 56, column 18 to column 37)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 56, column 2 to column 54)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 57, column 18 to column 43)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 57, column 2 to column 65)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 58, column 18 to column 43)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 58, column 2 to column 67)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 59, column 18 to column 30)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 59, column 32 to column 40)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 59, column 2 to column 61)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 60, column 9 to column 21)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 60, column 23 to column 30)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 60, column 2 to column 48)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 61, column 18 to column 30)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 61, column 32 to column 39)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 61, column 2 to column 59)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 63, column 9 to column 14)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 63, column 16 to column 24)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 63, column 2 to column 32)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 64, column 9 to column 14)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 64, column 16 to column 23)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 64, column 2 to column 33)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 65, column 9 to column 14)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 65, column 16 to column 32)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 65, column 2 to column 41)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 66, column 45 to column 50)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 66, column 2 to column 52)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 67, column 9 to column 17)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 67, column 2 to column 39)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 68, column 9 to column 19)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 68, column 21 to column 29)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 68, column 2 to column 45)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 69, column 26 to column 38)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 69, column 40 to column 48)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 69, column 2 to column 62)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 70, column 36 to column 41)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 70, column 43 to column 51)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 70, column 2 to column 53)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 71, column 32 to column 40)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 71, column 2 to column 42)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 72, column 32 to column 40)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 72, column 2 to column 42)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 73, column 32 to column 40)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 73, column 2 to column 42)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 74, column 33 to column 56)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 74, column 2 to column 58)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 75, column 33 to column 55)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 75, column 2 to column 57)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 76, column 33 to column 55)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 76, column 2 to column 57)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 77, column 24 to column 32)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 77, column 2 to column 34)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 79, column 35 to column 47)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 79, column 18 to column 23)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 79, column 2 to column 49)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 80, column 2 to column 15)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 81, column 2 to column 15)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 82, column 2 to column 20)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 83, column 2 to column 34)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 84, column 2 to column 26)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 87, column 2 to column 24)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 88, column 9 to column 21)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 88, column 23 to column 31)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 88, column 2 to line 89, column 56)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 92, column 9 to column 21)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 93, column 9 to column 21)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 93, column 23 to column 30)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 94, column 9 to column 17)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 95, column 9 to column 13)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 59, column 32 to column 57)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 59, column 2 to column 79)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 60, column 18 to column 30)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 60, column 32 to column 57)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 60, column 2 to column 81)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 61, column 9 to column 21)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 61, column 23 to column 35)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 61, column 2 to column 58)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 62, column 18 to column 30)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 62, column 32 to column 44)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 62, column 2 to column 69)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 63, column 9 to column 21)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 63, column 23 to column 31)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 63, column 2 to column 50)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 64, column 18 to column 30)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 64, column 32 to column 40)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 64, column 2 to column 61)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 65, column 9 to column 21)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 65, column 23 to column 30)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 65, column 2 to column 48)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 66, column 18 to column 30)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 66, column 32 to column 39)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 66, column 2 to column 59)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 68, column 9 to column 14)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 68, column 16 to column 24)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 68, column 2 to column 32)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 69, column 9 to column 14)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 69, column 16 to column 23)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 69, column 2 to column 33)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 70, column 9 to column 14)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 70, column 16 to column 32)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 70, column 2 to column 41)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 71, column 45 to column 50)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 71, column 2 to column 52)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 72, column 9 to column 17)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 72, column 2 to column 39)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 73, column 9 to column 19)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 73, column 21 to column 29)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 73, column 2 to column 45)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 74, column 26 to column 38)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 74, column 40 to column 48)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 74, column 2 to column 62)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 75, column 26 to column 38)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 75, column 40 to column 65)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 75, column 2 to column 84)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 76, column 26 to column 51)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 76, column 53 to column 61)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 76, column 2 to column 74)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 77, column 26 to column 51)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 77, column 53 to column 61)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 77, column 2 to column 74)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 78, column 36 to column 41)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 78, column 43 to column 51)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 78, column 2 to column 53)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 79, column 32 to column 40)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 79, column 2 to column 42)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 80, column 32 to column 40)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 80, column 2 to column 42)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 81, column 32 to column 40)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 81, column 2 to column 42)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 82, column 33 to column 56)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 82, column 2 to column 58)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 83, column 33 to column 55)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 83, column 2 to column 57)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 84, column 33 to column 55)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 84, column 2 to column 57)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 85, column 24 to column 32)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 85, column 2 to column 34)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 87, column 35 to column 47)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 87, column 18 to column 23)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 87, column 2 to column 49)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 88, column 2 to column 15)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 89, column 2 to column 15)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 90, column 2 to column 20)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 91, column 2 to column 34)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 92, column 2 to column 26)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 95, column 2 to column 24)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 96, column 9 to column 21)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 96, column 23 to column 31)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 97, column 9 to column 21)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 97, column 23 to column 35)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 98, column 9 to column 32)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 99, column 9 to column 31)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 100, column 9 to column 31)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 101, column 9 to column 28)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 105, column 9 to column 21)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 107, column 9 to column 13)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 108, column 9 to column 32)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 110, column 9 to column 17)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 96, column 2 to line 97, column 56)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 98, column 9 to column 21)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 98, column 23 to column 48)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 98, column 2 to line 99, column 78)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 102, column 9 to column 21)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 103, column 9 to column 21)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 103, column 23 to column 30)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 104, column 9 to column 17)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 105, column 9 to column 13)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 106, column 9 to column 34)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 107, column 9 to column 21)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 107, column 23 to column 31)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 108, column 9 to column 21)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 108, column 23 to column 48)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 109, column 9 to column 21)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 109, column 23 to column 35)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 110, column 9 to column 32)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 111, column 9 to column 31)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 113, column 9 to column 31)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 115, column 9 to column 28)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 112, column 9 to column 31)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 113, column 9 to column 28)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 117, column 9 to column 21)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 117, column 23 to column 30)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 118, column 9 to column 21)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 118, column 23 to column 31)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 119, column 9 to column 21)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 119, column 23 to column 35)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 129, column 30 to column 42)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 129, column 18 to column 23)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 130, column 9 to column 21)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 130, column 23 to column 33)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 131, column 9 to column 17)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 226, column 9 to column 27)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 227, column 9 to column 27)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 228, column 9 to column 46)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 119, column 9 to column 13)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 120, column 9 to column 32)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 122, column 9 to column 17)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 123, column 9 to column 31)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 125, column 9 to column 31)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 127, column 9 to column 28)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 129, column 9 to column 34)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 131, column 9 to column 21)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 131, column 23 to column 30)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 132, column 9 to column 21)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 132, column 23 to column 31)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 133, column 9 to column 21)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 133, column 23 to column 35)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 134, column 9 to column 21)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 134, column 23 to column 48)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 146, column 30 to column 42)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 146, column 18 to column 23)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 147, column 9 to column 21)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 147, column 23 to column 33)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 148, column 9 to column 17)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 255, column 9 to column 27)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 256, column 9 to column 27)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 257, column 9 to column 27)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/inference_model.stan', line 258, column 9 to column 27)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/allostery.stan', line 12, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 2, column 0)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/allostery.stan', line 13, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 2, column 0)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/allostery.stan', line 14, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 2, column 0)",
@@ -378,85 +414,103 @@ static const std::vector<string> locations_array__ = {" (found before start of p
                                                       " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 15, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 21, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 11, column 39, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 42, column 9, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 42, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 43, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 44, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 45, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 46, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 48, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 49, column 17, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 49, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 50, column 11, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 50, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 51, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 52, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 53, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 54, column 11, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 54, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 55, column 11, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 55, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 56, column 11, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 56, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 57, column 11, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 57, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 58, column 11, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 58, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 59, column 11, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 59, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 60, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 61, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 62, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 63, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 65, column 6, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 66, column 6, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 64, column 21, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 64, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 69, column 6, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 70, column 6, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 68, column 21, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 68, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 73, column 6, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 74, column 6, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 72, column 21, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 28, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 29, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 30, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 36, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 35, column 7, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 33, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 32, column 30, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 32, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 38, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 27, column 46, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 63, column 9, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 63, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 64, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 65, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 66, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 67, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 68, column 9, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 68, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 70, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 71, column 17, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 71, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 72, column 11, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 72, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 73, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 74, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 75, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 76, column 11, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 76, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 77, column 11, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 77, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 78, column 11, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 78, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 79, column 11, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 79, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 80, column 11, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 80, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 81, column 11, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 81, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 90, column 6, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 89, column 27, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 89, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 82, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 83, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 84, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 85, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 87, column 6, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 88, column 6, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 86, column 21, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 86, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 91, column 6, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 92, column 6, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 90, column 21, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 90, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 95, column 6, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 96, column 6, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 94, column 21, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 94, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 98, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 99, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 100, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 101, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 102, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 47, column 26, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 47, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 104, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 41, column 31, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 110, column 9, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 110, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 112, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 113, column 19, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 113, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 114, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 115, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 111, column 34, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 111, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 117, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 109, column 35, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 145, column 9, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 145, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 146, column 9, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 146, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 147, column 9, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 147, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 149, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 150, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 152, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 170, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 174, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
-                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 144, column 33, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 103, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 112, column 6, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 111, column 27, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 111, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 120, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 121, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 122, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 123, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 124, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 69, column 26, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 69, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 128, column 6, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 127, column 33, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 127, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 133, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 126, column 33, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 126, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 135, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 62, column 34, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 141, column 9, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 141, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 143, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 144, column 19, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 144, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 145, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 146, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 142, column 34, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 142, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 148, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 140, column 35, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 180, column 9, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 180, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 181, column 9, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 181, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 182, column 9, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 182, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 184, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 185, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 187, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 209, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 213, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
+                                                      " (in '/Users/s143838/code/Maud/src/maud/dbalanced_dt.stan', line 179, column 33, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 5, column 0)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/partial_sums.stan', line 8, column 2, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 6, column 0)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/partial_sums.stan', line 10, column 4, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 6, column 0)",
                                                       " (in '/Users/s143838/code/Maud/src/maud/partial_sums.stan', line 9, column 22, included from\n'/Users/s143838/code/Maud/src/maud/inference_model.stan', line 6, column 0)",
@@ -507,16 +561,16 @@ get_allostery(const Eigen::Matrix<T0__, -1, 1>& activator_concentration,
   (void) DUMMY_VAR__;  // suppress unused var warning
   
   try {
-    current_statement__ = 262;
+    current_statement__ = 298;
     if ((primitive_value(logical_eq(rows(activator_concentration), 0)) &&
         primitive_value(logical_eq(rows(inhibitor_concentration), 0)))) {
-      current_statement__ = 260;
+      current_statement__ = 296;
       return 1;
     } else {
       local_scalar_t__ Q_num;
       Q_num = DUMMY_VAR__;
       
-      current_statement__ = 256;
+      current_statement__ = 292;
       Q_num = (1 +
                 sum(
                   elt_divide(inhibitor_concentration,
@@ -524,12 +578,12 @@ get_allostery(const Eigen::Matrix<T0__, -1, 1>& activator_concentration,
       local_scalar_t__ Q_denom;
       Q_denom = DUMMY_VAR__;
       
-      current_statement__ = 257;
+      current_statement__ = 293;
       Q_denom = (1 +
                   sum(
                     elt_divide(activator_concentration,
                       dissociation_constant_r)));
-      current_statement__ = 258;
+      current_statement__ = 294;
       return inv(
                (1 +
                  (transfer_constant *
@@ -584,37 +638,37 @@ get_Tr(const Eigen::Matrix<T0__, -1, 1>& metabolite,
     local_scalar_t__ plus_product;
     plus_product = DUMMY_VAR__;
     
-    current_statement__ = 264;
+    current_statement__ = 300;
     plus_product = 1;
     local_scalar_t__ minus_product;
     minus_product = DUMMY_VAR__;
     
-    current_statement__ = 265;
+    current_statement__ = 301;
     minus_product = 1;
     local_scalar_t__ k_minus;
     k_minus = DUMMY_VAR__;
     
-    current_statement__ = 266;
+    current_statement__ = 302;
     k_minus = (kcat / keq);
-    current_statement__ = 273;
-    for (int m = 1; m <= size(metabolite); ++m) {
+    current_statement__ = 309;
+    for (int m = 1; m <= rows(metabolite); ++m) {
       local_scalar_t__ multiplicand;
       multiplicand = DUMMY_VAR__;
       
-      current_statement__ = 267;
+      current_statement__ = 303;
       multiplicand = pow((metabolite[(m - 1)] / km[(m - 1)]),
                        stan::math::abs(stoichiometry[(m - 1)]));
-      current_statement__ = 268;
+      current_statement__ = 304;
       k_minus = (k_minus * pow(km[(m - 1)], stoichiometry[(m - 1)]));
-      current_statement__ = 271;
+      current_statement__ = 307;
       if (logical_lt(stoichiometry[(m - 1)], 0)) {
-        current_statement__ = 270;
+        current_statement__ = 306;
         plus_product = (plus_product * multiplicand);
       } else {
-        current_statement__ = 269;
+        current_statement__ = 305;
         minus_product = (minus_product * multiplicand);
       }}
-    current_statement__ = 274;
+    current_statement__ = 310;
     return ((kcat * plus_product) - (k_minus * minus_product));
   } catch (const std::exception& e) {
     stan::lang::rethrow_located(e, locations_array__[current_statement__]);
@@ -655,30 +709,30 @@ get_Dr_common_rate_law(const Eigen::Matrix<T0__, -1, 1>& metabolite,
     local_scalar_t__ psi_plus;
     psi_plus = DUMMY_VAR__;
     
-    current_statement__ = 276;
+    current_statement__ = 312;
     psi_plus = 1;
     local_scalar_t__ psi_minus;
     psi_minus = DUMMY_VAR__;
     
-    current_statement__ = 277;
+    current_statement__ = 313;
     psi_minus = 1;
-    current_statement__ = 283;
-    for (int m = 1; m <= size(metabolite); ++m) {
+    current_statement__ = 319;
+    for (int m = 1; m <= rows(metabolite); ++m) {
       local_scalar_t__ multiplicand;
       multiplicand = DUMMY_VAR__;
       
-      current_statement__ = 278;
+      current_statement__ = 314;
       multiplicand = pow((1 + (metabolite[(m - 1)] / km[(m - 1)])),
                        stan::math::abs(stoichiometry[(m - 1)]));
-      current_statement__ = 281;
+      current_statement__ = 317;
       if (logical_lt(stoichiometry[(m - 1)], 0)) {
-        current_statement__ = 280;
+        current_statement__ = 316;
         psi_plus = (psi_plus * multiplicand);
       } else {
-        current_statement__ = 279;
+        current_statement__ = 315;
         psi_minus = (psi_minus * multiplicand);
       }}
-    current_statement__ = 284;
+    current_statement__ = 320;
     return ((psi_plus + psi_minus) - 1);
   } catch (const std::exception& e) {
     stan::lang::rethrow_located(e, locations_array__[current_statement__]);
@@ -713,12 +767,12 @@ get_Dr_reg(const Eigen::Matrix<T0__, -1, 1>& conc_ci,
   (void) DUMMY_VAR__;  // suppress unused var warning
   
   try {
-    current_statement__ = 290;
+    current_statement__ = 326;
     if (logical_lt(rows(conc_ci), 1)) {
-      current_statement__ = 288;
+      current_statement__ = 324;
       return 0;
     } else {
-      current_statement__ = 286;
+      current_statement__ = 322;
       return sum(elt_divide(conc_ci, ki));
     }
   } catch (const std::exception& e) {
@@ -764,14 +818,14 @@ get_free_enzyme_ratio(const Eigen::Matrix<T0__, -1, 1>& metabolite,
     local_scalar_t__ Dr;
     Dr = DUMMY_VAR__;
     
-    current_statement__ = 292;
+    current_statement__ = 328;
     Dr = get_Dr_common_rate_law(metabolite, km, stoichiometry, pstream__);
     local_scalar_t__ Dr_reg;
     Dr_reg = DUMMY_VAR__;
     
-    current_statement__ = 293;
+    current_statement__ = 329;
     Dr_reg = get_Dr_reg(conc_ci, ki, pstream__);
-    current_statement__ = 294;
+    current_statement__ = 330;
     return (1 / (Dr + Dr_reg));
   } catch (const std::exception& e) {
     stan::lang::rethrow_located(e, locations_array__[current_statement__]);
@@ -825,15 +879,15 @@ modular_rate_law(const Eigen::Matrix<T0__, -1, 1>& metabolite,
     local_scalar_t__ free_enzyme_ratio;
     free_enzyme_ratio = DUMMY_VAR__;
     
-    current_statement__ = 296;
+    current_statement__ = 332;
     free_enzyme_ratio = get_free_enzyme_ratio(metabolite, km, stoichiometry,
                           conc_ci, ki, pstream__);
     local_scalar_t__ Tr;
     Tr = DUMMY_VAR__;
     
-    current_statement__ = 297;
+    current_statement__ = 333;
     Tr = get_Tr(metabolite, km, stoichiometry, kcat, keq, pstream__);
-    current_statement__ = 298;
+    current_statement__ = 334;
     return ((enz * free_enzyme_ratio) * Tr);
   } catch (const std::exception& e) {
     stan::lang::rethrow_located(e, locations_array__[current_statement__]);
@@ -873,7 +927,7 @@ drain_reaction(const Eigen::Matrix<T0__, -1, 1>& metabolite,
   (void) DUMMY_VAR__;  // suppress unused var warning
   
   try {
-    current_statement__ = 300;
+    current_statement__ = 336;
     return (drain * prod(elt_divide(metabolite, add(metabolite, 1e-6))));
   } catch (const std::exception& e) {
     stan::lang::rethrow_located(e, locations_array__[current_statement__]);
@@ -908,30 +962,30 @@ get_N_enz_mics(const Eigen::Matrix<T0__, -1, -1>& S, const int& i_enz,
     int out;
     out = std::numeric_limits<int>::min();
     
-    current_statement__ = 302;
+    current_statement__ = 338;
     out = 0;
     {
       Eigen::Matrix<local_scalar_t__, -1, 1> sym1__;
-      current_statement__ = 303;
+      current_statement__ = 339;
       assign(sym1__, nil_index_list(),
         rvalue(S,
           cons_list(index_omni(),
             cons_list(index_uni(i_enz), nil_index_list())), "S"),
         "assigning variable sym1__");
-      current_statement__ = 303;
+      current_statement__ = 339;
       for (int sym2__ = 1; sym2__ <= stan::math::size(sym1__); ++sym2__) {
         {
           local_scalar_t__ s;
-          current_statement__ = 303;
+          current_statement__ = 339;
           s = sym1__[(sym2__ - 1)];
-          current_statement__ = 306;
+          current_statement__ = 342;
           if (logical_neq(s, 0)) {
-            current_statement__ = 304;
+            current_statement__ = 340;
             out = (out + 1);
           } 
         }}
     }
-    current_statement__ = 307;
+    current_statement__ = 343;
     return out;
   } catch (const std::exception& e) {
     stan::lang::rethrow_located(e, locations_array__[current_statement__]);
@@ -965,9 +1019,9 @@ get_enz_mics(const Eigen::Matrix<T0__, -1, -1>& S, const int& i_enz,
     int N_enz_mics;
     N_enz_mics = std::numeric_limits<int>::min();
     
-    current_statement__ = 309;
+    current_statement__ = 345;
     N_enz_mics = get_N_enz_mics(S, i_enz, pstream__);
-    current_statement__ = 310;
+    current_statement__ = 346;
     validate_non_negative_index("out", "N_enz_mics", N_enz_mics);
     std::vector<int> out;
     out = std::vector<int>(N_enz_mics, std::numeric_limits<int>::min());
@@ -975,22 +1029,22 @@ get_enz_mics(const Eigen::Matrix<T0__, -1, -1>& S, const int& i_enz,
     int ticker_pos;
     ticker_pos = std::numeric_limits<int>::min();
     
-    current_statement__ = 312;
+    current_statement__ = 348;
     ticker_pos = 1;
-    current_statement__ = 318;
+    current_statement__ = 354;
     for (int i_met = 1; i_met <= rows(S); ++i_met) {
-      current_statement__ = 316;
+      current_statement__ = 352;
       if (logical_neq(
             rvalue(S,
               cons_list(index_uni(i_met),
                 cons_list(index_uni(i_enz), nil_index_list())), "S"), 0)) {
-        current_statement__ = 313;
+        current_statement__ = 349;
         assign(out, cons_list(index_uni(ticker_pos), nil_index_list()),
           i_met, "assigning variable out");
-        current_statement__ = 314;
+        current_statement__ = 350;
         ticker_pos = (ticker_pos + 1);
       } }
-    current_statement__ = 319;
+    current_statement__ = 355;
     return out;
   } catch (const std::exception& e) {
     stan::lang::rethrow_located(e, locations_array__[current_statement__]);
@@ -1010,12 +1064,78 @@ return get_enz_mics(S, i_enz, pstream__);
 }
 };
 
+template <typename T0__, typename T1__, typename T2__, typename T3__>
+stan::promote_args_t<T0__, T1__, T2__,
+T3__>
+get_active_enzyme_fraction(const Eigen::Matrix<T0__, -1, 1>& activating_enzyme_conc,
+                           const Eigen::Matrix<T1__, -1, 1>& deactivating_enzyme_conc,
+                           const Eigen::Matrix<T2__, -1, 1>& phosphorylating_enzyme_kcat,
+                           const T3__& subunits, std::ostream* pstream__) {
+  using local_scalar_t__ = stan::promote_args_t<T0__, T1__, T2__, T3__>;
+  const static bool propto__ = true;
+  (void) propto__;
+  local_scalar_t__ DUMMY_VAR__(std::numeric_limits<double>::quiet_NaN());
+  (void) DUMMY_VAR__;  // suppress unused var warning
+  
+  try {
+    local_scalar_t__ alpha;
+    alpha = DUMMY_VAR__;
+    
+    current_statement__ = 357;
+    alpha = sum(
+              elt_multiply(phosphorylating_enzyme_kcat,
+                deactivating_enzyme_conc));
+    local_scalar_t__ beta;
+    beta = DUMMY_VAR__;
+    
+    current_statement__ = 358;
+    beta = sum(
+             elt_multiply(phosphorylating_enzyme_kcat,
+               activating_enzyme_conc));
+    local_scalar_t__ active_fraction;
+    active_fraction = DUMMY_VAR__;
+    
+    current_statement__ = 364;
+    if ((primitive_value(logical_eq(alpha, 0)) && primitive_value(
+        logical_eq(beta, 0)))) {
+      current_statement__ = 362;
+      active_fraction = 1;
+    } else {
+      current_statement__ = 360;
+      active_fraction = (1 / (1 + pow((alpha / beta), subunits)));
+    }
+    current_statement__ = 365;
+    return active_fraction;
+  } catch (const std::exception& e) {
+    stan::lang::rethrow_located(e, locations_array__[current_statement__]);
+      // Next line prevents compiler griping about no return
+      throw std::runtime_error("*** IF YOU SEE THIS, PLEASE REPORT A BUG ***"); 
+  }
+  
+}
+
+struct get_active_enzyme_fraction_functor__ {
+template <typename T0__, typename T1__, typename T2__, typename T3__>
+stan::promote_args_t<T0__, T1__, T2__,
+T3__>
+operator()(const Eigen::Matrix<T0__, -1, 1>& activating_enzyme_conc,
+           const Eigen::Matrix<T1__, -1, 1>& deactivating_enzyme_conc,
+           const Eigen::Matrix<T2__, -1, 1>& phosphorylating_enzyme_kcat,
+           const T3__& subunits, std::ostream* pstream__)  const 
+{
+return get_active_enzyme_fraction(activating_enzyme_conc,
+         deactivating_enzyme_conc, phosphorylating_enzyme_kcat, subunits,
+         pstream__);
+}
+};
+
 template <typename T0__, typename T1__, typename T2__, typename T4__,
 typename T5__, typename T6__, typename T13__, typename T14__, typename T15__,
-typename T16__>
+typename T16__, typename T18__, typename T19__, typename T20__,
+typename T21__>
 Eigen::Matrix<stan::promote_args_t<T0__, T1__, T2__, T4__, T5__, stan::promote_args_t<T6__,
-T13__, T14__, T15__,
-T16__>>, -1, 1>
+T13__, T14__, T15__, T16__, stan::promote_args_t<T18__, T19__, T20__,
+T21__>>>, -1, 1>
 get_flux_enz(const Eigen::Matrix<T0__, -1, 1>& conc_mic,
              const Eigen::Matrix<T1__, -1, 1>& conc_enz,
              const Eigen::Matrix<T2__, -1, 1>& km,
@@ -1030,7 +1150,12 @@ get_flux_enz(const Eigen::Matrix<T0__, -1, 1>& conc_mic,
              const Eigen::Matrix<T14__, -1, 1>& dissociation_constant_t,
              const Eigen::Matrix<T15__, -1, 1>& dissociation_constant_r,
              const Eigen::Matrix<T16__, -1, 1>& transfer_constant,
-             const std::vector<int>& subunits, std::ostream* pstream__) {
+             const std::vector<int>& subunits,
+             const Eigen::Matrix<T18__, -1, 1>& phos_enzyme_conc,
+             const Eigen::Matrix<T19__, -1, 1>& phos_enzyme_kcat,
+             const Eigen::Matrix<T20__, -1, -1>& S_phos_act,
+             const Eigen::Matrix<T21__, -1, -1>& S_phos_inh,
+             std::ostream* pstream__) {
   using local_scalar_t__ = stan::promote_args_t<T0__,
           T1__,
           T2__,
@@ -1039,14 +1164,17 @@ get_flux_enz(const Eigen::Matrix<T0__, -1, 1>& conc_mic,
           T13__,
           T14__,
           T15__,
-          T16__>>;
+          T16__, stan::promote_args_t<T18__,
+          T19__,
+          T20__,
+          T21__>>>;
   const static bool propto__ = true;
   (void) propto__;
   local_scalar_t__ DUMMY_VAR__(std::numeric_limits<double>::quiet_NaN());
   (void) DUMMY_VAR__;  // suppress unused var warning
   
   try {
-    current_statement__ = 321;
+    current_statement__ = 367;
     validate_non_negative_index("flux_enz", "cols(S)", cols(S));
     Eigen::Matrix<local_scalar_t__, -1, 1> flux_enz;
     flux_enz = Eigen::Matrix<local_scalar_t__, -1, 1>(cols(S));
@@ -1055,45 +1183,51 @@ get_flux_enz(const Eigen::Matrix<T0__, -1, 1>& conc_mic,
     int pos_ci;
     pos_ci = std::numeric_limits<int>::min();
     
-    current_statement__ = 323;
+    current_statement__ = 369;
     pos_ci = 1;
     int pos_ai;
     pos_ai = std::numeric_limits<int>::min();
     
-    current_statement__ = 324;
+    current_statement__ = 370;
     pos_ai = 1;
     int pos_aa;
     pos_aa = std::numeric_limits<int>::min();
     
-    current_statement__ = 325;
+    current_statement__ = 371;
     pos_aa = 1;
     int pos_tc;
     pos_tc = std::numeric_limits<int>::min();
     
-    current_statement__ = 326;
+    current_statement__ = 372;
     pos_tc = 1;
-    current_statement__ = 374;
+    current_statement__ = 373;
+    validate_non_negative_index("phos_frac", "cols(S)", cols(S));
+    Eigen::Matrix<local_scalar_t__, -1, 1> phos_frac;
+    phos_frac = Eigen::Matrix<local_scalar_t__, -1, 1>(cols(S));
+    stan::math::fill(phos_frac, DUMMY_VAR__);
+    
+    current_statement__ = 422;
     for (int i_enz = 1; i_enz <= cols(S); ++i_enz) {
       int N_enz_mics;
       N_enz_mics = std::numeric_limits<int>::min();
       
-      current_statement__ = 327;
+      current_statement__ = 375;
       N_enz_mics = get_N_enz_mics(S, i_enz, pstream__);
-      current_statement__ = 328;
+      current_statement__ = 376;
       validate_non_negative_index("enz_mics", "N_enz_mics", N_enz_mics);
       std::vector<int> enz_mics;
       enz_mics = std::vector<int>(N_enz_mics, std::numeric_limits<int>::min());
       
-      current_statement__ = 329;
+      current_statement__ = 377;
       assign(enz_mics, nil_index_list(), get_enz_mics(S, i_enz, pstream__),
         "assigning variable enz_mics");
-      current_statement__ = 330;
+      current_statement__ = 378;
       validate_non_negative_index("km_enz", "N_enz_mics", N_enz_mics);
       Eigen::Matrix<local_scalar_t__, -1, 1> km_enz;
       km_enz = Eigen::Matrix<local_scalar_t__, -1, 1>(N_enz_mics);
       stan::math::fill(km_enz, DUMMY_VAR__);
       
-      current_statement__ = 331;
+      current_statement__ = 379;
       assign(km_enz, nil_index_list(),
         rvalue(km,
           cons_list(
@@ -1105,49 +1239,49 @@ get_flux_enz(const Eigen::Matrix<T0__, -1, 1>& conc_mic,
       int nci_enz;
       nci_enz = std::numeric_limits<int>::min();
       
-      current_statement__ = 332;
+      current_statement__ = 380;
       nci_enz = n_ci[(i_enz - 1)];
       int nai_enz;
       nai_enz = std::numeric_limits<int>::min();
       
-      current_statement__ = 333;
+      current_statement__ = 381;
       nai_enz = n_ai[(i_enz - 1)];
       int naa_enz;
       naa_enz = std::numeric_limits<int>::min();
       
-      current_statement__ = 334;
+      current_statement__ = 382;
       naa_enz = n_aa[(i_enz - 1)];
-      current_statement__ = 335;
+      current_statement__ = 383;
       validate_non_negative_index("conc_ci", "nci_enz", nci_enz);
       Eigen::Matrix<local_scalar_t__, -1, 1> conc_ci;
       conc_ci = Eigen::Matrix<local_scalar_t__, -1, 1>(nci_enz);
       stan::math::fill(conc_ci, DUMMY_VAR__);
       
-      current_statement__ = 337;
+      current_statement__ = 385;
       validate_non_negative_index("conc_ai", "nai_enz", nai_enz);
       Eigen::Matrix<local_scalar_t__, -1, 1> conc_ai;
       conc_ai = Eigen::Matrix<local_scalar_t__, -1, 1>(nai_enz);
       stan::math::fill(conc_ai, DUMMY_VAR__);
       
-      current_statement__ = 339;
+      current_statement__ = 387;
       validate_non_negative_index("conc_aa", "naa_enz", naa_enz);
       Eigen::Matrix<local_scalar_t__, -1, 1> conc_aa;
       conc_aa = Eigen::Matrix<local_scalar_t__, -1, 1>(naa_enz);
       stan::math::fill(conc_aa, DUMMY_VAR__);
       
-      current_statement__ = 341;
+      current_statement__ = 389;
       validate_non_negative_index("ki_enz", "nci_enz", nci_enz);
       Eigen::Matrix<local_scalar_t__, -1, 1> ki_enz;
       ki_enz = Eigen::Matrix<local_scalar_t__, -1, 1>(nci_enz);
       stan::math::fill(ki_enz, DUMMY_VAR__);
       
-      current_statement__ = 343;
+      current_statement__ = 391;
       validate_non_negative_index("diss_t_enz", "nai_enz", nai_enz);
       Eigen::Matrix<local_scalar_t__, -1, 1> diss_t_enz;
       diss_t_enz = Eigen::Matrix<local_scalar_t__, -1, 1>(nai_enz);
       stan::math::fill(diss_t_enz, DUMMY_VAR__);
       
-      current_statement__ = 345;
+      current_statement__ = 393;
       validate_non_negative_index("diss_r_enz", "naa_enz", naa_enz);
       Eigen::Matrix<local_scalar_t__, -1, 1> diss_r_enz;
       diss_r_enz = Eigen::Matrix<local_scalar_t__, -1, 1>(naa_enz);
@@ -1159,7 +1293,7 @@ get_flux_enz(const Eigen::Matrix<T0__, -1, 1>& conc_mic,
       local_scalar_t__ allostery_factor;
       allostery_factor = DUMMY_VAR__;
       
-      current_statement__ = 348;
+      current_statement__ = 396;
       allostery_factor = 1;
       local_scalar_t__ free_enzyme_ratio;
       free_enzyme_ratio = DUMMY_VAR__;
@@ -1167,45 +1301,45 @@ get_flux_enz(const Eigen::Matrix<T0__, -1, 1>& conc_mic,
       int is_allosteric;
       is_allosteric = std::numeric_limits<int>::min();
       
-      current_statement__ = 350;
+      current_statement__ = 398;
       is_allosteric = (primitive_value(logical_gt(nai_enz, 0)) ||
           primitive_value(logical_gt(naa_enz, 0)));
-      current_statement__ = 354;
+      current_statement__ = 402;
       if (logical_neq(nci_enz, 0)) {
-        current_statement__ = 351;
+        current_statement__ = 399;
         assign(conc_ci, nil_index_list(),
           rvalue(conc_mic,
             cons_list(index_multi(segment(ci_ix, pos_ci, nci_enz)),
               nil_index_list()), "conc_mic"), "assigning variable conc_ci");
-        current_statement__ = 352;
+        current_statement__ = 400;
         assign(ki_enz, nil_index_list(), segment(ki, pos_ci, nci_enz),
           "assigning variable ki_enz");
       } 
-      current_statement__ = 358;
+      current_statement__ = 406;
       if (logical_neq(nai_enz, 0)) {
-        current_statement__ = 355;
+        current_statement__ = 403;
         assign(conc_ai, nil_index_list(),
           rvalue(conc_mic,
             cons_list(index_multi(segment(ai_ix, pos_ai, nai_enz)),
               nil_index_list()), "conc_mic"), "assigning variable conc_ai");
-        current_statement__ = 356;
+        current_statement__ = 404;
         assign(diss_t_enz, nil_index_list(),
           segment(dissociation_constant_t, pos_ai, nai_enz),
           "assigning variable diss_t_enz");
       } 
-      current_statement__ = 362;
+      current_statement__ = 410;
       if (logical_neq(naa_enz, 0)) {
-        current_statement__ = 359;
+        current_statement__ = 407;
         assign(conc_aa, nil_index_list(),
           rvalue(conc_mic,
             cons_list(index_multi(segment(aa_ix, pos_aa, naa_enz)),
               nil_index_list()), "conc_mic"), "assigning variable conc_aa");
-        current_statement__ = 360;
+        current_statement__ = 408;
         assign(diss_r_enz, nil_index_list(),
           segment(dissociation_constant_r, pos_aa, naa_enz),
           "assigning variable diss_r_enz");
       } 
-      current_statement__ = 363;
+      current_statement__ = 411;
       free_enzyme_ratio = get_free_enzyme_ratio(
                             rvalue(conc_mic,
                               cons_list(index_multi(enz_mics),
@@ -1214,7 +1348,7 @@ get_flux_enz(const Eigen::Matrix<T0__, -1, 1>& conc_mic,
                               cons_list(index_multi(enz_mics),
                                 cons_list(index_uni(i_enz), nil_index_list())),
                               "S"), conc_ci, ki_enz, pstream__);
-      current_statement__ = 364;
+      current_statement__ = 412;
       catalysis_factor = modular_rate_law(
                            rvalue(conc_mic,
                              cons_list(index_multi(enz_mics),
@@ -1224,26 +1358,48 @@ get_flux_enz(const Eigen::Matrix<T0__, -1, 1>& conc_mic,
                                cons_list(index_uni(i_enz), nil_index_list())),
                              "S"), kcat[(i_enz - 1)], keq[(i_enz - 1)],
                            conc_enz[(i_enz - 1)], conc_ci, ki_enz, pstream__);
-      current_statement__ = 367;
+      current_statement__ = 415;
       if (logical_eq(is_allosteric, 1)) {
-        current_statement__ = 365;
+        current_statement__ = 413;
         allostery_factor = get_allostery(conc_aa, conc_ai, free_enzyme_ratio,
                              diss_r_enz, diss_t_enz,
                              transfer_constant[(pos_tc - 1)],
                              subunits[(i_enz - 1)], pstream__);
       } 
-      current_statement__ = 368;
+      current_statement__ = 416;
       assign(flux_enz, cons_list(index_uni(i_enz), nil_index_list()),
         (catalysis_factor * allostery_factor), "assigning variable flux_enz");
-      current_statement__ = 369;
+      current_statement__ = 417;
       pos_ci = (pos_ci + n_ci[(i_enz - 1)]);
-      current_statement__ = 370;
+      current_statement__ = 418;
       pos_ai = (pos_ai + n_ai[(i_enz - 1)]);
-      current_statement__ = 371;
+      current_statement__ = 419;
       pos_aa = (pos_aa + n_aa[(i_enz - 1)]);
-      current_statement__ = 372;
+      current_statement__ = 420;
       pos_tc = (pos_tc + is_allosteric);}
-    current_statement__ = 375;
+    current_statement__ = 428;
+    if (logical_gt(rows(phos_enzyme_kcat), 0)) {
+      current_statement__ = 425;
+      for (int i = 1; i <= cols(S_phos_act); ++i) {
+        current_statement__ = 423;
+        assign(phos_frac, cons_list(index_uni(i), nil_index_list()),
+          get_active_enzyme_fraction(
+            elt_multiply(phos_enzyme_conc,
+              rvalue(S_phos_act,
+                cons_list(index_omni(),
+                  cons_list(index_uni(i), nil_index_list())), "S_phos_act")),
+            elt_multiply(phos_enzyme_conc,
+              rvalue(S_phos_inh,
+                cons_list(index_omni(),
+                  cons_list(index_uni(i), nil_index_list())), "S_phos_inh")),
+            phos_enzyme_kcat, subunits[(i - 1)], pstream__),
+          "assigning variable phos_frac");}
+      current_statement__ = 426;
+      assign(flux_enz, nil_index_list(),
+        elt_multiply(stan::model::deep_copy(flux_enz), phos_frac),
+        "assigning variable flux_enz");
+    } 
+    current_statement__ = 429;
     return flux_enz;
   } catch (const std::exception& e) {
     stan::lang::rethrow_located(e, locations_array__[current_statement__]);
@@ -1256,10 +1412,11 @@ get_flux_enz(const Eigen::Matrix<T0__, -1, 1>& conc_mic,
 struct get_flux_enz_functor__ {
 template <typename T0__, typename T1__, typename T2__, typename T4__,
 typename T5__, typename T6__, typename T13__, typename T14__, typename T15__,
-typename T16__>
+typename T16__, typename T18__, typename T19__, typename T20__,
+typename T21__>
 Eigen::Matrix<stan::promote_args_t<T0__, T1__, T2__, T4__, T5__, stan::promote_args_t<T6__,
-T13__, T14__, T15__,
-T16__>>, -1, 1>
+T13__, T14__, T15__, T16__, stan::promote_args_t<T18__, T19__, T20__,
+T21__>>>, -1, 1>
 operator()(const Eigen::Matrix<T0__, -1, 1>& conc_mic,
            const Eigen::Matrix<T1__, -1, 1>& conc_enz,
            const Eigen::Matrix<T2__, -1, 1>& km,
@@ -1274,11 +1431,18 @@ operator()(const Eigen::Matrix<T0__, -1, 1>& conc_mic,
            const Eigen::Matrix<T14__, -1, 1>& dissociation_constant_t,
            const Eigen::Matrix<T15__, -1, 1>& dissociation_constant_r,
            const Eigen::Matrix<T16__, -1, 1>& transfer_constant,
-           const std::vector<int>& subunits, std::ostream* pstream__)  const 
+           const std::vector<int>& subunits,
+           const Eigen::Matrix<T18__, -1, 1>& phos_enzyme_conc,
+           const Eigen::Matrix<T19__, -1, 1>& phos_enzyme_kcat,
+           const Eigen::Matrix<T20__, -1, -1>& S_phos_act,
+           const Eigen::Matrix<T21__, -1, -1>& S_phos_inh,
+           std::ostream* pstream__)  const 
 {
 return get_flux_enz(conc_mic, conc_enz, km, km_lookup, S, kcat, keq, ci_ix,
          ai_ix, aa_ix, n_ci, n_ai, n_aa, ki, dissociation_constant_t,
-         dissociation_constant_r, transfer_constant, subunits, pstream__);
+         dissociation_constant_r, transfer_constant, subunits,
+         phos_enzyme_conc, phos_enzyme_kcat, S_phos_act, S_phos_inh,
+         pstream__);
 }
 };
 
@@ -1296,40 +1460,40 @@ get_flux_drain(const Eigen::Matrix<T0__, -1, -1>& S_drain,
   (void) DUMMY_VAR__;  // suppress unused var warning
   
   try {
-    current_statement__ = 377;
+    current_statement__ = 431;
     validate_non_negative_index("flux_drain", "cols(S_drain)", cols(S_drain));
     Eigen::Matrix<local_scalar_t__, -1, 1> flux_drain;
     flux_drain = Eigen::Matrix<local_scalar_t__, -1, 1>(cols(S_drain));
     stan::math::fill(flux_drain, DUMMY_VAR__);
     
-    current_statement__ = 385;
+    current_statement__ = 439;
     for (int i_drain = 1; i_drain <= cols(S_drain); ++i_drain) {
       int N_drain_mics;
       N_drain_mics = std::numeric_limits<int>::min();
       
-      current_statement__ = 379;
+      current_statement__ = 433;
       N_drain_mics = get_N_enz_mics(S_drain, i_drain, pstream__);
-      current_statement__ = 380;
+      current_statement__ = 434;
       validate_non_negative_index("drain_mics", "N_drain_mics", N_drain_mics);
       std::vector<int> drain_mics;
       drain_mics = std::vector<int>(N_drain_mics, std::numeric_limits<int>::min());
       
-      current_statement__ = 381;
+      current_statement__ = 435;
       assign(drain_mics, nil_index_list(),
         get_enz_mics(S_drain, i_drain, pstream__),
         "assigning variable drain_mics");
       local_scalar_t__ drain_rate;
       drain_rate = DUMMY_VAR__;
       
-      current_statement__ = 382;
+      current_statement__ = 436;
       drain_rate = drain_reaction(
                      rvalue(conc_mic,
                        cons_list(index_multi(drain_mics), nil_index_list()),
                        "conc_mic"), drain[(i_drain - 1)], pstream__);
-      current_statement__ = 383;
+      current_statement__ = 437;
       assign(flux_drain, cons_list(index_uni(i_drain), nil_index_list()),
         drain_rate, "assigning variable flux_drain");}
-    current_statement__ = 386;
+    current_statement__ = 440;
     return flux_drain;
   } catch (const std::exception& e) {
     stan::lang::rethrow_located(e, locations_array__[current_statement__]);
@@ -1354,10 +1518,12 @@ return get_flux_drain(S_drain, conc_mic, drain, pstream__);
 template <typename T0__, typename T1__, typename T2__, typename T5__,
 typename T6__, typename T8__, typename T9__, typename T10__, typename T11__,
 typename T12__, typename T19__, typename T20__, typename T21__,
-typename T22__, typename T24__>
+typename T22__, typename T24__, typename T25__, typename T26__,
+typename T27__, typename T28__>
 Eigen::Matrix<stan::promote_args_t<T0__, T1__, T2__, T5__, T6__, stan::promote_args_t<T8__,
 T9__, T10__, T11__, T12__, stan::promote_args_t<T19__, T20__, T21__, T22__,
-T24__>>>, -1, 1>
+T24__, stan::promote_args_t<T25__, T26__, T27__,
+T28__>>>>, -1, 1>
 dbalanced_dt(const T0__& time,
              const Eigen::Matrix<T1__, -1, 1>& current_balanced,
              const Eigen::Matrix<T2__, -1, 1>& unbalanced,
@@ -1379,7 +1545,11 @@ dbalanced_dt(const T0__& time,
              const Eigen::Matrix<T21__, -1, 1>& dissociation_constant_r,
              const Eigen::Matrix<T22__, -1, 1>& transfer_constant,
              const std::vector<int>& subunits,
-             const Eigen::Matrix<T24__, -1, 1>& drain,
+             const Eigen::Matrix<T24__, -1, 1>& phos_enzyme_conc,
+             const Eigen::Matrix<T25__, -1, 1>& phos_enzyme_kcat,
+             const Eigen::Matrix<T26__, -1, -1>& S_phos_act,
+             const Eigen::Matrix<T27__, -1, -1>& S_phos_inh,
+             const Eigen::Matrix<T28__, -1, 1>& drain,
              std::ostream* pstream__) {
   using local_scalar_t__ = stan::promote_args_t<T0__,
           T1__,
@@ -1393,14 +1563,17 @@ dbalanced_dt(const T0__& time,
           T20__,
           T21__,
           T22__,
-          T24__>>>;
+          T24__, stan::promote_args_t<T25__,
+          T26__,
+          T27__,
+          T28__>>>>;
   const static bool propto__ = true;
   (void) propto__;
   local_scalar_t__ DUMMY_VAR__(std::numeric_limits<double>::quiet_NaN());
   (void) DUMMY_VAR__;  // suppress unused var warning
   
   try {
-    current_statement__ = 388;
+    current_statement__ = 442;
     validate_non_negative_index("current_concentration",
                                 "rows(current_balanced) + rows(unbalanced)",
                                 (rows(current_balanced) + rows(unbalanced)));
@@ -1412,38 +1585,38 @@ dbalanced_dt(const T0__& time,
                                                                     unbalanced)));
     stan::math::fill(current_concentration, DUMMY_VAR__);
     
-    current_statement__ = 390;
+    current_statement__ = 444;
     validate_non_negative_index("flux_enz", "cols(S_enz)", cols(S_enz));
     Eigen::Matrix<local_scalar_t__, -1, 1> flux_enz;
     flux_enz = Eigen::Matrix<local_scalar_t__, -1, 1>(cols(S_enz));
     stan::math::fill(flux_enz, DUMMY_VAR__);
     
-    current_statement__ = 392;
+    current_statement__ = 446;
     validate_non_negative_index("flux_drain", "cols(S_drain)", cols(S_drain));
     Eigen::Matrix<local_scalar_t__, -1, 1> flux_drain;
     flux_drain = Eigen::Matrix<local_scalar_t__, -1, 1>(cols(S_drain));
     stan::math::fill(flux_drain, DUMMY_VAR__);
     
-    current_statement__ = 394;
+    current_statement__ = 448;
     assign(current_concentration,
       cons_list(index_multi(balanced_ix), nil_index_list()),
       current_balanced, "assigning variable current_concentration");
-    current_statement__ = 395;
+    current_statement__ = 449;
     assign(current_concentration,
       cons_list(index_multi(unbalanced_ix), nil_index_list()), unbalanced,
       "assigning variable current_concentration");
-    current_statement__ = 396;
+    current_statement__ = 450;
     assign(flux_enz, nil_index_list(),
       get_flux_enz(current_concentration, enzyme_concentration, km,
         km_lookup, S_enz, kcat, keq, ci_ix, ai_ix, aa_ix, n_ci, n_ai, n_aa,
         ki, dissociation_constant_t, dissociation_constant_r,
-        transfer_constant, subunits, pstream__),
-      "assigning variable flux_enz");
-    current_statement__ = 397;
+        transfer_constant, subunits, phos_enzyme_conc, phos_enzyme_kcat,
+        S_phos_act, S_phos_inh, pstream__), "assigning variable flux_enz");
+    current_statement__ = 451;
     assign(flux_drain, nil_index_list(),
       get_flux_drain(S_drain, current_concentration, drain, pstream__),
       "assigning variable flux_drain");
-    current_statement__ = 398;
+    current_statement__ = 452;
     return multiply(
              rvalue(S_full,
                cons_list(index_multi(balanced_ix), nil_index_list()),
@@ -1460,10 +1633,12 @@ struct dbalanced_dt_functor__ {
 template <typename T0__, typename T1__, typename T2__, typename T5__,
 typename T6__, typename T8__, typename T9__, typename T10__, typename T11__,
 typename T12__, typename T19__, typename T20__, typename T21__,
-typename T22__, typename T24__>
+typename T22__, typename T24__, typename T25__, typename T26__,
+typename T27__, typename T28__>
 Eigen::Matrix<stan::promote_args_t<T0__, T1__, T2__, T5__, T6__, stan::promote_args_t<T8__,
 T9__, T10__, T11__, T12__, stan::promote_args_t<T19__, T20__, T21__, T22__,
-T24__>>>, -1, 1>
+T24__, stan::promote_args_t<T25__, T26__, T27__,
+T28__>>>>, -1, 1>
 operator()(const T0__& time,
            const Eigen::Matrix<T1__, -1, 1>& current_balanced,
            const Eigen::Matrix<T2__, -1, 1>& unbalanced,
@@ -1485,13 +1660,18 @@ operator()(const T0__& time,
            const Eigen::Matrix<T21__, -1, 1>& dissociation_constant_r,
            const Eigen::Matrix<T22__, -1, 1>& transfer_constant,
            const std::vector<int>& subunits,
-           const Eigen::Matrix<T24__, -1, 1>& drain, std::ostream* pstream__)  const 
+           const Eigen::Matrix<T24__, -1, 1>& phos_enzyme_conc,
+           const Eigen::Matrix<T25__, -1, 1>& phos_enzyme_kcat,
+           const Eigen::Matrix<T26__, -1, -1>& S_phos_act,
+           const Eigen::Matrix<T27__, -1, -1>& S_phos_inh,
+           const Eigen::Matrix<T28__, -1, 1>& drain, std::ostream* pstream__)  const 
 {
 return dbalanced_dt(time, current_balanced, unbalanced, balanced_ix,
          unbalanced_ix, enzyme_concentration, km, km_lookup, S_enz, S_drain,
          S_full, kcat, keq, ci_ix, ai_ix, aa_ix, n_ci, n_ai, n_aa, ki,
          dissociation_constant_t, dissociation_constant_r, transfer_constant,
-         subunits, drain, pstream__);
+         subunits, phos_enzyme_conc, phos_enzyme_kcat, S_phos_act,
+         S_phos_inh, drain, pstream__);
 }
 };
 
@@ -1500,10 +1680,12 @@ struct dbalanced_dt_odefunctor__ {
 template <typename T0__, typename T1__, typename T2__, typename T5__,
 typename T6__, typename T8__, typename T9__, typename T10__, typename T11__,
 typename T12__, typename T19__, typename T20__, typename T21__,
-typename T22__, typename T24__>
+typename T22__, typename T24__, typename T25__, typename T26__,
+typename T27__, typename T28__>
 Eigen::Matrix<stan::promote_args_t<T0__, T1__, T2__, T5__, T6__, stan::promote_args_t<T8__,
 T9__, T10__, T11__, T12__, stan::promote_args_t<T19__, T20__, T21__, T22__,
-T24__>>>, -1, 1>
+T24__, stan::promote_args_t<T25__, T26__, T27__,
+T28__>>>>, -1, 1>
 operator()(const T0__& time,
            const Eigen::Matrix<T1__, -1, 1>& current_balanced,
            std::ostream* pstream__,
@@ -1526,13 +1708,18 @@ operator()(const T0__& time,
            const Eigen::Matrix<T21__, -1, 1>& dissociation_constant_r,
            const Eigen::Matrix<T22__, -1, 1>& transfer_constant,
            const std::vector<int>& subunits,
-           const Eigen::Matrix<T24__, -1, 1>& drain)  const 
+           const Eigen::Matrix<T24__, -1, 1>& phos_enzyme_conc,
+           const Eigen::Matrix<T25__, -1, 1>& phos_enzyme_kcat,
+           const Eigen::Matrix<T26__, -1, -1>& S_phos_act,
+           const Eigen::Matrix<T27__, -1, -1>& S_phos_inh,
+           const Eigen::Matrix<T28__, -1, 1>& drain)  const 
 {
 return dbalanced_dt(time, current_balanced, unbalanced, balanced_ix,
          unbalanced_ix, enzyme_concentration, km, km_lookup, S_enz, S_drain,
          S_full, kcat, keq, ci_ix, ai_ix, aa_ix, n_ci, n_ai, n_aa, ki,
          dissociation_constant_t, dissociation_constant_r, transfer_constant,
-         subunits, drain, pstream__);
+         subunits, phos_enzyme_conc, phos_enzyme_kcat, S_phos_act,
+         S_phos_inh, drain, pstream__);
 }
 };
 
@@ -1556,17 +1743,17 @@ partial_sum_conc(const std::vector<T0__>& y_slice, const int& start,
     local_scalar_t__ out;
     out = DUMMY_VAR__;
     
-    current_statement__ = 400;
+    current_statement__ = 454;
     out = 0;
-    current_statement__ = 403;
+    current_statement__ = 457;
     for (int c = start; c <= end; ++c) {
-      current_statement__ = 401;
+      current_statement__ = 455;
       out = (out +
               lognormal_lpdf<false>(y_slice[(((c - start) + 1) - 1)],
                 stan::math::log(
                   conc[(experiment[(c - 1)] - 1)][(mic[(c - 1)] - 1)]),
                 sigma[(c - 1)]));}
-    current_statement__ = 404;
+    current_statement__ = 458;
     return out;
   } catch (const std::exception& e) {
     stan::lang::rethrow_located(e, locations_array__[current_statement__]);
@@ -1626,11 +1813,11 @@ partial_sum_enz(const std::vector<T0__>& y_slice, const int& start,
     local_scalar_t__ out;
     out = DUMMY_VAR__;
     
-    current_statement__ = 406;
+    current_statement__ = 460;
     out = 0;
-    current_statement__ = 409;
+    current_statement__ = 463;
     for (int c = start; c <= end; ++c) {
-      current_statement__ = 407;
+      current_statement__ = 461;
       out = (out +
               lognormal_lpdf<false>(y_slice[(((c - start) + 1) - 1)],
                 stan::math::log(
@@ -1638,7 +1825,7 @@ partial_sum_enz(const std::vector<T0__>& y_slice, const int& start,
                     cons_list(index_uni(experiment[(c - 1)]),
                       cons_list(index_uni(enzyme[(c - 1)]), nil_index_list())),
                     "enz_conc")), sigma[(c - 1)]));}
-    current_statement__ = 410;
+    current_statement__ = 464;
     return out;
   } catch (const std::exception& e) {
     stan::lang::rethrow_located(e, locations_array__[current_statement__]);
@@ -1699,18 +1886,18 @@ partial_sum_flux(const std::vector<T0__>& y_slice, const int& start,
     local_scalar_t__ out;
     out = DUMMY_VAR__;
     
-    current_statement__ = 412;
+    current_statement__ = 466;
     out = 0;
-    current_statement__ = 415;
+    current_statement__ = 469;
     for (int c = start; c <= end; ++c) {
-      current_statement__ = 413;
+      current_statement__ = 467;
       out = (out +
               normal_lpdf<false>(y_slice[(((c - start) + 1) - 1)],
                 rvalue(flux,
                   cons_list(index_uni(experiment[(c - 1)]),
                     cons_list(index_uni(reaction[(c - 1)]), nil_index_list())),
                   "flux"), sigma[(c - 1)]));}
-    current_statement__ = 416;
+    current_statement__ = 470;
     return out;
   } catch (const std::exception& e) {
     stan::lang::rethrow_located(e, locations_array__[current_statement__]);
@@ -1770,20 +1957,20 @@ get_keq(const Eigen::Matrix<T0__, -1, -1>& S,
     local_scalar_t__ minus_RT;
     minus_RT = DUMMY_VAR__;
     
-    current_statement__ = 418;
+    current_statement__ = 472;
     minus_RT = (-0.008314 * 298.15);
     local_scalar_t__ dgf_water;
     dgf_water = DUMMY_VAR__;
     
-    current_statement__ = 419;
+    current_statement__ = 473;
     dgf_water = -157.6;
-    current_statement__ = 420;
+    current_statement__ = 474;
     validate_non_negative_index("delta_g", "rows(S)", rows(S));
     Eigen::Matrix<local_scalar_t__, -1, 1> delta_g;
     delta_g = Eigen::Matrix<local_scalar_t__, -1, 1>(rows(S));
     stan::math::fill(delta_g, DUMMY_VAR__);
     
-    current_statement__ = 421;
+    current_statement__ = 475;
     assign(delta_g, nil_index_list(),
       add(
         multiply(transpose(S),
@@ -1791,7 +1978,7 @@ get_keq(const Eigen::Matrix<T0__, -1, -1>& S,
             cons_list(index_multi(mic_to_met), nil_index_list()),
             "formation_energy")), multiply(water_stoichiometry, dgf_water)),
       "assigning variable delta_g");
-    current_statement__ = 422;
+    current_statement__ = 476;
     return stan::math::exp(divide(delta_g, minus_RT));
   } catch (const std::exception& e) {
     stan::lang::rethrow_located(e, locations_array__[current_statement__]);
@@ -1826,6 +2013,7 @@ class inference_model_model final : public model_base_crtp<inference_model_model
   int N_reaction;
   int N_enzyme;
   int N_drain;
+  int N_phosphorylation_enzymes;
   int N_experiment;
   int N_flux_measurement;
   int N_conc_measurement;
@@ -1862,6 +2050,10 @@ class inference_model_model final : public model_base_crtp<inference_model_model
   Eigen::Matrix<double, -1, 1> prior_scale_diss_r;
   Eigen::Matrix<double, -1, 1> prior_loc_tc;
   Eigen::Matrix<double, -1, 1> prior_scale_tc;
+  Eigen::Matrix<double, -1, 1> prior_loc_phos_kcat;
+  Eigen::Matrix<double, -1, 1> prior_scale_phos_kcat;
+  Eigen::Matrix<double, -1, -1> prior_loc_phos_conc;
+  Eigen::Matrix<double, -1, -1> prior_scale_phos_conc;
   Eigen::Matrix<double, -1, -1> prior_loc_unbalanced;
   Eigen::Matrix<double, -1, -1> prior_scale_unbalanced;
   Eigen::Matrix<double, -1, -1> prior_loc_enzyme;
@@ -1875,6 +2067,9 @@ class inference_model_model final : public model_base_crtp<inference_model_model
   Eigen::Matrix<double, -1, 1> water_stoichiometry;
   Eigen::Matrix<double, -1, -1> S_to_flux_map;
   Eigen::Matrix<double, -1, -1> is_knockout;
+  Eigen::Matrix<double, -1, -1> is_phos_knockout;
+  Eigen::Matrix<double, -1, -1> S_phos_act;
+  Eigen::Matrix<double, -1, -1> S_phos_inh;
   std::vector<std::vector<int>> km_lookup;
   std::vector<int> n_ci;
   std::vector<int> n_ai;
@@ -1891,7 +2086,7 @@ class inference_model_model final : public model_base_crtp<inference_model_model
   double timepoint;
   double initial_time;
   Eigen::Matrix<double, -1, -1> knockout;
-  int log_lik_1dim__;
+  Eigen::Matrix<double, -1, -1> phos_knockout;
  
  public:
   ~inference_model_model() final { }
@@ -1923,277 +2118,289 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       pos__ = std::numeric_limits<int>::min();
       
       pos__ = 1;
-      current_statement__ = 85;
+      current_statement__ = 91;
       context__.validate_dims("data initialization","N_mic","int",
           context__.to_vec());
       N_mic = std::numeric_limits<int>::min();
       
-      current_statement__ = 85;
+      current_statement__ = 91;
       N_mic = context__.vals_i("N_mic")[(1 - 1)];
-      current_statement__ = 85;
-      current_statement__ = 85;
+      current_statement__ = 91;
+      current_statement__ = 91;
       check_greater_or_equal(function__, "N_mic", N_mic, 1);
-      current_statement__ = 86;
+      current_statement__ = 92;
       context__.validate_dims("data initialization","N_unbalanced","int",
           context__.to_vec());
       N_unbalanced = std::numeric_limits<int>::min();
       
-      current_statement__ = 86;
+      current_statement__ = 92;
       N_unbalanced = context__.vals_i("N_unbalanced")[(1 - 1)];
-      current_statement__ = 86;
-      current_statement__ = 86;
+      current_statement__ = 92;
+      current_statement__ = 92;
       check_greater_or_equal(function__, "N_unbalanced", N_unbalanced, 1);
-      current_statement__ = 87;
+      current_statement__ = 93;
       context__.validate_dims("data initialization","N_metabolite","int",
           context__.to_vec());
       N_metabolite = std::numeric_limits<int>::min();
       
-      current_statement__ = 87;
+      current_statement__ = 93;
       N_metabolite = context__.vals_i("N_metabolite")[(1 - 1)];
-      current_statement__ = 87;
-      current_statement__ = 87;
+      current_statement__ = 93;
+      current_statement__ = 93;
       check_greater_or_equal(function__, "N_metabolite", N_metabolite, 1);
-      current_statement__ = 88;
+      current_statement__ = 94;
       context__.validate_dims("data initialization","N_km","int",
           context__.to_vec());
       N_km = std::numeric_limits<int>::min();
       
-      current_statement__ = 88;
+      current_statement__ = 94;
       N_km = context__.vals_i("N_km")[(1 - 1)];
-      current_statement__ = 88;
-      current_statement__ = 88;
+      current_statement__ = 94;
+      current_statement__ = 94;
       check_greater_or_equal(function__, "N_km", N_km, 1);
-      current_statement__ = 89;
+      current_statement__ = 95;
       context__.validate_dims("data initialization","N_reaction","int",
           context__.to_vec());
       N_reaction = std::numeric_limits<int>::min();
       
-      current_statement__ = 89;
+      current_statement__ = 95;
       N_reaction = context__.vals_i("N_reaction")[(1 - 1)];
-      current_statement__ = 89;
-      current_statement__ = 89;
+      current_statement__ = 95;
+      current_statement__ = 95;
       check_greater_or_equal(function__, "N_reaction", N_reaction, 1);
-      current_statement__ = 90;
+      current_statement__ = 96;
       context__.validate_dims("data initialization","N_enzyme","int",
           context__.to_vec());
       N_enzyme = std::numeric_limits<int>::min();
       
-      current_statement__ = 90;
+      current_statement__ = 96;
       N_enzyme = context__.vals_i("N_enzyme")[(1 - 1)];
-      current_statement__ = 90;
-      current_statement__ = 90;
+      current_statement__ = 96;
+      current_statement__ = 96;
       check_greater_or_equal(function__, "N_enzyme", N_enzyme, 1);
-      current_statement__ = 91;
+      current_statement__ = 97;
       context__.validate_dims("data initialization","N_drain","int",
           context__.to_vec());
       N_drain = std::numeric_limits<int>::min();
       
-      current_statement__ = 91;
+      current_statement__ = 97;
       N_drain = context__.vals_i("N_drain")[(1 - 1)];
-      current_statement__ = 91;
-      current_statement__ = 91;
+      current_statement__ = 97;
+      current_statement__ = 97;
       check_greater_or_equal(function__, "N_drain", N_drain, 0);
-      current_statement__ = 92;
+      current_statement__ = 98;
+      context__.validate_dims("data initialization",
+          "N_phosphorylation_enzymes","int",context__.to_vec());
+      N_phosphorylation_enzymes = std::numeric_limits<int>::min();
+      
+      current_statement__ = 98;
+      N_phosphorylation_enzymes = context__.vals_i("N_phosphorylation_enzymes")[
+          (1 - 1)];
+      current_statement__ = 98;
+      current_statement__ = 98;
+      check_greater_or_equal(function__, "N_phosphorylation_enzymes",
+                             N_phosphorylation_enzymes, 0);
+      current_statement__ = 99;
       context__.validate_dims("data initialization","N_experiment","int",
           context__.to_vec());
       N_experiment = std::numeric_limits<int>::min();
       
-      current_statement__ = 92;
+      current_statement__ = 99;
       N_experiment = context__.vals_i("N_experiment")[(1 - 1)];
-      current_statement__ = 92;
-      current_statement__ = 92;
+      current_statement__ = 99;
+      current_statement__ = 99;
       check_greater_or_equal(function__, "N_experiment", N_experiment, 1);
-      current_statement__ = 93;
+      current_statement__ = 100;
       context__.validate_dims("data initialization","N_flux_measurement",
           "int",context__.to_vec());
       N_flux_measurement = std::numeric_limits<int>::min();
       
-      current_statement__ = 93;
+      current_statement__ = 100;
       N_flux_measurement = context__.vals_i("N_flux_measurement")[(1 - 1)];
-      current_statement__ = 93;
-      current_statement__ = 93;
+      current_statement__ = 100;
+      current_statement__ = 100;
       check_greater_or_equal(function__, "N_flux_measurement",
                              N_flux_measurement, 1);
-      current_statement__ = 94;
+      current_statement__ = 101;
       context__.validate_dims("data initialization","N_conc_measurement",
           "int",context__.to_vec());
       N_conc_measurement = std::numeric_limits<int>::min();
       
-      current_statement__ = 94;
+      current_statement__ = 101;
       N_conc_measurement = context__.vals_i("N_conc_measurement")[(1 - 1)];
-      current_statement__ = 94;
-      current_statement__ = 94;
+      current_statement__ = 101;
+      current_statement__ = 101;
       check_greater_or_equal(function__, "N_conc_measurement",
                              N_conc_measurement, 1);
-      current_statement__ = 95;
+      current_statement__ = 102;
       context__.validate_dims("data initialization",
           "N_competitive_inhibitor","int",context__.to_vec());
       N_competitive_inhibitor = std::numeric_limits<int>::min();
       
-      current_statement__ = 95;
+      current_statement__ = 102;
       N_competitive_inhibitor = context__.vals_i("N_competitive_inhibitor")[
           (1 - 1)];
-      current_statement__ = 95;
-      current_statement__ = 95;
+      current_statement__ = 102;
+      current_statement__ = 102;
       check_greater_or_equal(function__, "N_competitive_inhibitor",
                              N_competitive_inhibitor, 0);
-      current_statement__ = 96;
+      current_statement__ = 103;
       context__.validate_dims("data initialization","N_allosteric_inhibitor",
           "int",context__.to_vec());
       N_allosteric_inhibitor = std::numeric_limits<int>::min();
       
-      current_statement__ = 96;
+      current_statement__ = 103;
       N_allosteric_inhibitor = context__.vals_i("N_allosteric_inhibitor")[
           (1 - 1)];
-      current_statement__ = 96;
-      current_statement__ = 96;
+      current_statement__ = 103;
+      current_statement__ = 103;
       check_greater_or_equal(function__, "N_allosteric_inhibitor",
                              N_allosteric_inhibitor, 0);
-      current_statement__ = 97;
+      current_statement__ = 104;
       context__.validate_dims("data initialization","N_allosteric_activator",
           "int",context__.to_vec());
       N_allosteric_activator = std::numeric_limits<int>::min();
       
-      current_statement__ = 97;
+      current_statement__ = 104;
       N_allosteric_activator = context__.vals_i("N_allosteric_activator")[
           (1 - 1)];
-      current_statement__ = 97;
-      current_statement__ = 97;
+      current_statement__ = 104;
+      current_statement__ = 104;
       check_greater_or_equal(function__, "N_allosteric_activator",
                              N_allosteric_activator, 0);
-      current_statement__ = 98;
+      current_statement__ = 105;
       context__.validate_dims("data initialization","N_allosteric_enzyme",
           "int",context__.to_vec());
       N_allosteric_enzyme = std::numeric_limits<int>::min();
       
-      current_statement__ = 98;
+      current_statement__ = 105;
       N_allosteric_enzyme = context__.vals_i("N_allosteric_enzyme")[(1 - 1)];
-      current_statement__ = 98;
-      current_statement__ = 98;
+      current_statement__ = 105;
+      current_statement__ = 105;
       check_greater_or_equal(function__, "N_allosteric_enzyme",
                              N_allosteric_enzyme, 0);
-      current_statement__ = 99;
+      current_statement__ = 106;
       context__.validate_dims("data initialization","N_enzyme_measurement",
           "int",context__.to_vec());
       N_enzyme_measurement = std::numeric_limits<int>::min();
       
-      current_statement__ = 99;
+      current_statement__ = 106;
       N_enzyme_measurement = context__.vals_i("N_enzyme_measurement")[
           (1 - 1)];
-      current_statement__ = 99;
-      current_statement__ = 99;
+      current_statement__ = 106;
+      current_statement__ = 106;
       check_greater_or_equal(function__, "N_enzyme_measurement",
                              N_enzyme_measurement, 0);
-      current_statement__ = 100;
+      current_statement__ = 107;
       validate_non_negative_index("unbalanced_mic_ix", "N_unbalanced",
                                   N_unbalanced);
-      current_statement__ = 101;
+      current_statement__ = 108;
       context__.validate_dims("data initialization","unbalanced_mic_ix",
           "int",context__.to_vec(N_unbalanced));
       unbalanced_mic_ix = std::vector<int>(N_unbalanced, std::numeric_limits<int>::min());
       
-      current_statement__ = 101;
+      current_statement__ = 108;
       assign(unbalanced_mic_ix, nil_index_list(),
         context__.vals_i("unbalanced_mic_ix"),
         "assigning variable unbalanced_mic_ix");
-      current_statement__ = 101;
+      current_statement__ = 108;
       for (int sym1__ = 1; sym1__ <= N_unbalanced; ++sym1__) {
-        current_statement__ = 101;
-        current_statement__ = 101;
+        current_statement__ = 108;
+        current_statement__ = 108;
         check_greater_or_equal(function__, "unbalanced_mic_ix[sym1__]",
                                unbalanced_mic_ix[(sym1__ - 1)], 1);}
-      current_statement__ = 101;
+      current_statement__ = 108;
       for (int sym1__ = 1; sym1__ <= N_unbalanced; ++sym1__) {
-        current_statement__ = 101;
-        current_statement__ = 101;
+        current_statement__ = 108;
+        current_statement__ = 108;
         check_less_or_equal(function__, "unbalanced_mic_ix[sym1__]",
                             unbalanced_mic_ix[(sym1__ - 1)], N_mic);}
-      current_statement__ = 102;
+      current_statement__ = 109;
       validate_non_negative_index("balanced_mic_ix", "N_mic - N_unbalanced",
                                   (N_mic - N_unbalanced));
-      current_statement__ = 103;
+      current_statement__ = 110;
       context__.validate_dims("data initialization","balanced_mic_ix","int",
           context__.to_vec((N_mic - N_unbalanced)));
       balanced_mic_ix = std::vector<int>((N_mic - N_unbalanced), std::numeric_limits<int>::min());
       
-      current_statement__ = 103;
+      current_statement__ = 110;
       assign(balanced_mic_ix, nil_index_list(),
         context__.vals_i("balanced_mic_ix"),
         "assigning variable balanced_mic_ix");
-      current_statement__ = 103;
+      current_statement__ = 110;
       for (int sym1__ = 1; sym1__ <= (N_mic - N_unbalanced); ++sym1__) {
-        current_statement__ = 103;
-        current_statement__ = 103;
+        current_statement__ = 110;
+        current_statement__ = 110;
         check_greater_or_equal(function__, "balanced_mic_ix[sym1__]",
                                balanced_mic_ix[(sym1__ - 1)], 1);}
-      current_statement__ = 103;
+      current_statement__ = 110;
       for (int sym1__ = 1; sym1__ <= (N_mic - N_unbalanced); ++sym1__) {
-        current_statement__ = 103;
-        current_statement__ = 103;
+        current_statement__ = 110;
+        current_statement__ = 110;
         check_less_or_equal(function__, "balanced_mic_ix[sym1__]",
                             balanced_mic_ix[(sym1__ - 1)], N_mic);}
-      current_statement__ = 104;
+      current_statement__ = 111;
       validate_non_negative_index("experiment_yconc", "N_conc_measurement",
                                   N_conc_measurement);
-      current_statement__ = 105;
+      current_statement__ = 112;
       context__.validate_dims("data initialization","experiment_yconc","int",
           context__.to_vec(N_conc_measurement));
       experiment_yconc = std::vector<int>(N_conc_measurement, std::numeric_limits<int>::min());
       
-      current_statement__ = 105;
+      current_statement__ = 112;
       assign(experiment_yconc, nil_index_list(),
         context__.vals_i("experiment_yconc"),
         "assigning variable experiment_yconc");
-      current_statement__ = 105;
+      current_statement__ = 112;
       for (int sym1__ = 1; sym1__ <= N_conc_measurement; ++sym1__) {
-        current_statement__ = 105;
-        current_statement__ = 105;
+        current_statement__ = 112;
+        current_statement__ = 112;
         check_greater_or_equal(function__, "experiment_yconc[sym1__]",
                                experiment_yconc[(sym1__ - 1)], 1);}
-      current_statement__ = 105;
+      current_statement__ = 112;
       for (int sym1__ = 1; sym1__ <= N_conc_measurement; ++sym1__) {
-        current_statement__ = 105;
-        current_statement__ = 105;
+        current_statement__ = 112;
+        current_statement__ = 112;
         check_less_or_equal(function__, "experiment_yconc[sym1__]",
                             experiment_yconc[(sym1__ - 1)], N_experiment);}
-      current_statement__ = 106;
+      current_statement__ = 113;
       validate_non_negative_index("mic_ix_yconc", "N_conc_measurement",
                                   N_conc_measurement);
-      current_statement__ = 107;
+      current_statement__ = 114;
       context__.validate_dims("data initialization","mic_ix_yconc","int",
           context__.to_vec(N_conc_measurement));
       mic_ix_yconc = std::vector<int>(N_conc_measurement, std::numeric_limits<int>::min());
       
-      current_statement__ = 107;
+      current_statement__ = 114;
       assign(mic_ix_yconc, nil_index_list(),
         context__.vals_i("mic_ix_yconc"), "assigning variable mic_ix_yconc");
-      current_statement__ = 107;
+      current_statement__ = 114;
       for (int sym1__ = 1; sym1__ <= N_conc_measurement; ++sym1__) {
-        current_statement__ = 107;
-        current_statement__ = 107;
+        current_statement__ = 114;
+        current_statement__ = 114;
         check_greater_or_equal(function__, "mic_ix_yconc[sym1__]",
                                mic_ix_yconc[(sym1__ - 1)], 1);}
-      current_statement__ = 107;
+      current_statement__ = 114;
       for (int sym1__ = 1; sym1__ <= N_conc_measurement; ++sym1__) {
-        current_statement__ = 107;
-        current_statement__ = 107;
+        current_statement__ = 114;
+        current_statement__ = 114;
         check_less_or_equal(function__, "mic_ix_yconc[sym1__]",
                             mic_ix_yconc[(sym1__ - 1)], N_mic);}
-      current_statement__ = 108;
+      current_statement__ = 115;
       validate_non_negative_index("yconc", "N_conc_measurement",
                                   N_conc_measurement);
-      current_statement__ = 109;
+      current_statement__ = 116;
       context__.validate_dims("data initialization","yconc","double",
           context__.to_vec(N_conc_measurement));
       yconc = std::vector<double>(N_conc_measurement, std::numeric_limits<double>::quiet_NaN());
       
-      current_statement__ = 109;
+      current_statement__ = 116;
       assign(yconc, nil_index_list(), context__.vals_r("yconc"),
         "assigning variable yconc");
-      current_statement__ = 110;
+      current_statement__ = 117;
       validate_non_negative_index("sigma_conc", "N_conc_measurement",
                                   N_conc_measurement);
-      current_statement__ = 111;
+      current_statement__ = 118;
       context__.validate_dims("data initialization","sigma_conc","double",
           context__.to_vec(N_conc_measurement));
       sigma_conc = Eigen::Matrix<double, -1, 1>(N_conc_measurement);
@@ -2201,89 +2408,89 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> sigma_conc_flat__;
-        current_statement__ = 111;
+        current_statement__ = 118;
         assign(sigma_conc_flat__, nil_index_list(),
           context__.vals_r("sigma_conc"),
           "assigning variable sigma_conc_flat__");
-        current_statement__ = 111;
+        current_statement__ = 118;
         pos__ = 1;
-        current_statement__ = 111;
+        current_statement__ = 118;
         for (int sym1__ = 1; sym1__ <= N_conc_measurement; ++sym1__) {
-          current_statement__ = 111;
+          current_statement__ = 118;
           assign(sigma_conc, cons_list(index_uni(sym1__), nil_index_list()),
             sigma_conc_flat__[(pos__ - 1)], "assigning variable sigma_conc");
-          current_statement__ = 111;
+          current_statement__ = 118;
           pos__ = (pos__ + 1);}
       }
-      current_statement__ = 111;
+      current_statement__ = 118;
       for (int sym1__ = 1; sym1__ <= N_conc_measurement; ++sym1__) {
-        current_statement__ = 111;
-        current_statement__ = 111;
+        current_statement__ = 118;
+        current_statement__ = 118;
         check_greater_or_equal(function__, "sigma_conc[sym1__]",
                                sigma_conc[(sym1__ - 1)], 0);}
-      current_statement__ = 112;
+      current_statement__ = 119;
       validate_non_negative_index("experiment_yflux", "N_flux_measurement",
                                   N_flux_measurement);
-      current_statement__ = 113;
+      current_statement__ = 120;
       context__.validate_dims("data initialization","experiment_yflux","int",
           context__.to_vec(N_flux_measurement));
       experiment_yflux = std::vector<int>(N_flux_measurement, std::numeric_limits<int>::min());
       
-      current_statement__ = 113;
+      current_statement__ = 120;
       assign(experiment_yflux, nil_index_list(),
         context__.vals_i("experiment_yflux"),
         "assigning variable experiment_yflux");
-      current_statement__ = 113;
+      current_statement__ = 120;
       for (int sym1__ = 1; sym1__ <= N_flux_measurement; ++sym1__) {
-        current_statement__ = 113;
-        current_statement__ = 113;
+        current_statement__ = 120;
+        current_statement__ = 120;
         check_greater_or_equal(function__, "experiment_yflux[sym1__]",
                                experiment_yflux[(sym1__ - 1)], 1);}
-      current_statement__ = 113;
+      current_statement__ = 120;
       for (int sym1__ = 1; sym1__ <= N_flux_measurement; ++sym1__) {
-        current_statement__ = 113;
-        current_statement__ = 113;
+        current_statement__ = 120;
+        current_statement__ = 120;
         check_less_or_equal(function__, "experiment_yflux[sym1__]",
                             experiment_yflux[(sym1__ - 1)], N_experiment);}
-      current_statement__ = 114;
+      current_statement__ = 121;
       validate_non_negative_index("reaction_yflux", "N_flux_measurement",
                                   N_flux_measurement);
-      current_statement__ = 115;
+      current_statement__ = 122;
       context__.validate_dims("data initialization","reaction_yflux","int",
           context__.to_vec(N_flux_measurement));
       reaction_yflux = std::vector<int>(N_flux_measurement, std::numeric_limits<int>::min());
       
-      current_statement__ = 115;
+      current_statement__ = 122;
       assign(reaction_yflux, nil_index_list(),
         context__.vals_i("reaction_yflux"),
         "assigning variable reaction_yflux");
-      current_statement__ = 115;
+      current_statement__ = 122;
       for (int sym1__ = 1; sym1__ <= N_flux_measurement; ++sym1__) {
-        current_statement__ = 115;
-        current_statement__ = 115;
+        current_statement__ = 122;
+        current_statement__ = 122;
         check_greater_or_equal(function__, "reaction_yflux[sym1__]",
                                reaction_yflux[(sym1__ - 1)], 1);}
-      current_statement__ = 115;
+      current_statement__ = 122;
       for (int sym1__ = 1; sym1__ <= N_flux_measurement; ++sym1__) {
-        current_statement__ = 115;
-        current_statement__ = 115;
+        current_statement__ = 122;
+        current_statement__ = 122;
         check_less_or_equal(function__, "reaction_yflux[sym1__]",
                             reaction_yflux[(sym1__ - 1)], N_reaction);}
-      current_statement__ = 116;
+      current_statement__ = 123;
       validate_non_negative_index("yflux", "N_flux_measurement",
                                   N_flux_measurement);
-      current_statement__ = 117;
+      current_statement__ = 124;
       context__.validate_dims("data initialization","yflux","double",
           context__.to_vec(N_flux_measurement));
       yflux = std::vector<double>(N_flux_measurement, std::numeric_limits<double>::quiet_NaN());
       
-      current_statement__ = 117;
+      current_statement__ = 124;
       assign(yflux, nil_index_list(), context__.vals_r("yflux"),
         "assigning variable yflux");
-      current_statement__ = 118;
+      current_statement__ = 125;
       validate_non_negative_index("sigma_flux", "N_flux_measurement",
                                   N_flux_measurement);
-      current_statement__ = 119;
+      current_statement__ = 126;
       context__.validate_dims("data initialization","sigma_flux","double",
           context__.to_vec(N_flux_measurement));
       sigma_flux = Eigen::Matrix<double, -1, 1>(N_flux_measurement);
@@ -2291,88 +2498,88 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> sigma_flux_flat__;
-        current_statement__ = 119;
+        current_statement__ = 126;
         assign(sigma_flux_flat__, nil_index_list(),
           context__.vals_r("sigma_flux"),
           "assigning variable sigma_flux_flat__");
-        current_statement__ = 119;
+        current_statement__ = 126;
         pos__ = 1;
-        current_statement__ = 119;
+        current_statement__ = 126;
         for (int sym1__ = 1; sym1__ <= N_flux_measurement; ++sym1__) {
-          current_statement__ = 119;
+          current_statement__ = 126;
           assign(sigma_flux, cons_list(index_uni(sym1__), nil_index_list()),
             sigma_flux_flat__[(pos__ - 1)], "assigning variable sigma_flux");
-          current_statement__ = 119;
+          current_statement__ = 126;
           pos__ = (pos__ + 1);}
       }
-      current_statement__ = 119;
+      current_statement__ = 126;
       for (int sym1__ = 1; sym1__ <= N_flux_measurement; ++sym1__) {
-        current_statement__ = 119;
-        current_statement__ = 119;
+        current_statement__ = 126;
+        current_statement__ = 126;
         check_greater_or_equal(function__, "sigma_flux[sym1__]",
                                sigma_flux[(sym1__ - 1)], 0);}
-      current_statement__ = 120;
+      current_statement__ = 127;
       validate_non_negative_index("experiment_yenz", "N_enzyme_measurement",
                                   N_enzyme_measurement);
-      current_statement__ = 121;
+      current_statement__ = 128;
       context__.validate_dims("data initialization","experiment_yenz","int",
           context__.to_vec(N_enzyme_measurement));
       experiment_yenz = std::vector<int>(N_enzyme_measurement, std::numeric_limits<int>::min());
       
-      current_statement__ = 121;
+      current_statement__ = 128;
       assign(experiment_yenz, nil_index_list(),
         context__.vals_i("experiment_yenz"),
         "assigning variable experiment_yenz");
-      current_statement__ = 121;
+      current_statement__ = 128;
       for (int sym1__ = 1; sym1__ <= N_enzyme_measurement; ++sym1__) {
-        current_statement__ = 121;
-        current_statement__ = 121;
+        current_statement__ = 128;
+        current_statement__ = 128;
         check_greater_or_equal(function__, "experiment_yenz[sym1__]",
                                experiment_yenz[(sym1__ - 1)], 0);}
-      current_statement__ = 121;
+      current_statement__ = 128;
       for (int sym1__ = 1; sym1__ <= N_enzyme_measurement; ++sym1__) {
-        current_statement__ = 121;
-        current_statement__ = 121;
+        current_statement__ = 128;
+        current_statement__ = 128;
         check_less_or_equal(function__, "experiment_yenz[sym1__]",
                             experiment_yenz[(sym1__ - 1)], N_experiment);}
-      current_statement__ = 122;
+      current_statement__ = 129;
       validate_non_negative_index("enzyme_yenz", "N_enzyme_measurement",
                                   N_enzyme_measurement);
-      current_statement__ = 123;
+      current_statement__ = 130;
       context__.validate_dims("data initialization","enzyme_yenz","int",
           context__.to_vec(N_enzyme_measurement));
       enzyme_yenz = std::vector<int>(N_enzyme_measurement, std::numeric_limits<int>::min());
       
-      current_statement__ = 123;
+      current_statement__ = 130;
       assign(enzyme_yenz, nil_index_list(), context__.vals_i("enzyme_yenz"),
         "assigning variable enzyme_yenz");
-      current_statement__ = 123;
+      current_statement__ = 130;
       for (int sym1__ = 1; sym1__ <= N_enzyme_measurement; ++sym1__) {
-        current_statement__ = 123;
-        current_statement__ = 123;
+        current_statement__ = 130;
+        current_statement__ = 130;
         check_greater_or_equal(function__, "enzyme_yenz[sym1__]",
                                enzyme_yenz[(sym1__ - 1)], 0);}
-      current_statement__ = 123;
+      current_statement__ = 130;
       for (int sym1__ = 1; sym1__ <= N_enzyme_measurement; ++sym1__) {
-        current_statement__ = 123;
-        current_statement__ = 123;
+        current_statement__ = 130;
+        current_statement__ = 130;
         check_less_or_equal(function__, "enzyme_yenz[sym1__]",
                             enzyme_yenz[(sym1__ - 1)], N_enzyme);}
-      current_statement__ = 124;
+      current_statement__ = 131;
       validate_non_negative_index("yenz", "N_enzyme_measurement",
                                   N_enzyme_measurement);
-      current_statement__ = 125;
+      current_statement__ = 132;
       context__.validate_dims("data initialization","yenz","double",
           context__.to_vec(N_enzyme_measurement));
       yenz = std::vector<double>(N_enzyme_measurement, std::numeric_limits<double>::quiet_NaN());
       
-      current_statement__ = 125;
+      current_statement__ = 132;
       assign(yenz, nil_index_list(), context__.vals_r("yenz"),
         "assigning variable yenz");
-      current_statement__ = 126;
+      current_statement__ = 133;
       validate_non_negative_index("sigma_enz", "N_enzyme_measurement",
                                   N_enzyme_measurement);
-      current_statement__ = 127;
+      current_statement__ = 134;
       context__.validate_dims("data initialization","sigma_enz","double",
           context__.to_vec(N_enzyme_measurement));
       sigma_enz = Eigen::Matrix<double, -1, 1>(N_enzyme_measurement);
@@ -2380,30 +2587,30 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> sigma_enz_flat__;
-        current_statement__ = 127;
+        current_statement__ = 134;
         assign(sigma_enz_flat__, nil_index_list(),
           context__.vals_r("sigma_enz"),
           "assigning variable sigma_enz_flat__");
-        current_statement__ = 127;
+        current_statement__ = 134;
         pos__ = 1;
-        current_statement__ = 127;
+        current_statement__ = 134;
         for (int sym1__ = 1; sym1__ <= N_enzyme_measurement; ++sym1__) {
-          current_statement__ = 127;
+          current_statement__ = 134;
           assign(sigma_enz, cons_list(index_uni(sym1__), nil_index_list()),
             sigma_enz_flat__[(pos__ - 1)], "assigning variable sigma_enz");
-          current_statement__ = 127;
+          current_statement__ = 134;
           pos__ = (pos__ + 1);}
       }
-      current_statement__ = 127;
+      current_statement__ = 134;
       for (int sym1__ = 1; sym1__ <= N_enzyme_measurement; ++sym1__) {
-        current_statement__ = 127;
-        current_statement__ = 127;
+        current_statement__ = 134;
+        current_statement__ = 134;
         check_greater_or_equal(function__, "sigma_enz[sym1__]",
                                sigma_enz[(sym1__ - 1)], 0);}
-      current_statement__ = 128;
+      current_statement__ = 135;
       validate_non_negative_index("prior_loc_formation_energy",
                                   "N_metabolite", N_metabolite);
-      current_statement__ = 129;
+      current_statement__ = 136;
       context__.validate_dims("data initialization",
           "prior_loc_formation_energy","double",
           context__.to_vec(N_metabolite));
@@ -2412,26 +2619,26 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> prior_loc_formation_energy_flat__;
-        current_statement__ = 129;
+        current_statement__ = 136;
         assign(prior_loc_formation_energy_flat__, nil_index_list(),
           context__.vals_r("prior_loc_formation_energy"),
           "assigning variable prior_loc_formation_energy_flat__");
-        current_statement__ = 129;
+        current_statement__ = 136;
         pos__ = 1;
-        current_statement__ = 129;
+        current_statement__ = 136;
         for (int sym1__ = 1; sym1__ <= N_metabolite; ++sym1__) {
-          current_statement__ = 129;
+          current_statement__ = 136;
           assign(prior_loc_formation_energy,
             cons_list(index_uni(sym1__), nil_index_list()),
             prior_loc_formation_energy_flat__[(pos__ - 1)],
             "assigning variable prior_loc_formation_energy");
-          current_statement__ = 129;
+          current_statement__ = 136;
           pos__ = (pos__ + 1);}
       }
-      current_statement__ = 130;
+      current_statement__ = 137;
       validate_non_negative_index("prior_scale_formation_energy",
                                   "N_metabolite", N_metabolite);
-      current_statement__ = 131;
+      current_statement__ = 138;
       context__.validate_dims("data initialization",
           "prior_scale_formation_energy","double",
           context__.to_vec(N_metabolite));
@@ -2440,33 +2647,33 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> prior_scale_formation_energy_flat__;
-        current_statement__ = 131;
+        current_statement__ = 138;
         assign(prior_scale_formation_energy_flat__, nil_index_list(),
           context__.vals_r("prior_scale_formation_energy"),
           "assigning variable prior_scale_formation_energy_flat__");
-        current_statement__ = 131;
+        current_statement__ = 138;
         pos__ = 1;
-        current_statement__ = 131;
+        current_statement__ = 138;
         for (int sym1__ = 1; sym1__ <= N_metabolite; ++sym1__) {
-          current_statement__ = 131;
+          current_statement__ = 138;
           assign(prior_scale_formation_energy,
             cons_list(index_uni(sym1__), nil_index_list()),
             prior_scale_formation_energy_flat__[(pos__ - 1)],
             "assigning variable prior_scale_formation_energy");
-          current_statement__ = 131;
+          current_statement__ = 138;
           pos__ = (pos__ + 1);}
       }
-      current_statement__ = 131;
+      current_statement__ = 138;
       for (int sym1__ = 1; sym1__ <= N_metabolite; ++sym1__) {
-        current_statement__ = 131;
-        current_statement__ = 131;
+        current_statement__ = 138;
+        current_statement__ = 138;
         check_greater_or_equal(function__,
                                "prior_scale_formation_energy[sym1__]",
                                prior_scale_formation_energy[(sym1__ - 1)], 0);
       }
-      current_statement__ = 132;
+      current_statement__ = 139;
       validate_non_negative_index("prior_loc_kcat", "N_enzyme", N_enzyme);
-      current_statement__ = 133;
+      current_statement__ = 140;
       context__.validate_dims("data initialization","prior_loc_kcat",
           "double",context__.to_vec(N_enzyme));
       prior_loc_kcat = Eigen::Matrix<double, -1, 1>(N_enzyme);
@@ -2474,25 +2681,25 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> prior_loc_kcat_flat__;
-        current_statement__ = 133;
+        current_statement__ = 140;
         assign(prior_loc_kcat_flat__, nil_index_list(),
           context__.vals_r("prior_loc_kcat"),
           "assigning variable prior_loc_kcat_flat__");
-        current_statement__ = 133;
+        current_statement__ = 140;
         pos__ = 1;
-        current_statement__ = 133;
+        current_statement__ = 140;
         for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
-          current_statement__ = 133;
+          current_statement__ = 140;
           assign(prior_loc_kcat,
             cons_list(index_uni(sym1__), nil_index_list()),
             prior_loc_kcat_flat__[(pos__ - 1)],
             "assigning variable prior_loc_kcat");
-          current_statement__ = 133;
+          current_statement__ = 140;
           pos__ = (pos__ + 1);}
       }
-      current_statement__ = 134;
+      current_statement__ = 141;
       validate_non_negative_index("prior_scale_kcat", "N_enzyme", N_enzyme);
-      current_statement__ = 135;
+      current_statement__ = 142;
       context__.validate_dims("data initialization","prior_scale_kcat",
           "double",context__.to_vec(N_enzyme));
       prior_scale_kcat = Eigen::Matrix<double, -1, 1>(N_enzyme);
@@ -2500,31 +2707,31 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> prior_scale_kcat_flat__;
-        current_statement__ = 135;
+        current_statement__ = 142;
         assign(prior_scale_kcat_flat__, nil_index_list(),
           context__.vals_r("prior_scale_kcat"),
           "assigning variable prior_scale_kcat_flat__");
-        current_statement__ = 135;
+        current_statement__ = 142;
         pos__ = 1;
-        current_statement__ = 135;
+        current_statement__ = 142;
         for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
-          current_statement__ = 135;
+          current_statement__ = 142;
           assign(prior_scale_kcat,
             cons_list(index_uni(sym1__), nil_index_list()),
             prior_scale_kcat_flat__[(pos__ - 1)],
             "assigning variable prior_scale_kcat");
-          current_statement__ = 135;
+          current_statement__ = 142;
           pos__ = (pos__ + 1);}
       }
-      current_statement__ = 135;
+      current_statement__ = 142;
       for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
-        current_statement__ = 135;
-        current_statement__ = 135;
+        current_statement__ = 142;
+        current_statement__ = 142;
         check_greater_or_equal(function__, "prior_scale_kcat[sym1__]",
                                prior_scale_kcat[(sym1__ - 1)], 0);}
-      current_statement__ = 136;
+      current_statement__ = 143;
       validate_non_negative_index("prior_loc_km", "N_km", N_km);
-      current_statement__ = 137;
+      current_statement__ = 144;
       context__.validate_dims("data initialization","prior_loc_km","double",
           context__.to_vec(N_km));
       prior_loc_km = Eigen::Matrix<double, -1, 1>(N_km);
@@ -2532,25 +2739,25 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> prior_loc_km_flat__;
-        current_statement__ = 137;
+        current_statement__ = 144;
         assign(prior_loc_km_flat__, nil_index_list(),
           context__.vals_r("prior_loc_km"),
           "assigning variable prior_loc_km_flat__");
-        current_statement__ = 137;
+        current_statement__ = 144;
         pos__ = 1;
-        current_statement__ = 137;
+        current_statement__ = 144;
         for (int sym1__ = 1; sym1__ <= N_km; ++sym1__) {
-          current_statement__ = 137;
+          current_statement__ = 144;
           assign(prior_loc_km,
             cons_list(index_uni(sym1__), nil_index_list()),
             prior_loc_km_flat__[(pos__ - 1)],
             "assigning variable prior_loc_km");
-          current_statement__ = 137;
+          current_statement__ = 144;
           pos__ = (pos__ + 1);}
       }
-      current_statement__ = 138;
+      current_statement__ = 145;
       validate_non_negative_index("prior_scale_km", "N_km", N_km);
-      current_statement__ = 139;
+      current_statement__ = 146;
       context__.validate_dims("data initialization","prior_scale_km",
           "double",context__.to_vec(N_km));
       prior_scale_km = Eigen::Matrix<double, -1, 1>(N_km);
@@ -2558,32 +2765,32 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> prior_scale_km_flat__;
-        current_statement__ = 139;
+        current_statement__ = 146;
         assign(prior_scale_km_flat__, nil_index_list(),
           context__.vals_r("prior_scale_km"),
           "assigning variable prior_scale_km_flat__");
-        current_statement__ = 139;
+        current_statement__ = 146;
         pos__ = 1;
-        current_statement__ = 139;
+        current_statement__ = 146;
         for (int sym1__ = 1; sym1__ <= N_km; ++sym1__) {
-          current_statement__ = 139;
+          current_statement__ = 146;
           assign(prior_scale_km,
             cons_list(index_uni(sym1__), nil_index_list()),
             prior_scale_km_flat__[(pos__ - 1)],
             "assigning variable prior_scale_km");
-          current_statement__ = 139;
+          current_statement__ = 146;
           pos__ = (pos__ + 1);}
       }
-      current_statement__ = 139;
+      current_statement__ = 146;
       for (int sym1__ = 1; sym1__ <= N_km; ++sym1__) {
-        current_statement__ = 139;
-        current_statement__ = 139;
+        current_statement__ = 146;
+        current_statement__ = 146;
         check_greater_or_equal(function__, "prior_scale_km[sym1__]",
                                prior_scale_km[(sym1__ - 1)], 0);}
-      current_statement__ = 140;
+      current_statement__ = 147;
       validate_non_negative_index("prior_loc_ki", "N_competitive_inhibitor",
                                   N_competitive_inhibitor);
-      current_statement__ = 141;
+      current_statement__ = 148;
       context__.validate_dims("data initialization","prior_loc_ki","double",
           context__.to_vec(N_competitive_inhibitor));
       prior_loc_ki = Eigen::Matrix<double, -1, 1>(N_competitive_inhibitor);
@@ -2591,27 +2798,27 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> prior_loc_ki_flat__;
-        current_statement__ = 141;
+        current_statement__ = 148;
         assign(prior_loc_ki_flat__, nil_index_list(),
           context__.vals_r("prior_loc_ki"),
           "assigning variable prior_loc_ki_flat__");
-        current_statement__ = 141;
+        current_statement__ = 148;
         pos__ = 1;
-        current_statement__ = 141;
+        current_statement__ = 148;
         for (int sym1__ = 1; sym1__ <= N_competitive_inhibitor; ++sym1__) {
-          current_statement__ = 141;
+          current_statement__ = 148;
           assign(prior_loc_ki,
             cons_list(index_uni(sym1__), nil_index_list()),
             prior_loc_ki_flat__[(pos__ - 1)],
             "assigning variable prior_loc_ki");
-          current_statement__ = 141;
+          current_statement__ = 148;
           pos__ = (pos__ + 1);}
       }
-      current_statement__ = 142;
+      current_statement__ = 149;
       validate_non_negative_index("prior_scale_ki",
                                   "N_competitive_inhibitor",
                                   N_competitive_inhibitor);
-      current_statement__ = 143;
+      current_statement__ = 150;
       context__.validate_dims("data initialization","prior_scale_ki",
           "double",context__.to_vec(N_competitive_inhibitor));
       prior_scale_ki = Eigen::Matrix<double, -1, 1>(N_competitive_inhibitor);
@@ -2619,33 +2826,33 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> prior_scale_ki_flat__;
-        current_statement__ = 143;
+        current_statement__ = 150;
         assign(prior_scale_ki_flat__, nil_index_list(),
           context__.vals_r("prior_scale_ki"),
           "assigning variable prior_scale_ki_flat__");
-        current_statement__ = 143;
+        current_statement__ = 150;
         pos__ = 1;
-        current_statement__ = 143;
+        current_statement__ = 150;
         for (int sym1__ = 1; sym1__ <= N_competitive_inhibitor; ++sym1__) {
-          current_statement__ = 143;
+          current_statement__ = 150;
           assign(prior_scale_ki,
             cons_list(index_uni(sym1__), nil_index_list()),
             prior_scale_ki_flat__[(pos__ - 1)],
             "assigning variable prior_scale_ki");
-          current_statement__ = 143;
+          current_statement__ = 150;
           pos__ = (pos__ + 1);}
       }
-      current_statement__ = 143;
+      current_statement__ = 150;
       for (int sym1__ = 1; sym1__ <= N_competitive_inhibitor; ++sym1__) {
-        current_statement__ = 143;
-        current_statement__ = 143;
+        current_statement__ = 150;
+        current_statement__ = 150;
         check_greater_or_equal(function__, "prior_scale_ki[sym1__]",
                                prior_scale_ki[(sym1__ - 1)], 0);}
-      current_statement__ = 144;
+      current_statement__ = 151;
       validate_non_negative_index("prior_loc_diss_t",
                                   "N_allosteric_inhibitor",
                                   N_allosteric_inhibitor);
-      current_statement__ = 145;
+      current_statement__ = 152;
       context__.validate_dims("data initialization","prior_loc_diss_t",
           "double",context__.to_vec(N_allosteric_inhibitor));
       prior_loc_diss_t = Eigen::Matrix<double, -1, 1>(N_allosteric_inhibitor);
@@ -2653,27 +2860,27 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> prior_loc_diss_t_flat__;
-        current_statement__ = 145;
+        current_statement__ = 152;
         assign(prior_loc_diss_t_flat__, nil_index_list(),
           context__.vals_r("prior_loc_diss_t"),
           "assigning variable prior_loc_diss_t_flat__");
-        current_statement__ = 145;
+        current_statement__ = 152;
         pos__ = 1;
-        current_statement__ = 145;
+        current_statement__ = 152;
         for (int sym1__ = 1; sym1__ <= N_allosteric_inhibitor; ++sym1__) {
-          current_statement__ = 145;
+          current_statement__ = 152;
           assign(prior_loc_diss_t,
             cons_list(index_uni(sym1__), nil_index_list()),
             prior_loc_diss_t_flat__[(pos__ - 1)],
             "assigning variable prior_loc_diss_t");
-          current_statement__ = 145;
+          current_statement__ = 152;
           pos__ = (pos__ + 1);}
       }
-      current_statement__ = 146;
+      current_statement__ = 153;
       validate_non_negative_index("prior_scale_diss_t",
                                   "N_allosteric_inhibitor",
                                   N_allosteric_inhibitor);
-      current_statement__ = 147;
+      current_statement__ = 154;
       context__.validate_dims("data initialization","prior_scale_diss_t",
           "double",context__.to_vec(N_allosteric_inhibitor));
       prior_scale_diss_t = Eigen::Matrix<double, -1, 1>(N_allosteric_inhibitor);
@@ -2681,33 +2888,33 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> prior_scale_diss_t_flat__;
-        current_statement__ = 147;
+        current_statement__ = 154;
         assign(prior_scale_diss_t_flat__, nil_index_list(),
           context__.vals_r("prior_scale_diss_t"),
           "assigning variable prior_scale_diss_t_flat__");
-        current_statement__ = 147;
+        current_statement__ = 154;
         pos__ = 1;
-        current_statement__ = 147;
+        current_statement__ = 154;
         for (int sym1__ = 1; sym1__ <= N_allosteric_inhibitor; ++sym1__) {
-          current_statement__ = 147;
+          current_statement__ = 154;
           assign(prior_scale_diss_t,
             cons_list(index_uni(sym1__), nil_index_list()),
             prior_scale_diss_t_flat__[(pos__ - 1)],
             "assigning variable prior_scale_diss_t");
-          current_statement__ = 147;
+          current_statement__ = 154;
           pos__ = (pos__ + 1);}
       }
-      current_statement__ = 147;
+      current_statement__ = 154;
       for (int sym1__ = 1; sym1__ <= N_allosteric_inhibitor; ++sym1__) {
-        current_statement__ = 147;
-        current_statement__ = 147;
+        current_statement__ = 154;
+        current_statement__ = 154;
         check_greater_or_equal(function__, "prior_scale_diss_t[sym1__]",
                                prior_scale_diss_t[(sym1__ - 1)], 0);}
-      current_statement__ = 148;
+      current_statement__ = 155;
       validate_non_negative_index("prior_loc_diss_r",
                                   "N_allosteric_activator",
                                   N_allosteric_activator);
-      current_statement__ = 149;
+      current_statement__ = 156;
       context__.validate_dims("data initialization","prior_loc_diss_r",
           "double",context__.to_vec(N_allosteric_activator));
       prior_loc_diss_r = Eigen::Matrix<double, -1, 1>(N_allosteric_activator);
@@ -2715,27 +2922,27 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> prior_loc_diss_r_flat__;
-        current_statement__ = 149;
+        current_statement__ = 156;
         assign(prior_loc_diss_r_flat__, nil_index_list(),
           context__.vals_r("prior_loc_diss_r"),
           "assigning variable prior_loc_diss_r_flat__");
-        current_statement__ = 149;
+        current_statement__ = 156;
         pos__ = 1;
-        current_statement__ = 149;
+        current_statement__ = 156;
         for (int sym1__ = 1; sym1__ <= N_allosteric_activator; ++sym1__) {
-          current_statement__ = 149;
+          current_statement__ = 156;
           assign(prior_loc_diss_r,
             cons_list(index_uni(sym1__), nil_index_list()),
             prior_loc_diss_r_flat__[(pos__ - 1)],
             "assigning variable prior_loc_diss_r");
-          current_statement__ = 149;
+          current_statement__ = 156;
           pos__ = (pos__ + 1);}
       }
-      current_statement__ = 150;
+      current_statement__ = 157;
       validate_non_negative_index("prior_scale_diss_r",
                                   "N_allosteric_activator",
                                   N_allosteric_activator);
-      current_statement__ = 151;
+      current_statement__ = 158;
       context__.validate_dims("data initialization","prior_scale_diss_r",
           "double",context__.to_vec(N_allosteric_activator));
       prior_scale_diss_r = Eigen::Matrix<double, -1, 1>(N_allosteric_activator);
@@ -2743,32 +2950,32 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> prior_scale_diss_r_flat__;
-        current_statement__ = 151;
+        current_statement__ = 158;
         assign(prior_scale_diss_r_flat__, nil_index_list(),
           context__.vals_r("prior_scale_diss_r"),
           "assigning variable prior_scale_diss_r_flat__");
-        current_statement__ = 151;
+        current_statement__ = 158;
         pos__ = 1;
-        current_statement__ = 151;
+        current_statement__ = 158;
         for (int sym1__ = 1; sym1__ <= N_allosteric_activator; ++sym1__) {
-          current_statement__ = 151;
+          current_statement__ = 158;
           assign(prior_scale_diss_r,
             cons_list(index_uni(sym1__), nil_index_list()),
             prior_scale_diss_r_flat__[(pos__ - 1)],
             "assigning variable prior_scale_diss_r");
-          current_statement__ = 151;
+          current_statement__ = 158;
           pos__ = (pos__ + 1);}
       }
-      current_statement__ = 151;
+      current_statement__ = 158;
       for (int sym1__ = 1; sym1__ <= N_allosteric_activator; ++sym1__) {
-        current_statement__ = 151;
-        current_statement__ = 151;
+        current_statement__ = 158;
+        current_statement__ = 158;
         check_greater_or_equal(function__, "prior_scale_diss_r[sym1__]",
                                prior_scale_diss_r[(sym1__ - 1)], 0);}
-      current_statement__ = 152;
+      current_statement__ = 159;
       validate_non_negative_index("prior_loc_tc", "N_allosteric_enzyme",
                                   N_allosteric_enzyme);
-      current_statement__ = 153;
+      current_statement__ = 160;
       context__.validate_dims("data initialization","prior_loc_tc","double",
           context__.to_vec(N_allosteric_enzyme));
       prior_loc_tc = Eigen::Matrix<double, -1, 1>(N_allosteric_enzyme);
@@ -2776,32 +2983,32 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> prior_loc_tc_flat__;
-        current_statement__ = 153;
+        current_statement__ = 160;
         assign(prior_loc_tc_flat__, nil_index_list(),
           context__.vals_r("prior_loc_tc"),
           "assigning variable prior_loc_tc_flat__");
-        current_statement__ = 153;
+        current_statement__ = 160;
         pos__ = 1;
-        current_statement__ = 153;
+        current_statement__ = 160;
         for (int sym1__ = 1; sym1__ <= N_allosteric_enzyme; ++sym1__) {
-          current_statement__ = 153;
+          current_statement__ = 160;
           assign(prior_loc_tc,
             cons_list(index_uni(sym1__), nil_index_list()),
             prior_loc_tc_flat__[(pos__ - 1)],
             "assigning variable prior_loc_tc");
-          current_statement__ = 153;
+          current_statement__ = 160;
           pos__ = (pos__ + 1);}
       }
-      current_statement__ = 153;
+      current_statement__ = 160;
       for (int sym1__ = 1; sym1__ <= N_allosteric_enzyme; ++sym1__) {
-        current_statement__ = 153;
-        current_statement__ = 153;
+        current_statement__ = 160;
+        current_statement__ = 160;
         check_greater_or_equal(function__, "prior_loc_tc[sym1__]",
                                prior_loc_tc[(sym1__ - 1)], 0);}
-      current_statement__ = 154;
+      current_statement__ = 161;
       validate_non_negative_index("prior_scale_tc", "N_allosteric_enzyme",
                                   N_allosteric_enzyme);
-      current_statement__ = 155;
+      current_statement__ = 162;
       context__.validate_dims("data initialization","prior_scale_tc",
           "double",context__.to_vec(N_allosteric_enzyme));
       prior_scale_tc = Eigen::Matrix<double, -1, 1>(N_allosteric_enzyme);
@@ -2809,35 +3016,199 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> prior_scale_tc_flat__;
-        current_statement__ = 155;
+        current_statement__ = 162;
         assign(prior_scale_tc_flat__, nil_index_list(),
           context__.vals_r("prior_scale_tc"),
           "assigning variable prior_scale_tc_flat__");
-        current_statement__ = 155;
+        current_statement__ = 162;
         pos__ = 1;
-        current_statement__ = 155;
+        current_statement__ = 162;
         for (int sym1__ = 1; sym1__ <= N_allosteric_enzyme; ++sym1__) {
-          current_statement__ = 155;
+          current_statement__ = 162;
           assign(prior_scale_tc,
             cons_list(index_uni(sym1__), nil_index_list()),
             prior_scale_tc_flat__[(pos__ - 1)],
             "assigning variable prior_scale_tc");
-          current_statement__ = 155;
+          current_statement__ = 162;
           pos__ = (pos__ + 1);}
       }
-      current_statement__ = 155;
+      current_statement__ = 162;
       for (int sym1__ = 1; sym1__ <= N_allosteric_enzyme; ++sym1__) {
-        current_statement__ = 155;
-        current_statement__ = 155;
+        current_statement__ = 162;
+        current_statement__ = 162;
         check_greater_or_equal(function__, "prior_scale_tc[sym1__]",
                                prior_scale_tc[(sym1__ - 1)], 0);}
-      current_statement__ = 156;
+      current_statement__ = 163;
+      validate_non_negative_index("prior_loc_phos_kcat",
+                                  "N_phosphorylation_enzymes",
+                                  N_phosphorylation_enzymes);
+      current_statement__ = 164;
+      context__.validate_dims("data initialization","prior_loc_phos_kcat",
+          "double",context__.to_vec(N_phosphorylation_enzymes));
+      prior_loc_phos_kcat = Eigen::Matrix<double, -1, 1>(N_phosphorylation_enzymes);
+      stan::math::fill(prior_loc_phos_kcat, std::numeric_limits<double>::quiet_NaN());
+      
+      {
+        std::vector<local_scalar_t__> prior_loc_phos_kcat_flat__;
+        current_statement__ = 164;
+        assign(prior_loc_phos_kcat_flat__, nil_index_list(),
+          context__.vals_r("prior_loc_phos_kcat"),
+          "assigning variable prior_loc_phos_kcat_flat__");
+        current_statement__ = 164;
+        pos__ = 1;
+        current_statement__ = 164;
+        for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+          current_statement__ = 164;
+          assign(prior_loc_phos_kcat,
+            cons_list(index_uni(sym1__), nil_index_list()),
+            prior_loc_phos_kcat_flat__[(pos__ - 1)],
+            "assigning variable prior_loc_phos_kcat");
+          current_statement__ = 164;
+          pos__ = (pos__ + 1);}
+      }
+      current_statement__ = 164;
+      for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+        current_statement__ = 164;
+        current_statement__ = 164;
+        check_greater_or_equal(function__, "prior_loc_phos_kcat[sym1__]",
+                               prior_loc_phos_kcat[(sym1__ - 1)], 0);}
+      current_statement__ = 165;
+      validate_non_negative_index("prior_scale_phos_kcat",
+                                  "N_phosphorylation_enzymes",
+                                  N_phosphorylation_enzymes);
+      current_statement__ = 166;
+      context__.validate_dims("data initialization","prior_scale_phos_kcat",
+          "double",context__.to_vec(N_phosphorylation_enzymes));
+      prior_scale_phos_kcat = Eigen::Matrix<double, -1, 1>(N_phosphorylation_enzymes);
+      stan::math::fill(prior_scale_phos_kcat, std::numeric_limits<double>::quiet_NaN());
+      
+      {
+        std::vector<local_scalar_t__> prior_scale_phos_kcat_flat__;
+        current_statement__ = 166;
+        assign(prior_scale_phos_kcat_flat__, nil_index_list(),
+          context__.vals_r("prior_scale_phos_kcat"),
+          "assigning variable prior_scale_phos_kcat_flat__");
+        current_statement__ = 166;
+        pos__ = 1;
+        current_statement__ = 166;
+        for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+          current_statement__ = 166;
+          assign(prior_scale_phos_kcat,
+            cons_list(index_uni(sym1__), nil_index_list()),
+            prior_scale_phos_kcat_flat__[(pos__ - 1)],
+            "assigning variable prior_scale_phos_kcat");
+          current_statement__ = 166;
+          pos__ = (pos__ + 1);}
+      }
+      current_statement__ = 166;
+      for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+        current_statement__ = 166;
+        current_statement__ = 166;
+        check_greater_or_equal(function__, "prior_scale_phos_kcat[sym1__]",
+                               prior_scale_phos_kcat[(sym1__ - 1)], 0);}
+      current_statement__ = 167;
+      validate_non_negative_index("prior_loc_phos_conc", "N_experiment",
+                                  N_experiment);
+      current_statement__ = 168;
+      validate_non_negative_index("prior_loc_phos_conc",
+                                  "N_phosphorylation_enzymes",
+                                  N_phosphorylation_enzymes);
+      current_statement__ = 169;
+      context__.validate_dims("data initialization","prior_loc_phos_conc",
+          "double",
+          context__.to_vec(N_experiment, N_phosphorylation_enzymes));
+      prior_loc_phos_conc = Eigen::Matrix<double, -1, -1>(N_experiment, N_phosphorylation_enzymes);
+      stan::math::fill(prior_loc_phos_conc, std::numeric_limits<double>::quiet_NaN());
+      
+      {
+        std::vector<local_scalar_t__> prior_loc_phos_conc_flat__;
+        current_statement__ = 169;
+        assign(prior_loc_phos_conc_flat__, nil_index_list(),
+          context__.vals_r("prior_loc_phos_conc"),
+          "assigning variable prior_loc_phos_conc_flat__");
+        current_statement__ = 169;
+        pos__ = 1;
+        current_statement__ = 169;
+        for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+          current_statement__ = 169;
+          for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
+            current_statement__ = 169;
+            assign(prior_loc_phos_conc,
+              cons_list(index_uni(sym2__),
+                cons_list(index_uni(sym1__), nil_index_list())),
+              prior_loc_phos_conc_flat__[(pos__ - 1)],
+              "assigning variable prior_loc_phos_conc");
+            current_statement__ = 169;
+            pos__ = (pos__ + 1);}}
+      }
+      current_statement__ = 169;
+      for (int sym1__ = 1; sym1__ <= N_experiment; ++sym1__) {
+        current_statement__ = 169;
+        for (int sym2__ = 1; sym2__ <= N_phosphorylation_enzymes; ++sym2__) {
+          current_statement__ = 169;
+          current_statement__ = 169;
+          check_greater_or_equal(function__,
+                                 "prior_loc_phos_conc[sym1__, sym2__]",
+                                 rvalue(prior_loc_phos_conc,
+                                   cons_list(index_uni(sym1__),
+                                     cons_list(index_uni(sym2__),
+                                       nil_index_list())),
+                                   "prior_loc_phos_conc"), 0);}}
+      current_statement__ = 170;
+      validate_non_negative_index("prior_scale_phos_conc", "N_experiment",
+                                  N_experiment);
+      current_statement__ = 171;
+      validate_non_negative_index("prior_scale_phos_conc",
+                                  "N_phosphorylation_enzymes",
+                                  N_phosphorylation_enzymes);
+      current_statement__ = 172;
+      context__.validate_dims("data initialization","prior_scale_phos_conc",
+          "double",
+          context__.to_vec(N_experiment, N_phosphorylation_enzymes));
+      prior_scale_phos_conc = Eigen::Matrix<double, -1, -1>(N_experiment, N_phosphorylation_enzymes);
+      stan::math::fill(prior_scale_phos_conc, std::numeric_limits<double>::quiet_NaN());
+      
+      {
+        std::vector<local_scalar_t__> prior_scale_phos_conc_flat__;
+        current_statement__ = 172;
+        assign(prior_scale_phos_conc_flat__, nil_index_list(),
+          context__.vals_r("prior_scale_phos_conc"),
+          "assigning variable prior_scale_phos_conc_flat__");
+        current_statement__ = 172;
+        pos__ = 1;
+        current_statement__ = 172;
+        for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+          current_statement__ = 172;
+          for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
+            current_statement__ = 172;
+            assign(prior_scale_phos_conc,
+              cons_list(index_uni(sym2__),
+                cons_list(index_uni(sym1__), nil_index_list())),
+              prior_scale_phos_conc_flat__[(pos__ - 1)],
+              "assigning variable prior_scale_phos_conc");
+            current_statement__ = 172;
+            pos__ = (pos__ + 1);}}
+      }
+      current_statement__ = 172;
+      for (int sym1__ = 1; sym1__ <= N_experiment; ++sym1__) {
+        current_statement__ = 172;
+        for (int sym2__ = 1; sym2__ <= N_phosphorylation_enzymes; ++sym2__) {
+          current_statement__ = 172;
+          current_statement__ = 172;
+          check_greater_or_equal(function__,
+                                 "prior_scale_phos_conc[sym1__, sym2__]",
+                                 rvalue(prior_scale_phos_conc,
+                                   cons_list(index_uni(sym1__),
+                                     cons_list(index_uni(sym2__),
+                                       nil_index_list())),
+                                   "prior_scale_phos_conc"), 0);}}
+      current_statement__ = 173;
       validate_non_negative_index("prior_loc_unbalanced", "N_experiment",
                                   N_experiment);
-      current_statement__ = 157;
+      current_statement__ = 174;
       validate_non_negative_index("prior_loc_unbalanced", "N_unbalanced",
                                   N_unbalanced);
-      current_statement__ = 158;
+      current_statement__ = 175;
       context__.validate_dims("data initialization","prior_loc_unbalanced",
           "double",context__.to_vec(N_experiment, N_unbalanced));
       prior_loc_unbalanced = Eigen::Matrix<double, -1, -1>(N_experiment, N_unbalanced);
@@ -2845,32 +3216,32 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> prior_loc_unbalanced_flat__;
-        current_statement__ = 158;
+        current_statement__ = 175;
         assign(prior_loc_unbalanced_flat__, nil_index_list(),
           context__.vals_r("prior_loc_unbalanced"),
           "assigning variable prior_loc_unbalanced_flat__");
-        current_statement__ = 158;
+        current_statement__ = 175;
         pos__ = 1;
-        current_statement__ = 158;
+        current_statement__ = 175;
         for (int sym1__ = 1; sym1__ <= N_unbalanced; ++sym1__) {
-          current_statement__ = 158;
+          current_statement__ = 175;
           for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
-            current_statement__ = 158;
+            current_statement__ = 175;
             assign(prior_loc_unbalanced,
               cons_list(index_uni(sym2__),
                 cons_list(index_uni(sym1__), nil_index_list())),
               prior_loc_unbalanced_flat__[(pos__ - 1)],
               "assigning variable prior_loc_unbalanced");
-            current_statement__ = 158;
+            current_statement__ = 175;
             pos__ = (pos__ + 1);}}
       }
-      current_statement__ = 159;
+      current_statement__ = 176;
       validate_non_negative_index("prior_scale_unbalanced", "N_experiment",
                                   N_experiment);
-      current_statement__ = 160;
+      current_statement__ = 177;
       validate_non_negative_index("prior_scale_unbalanced", "N_unbalanced",
                                   N_unbalanced);
-      current_statement__ = 161;
+      current_statement__ = 178;
       context__.validate_dims("data initialization","prior_scale_unbalanced",
           "double",context__.to_vec(N_experiment, N_unbalanced));
       prior_scale_unbalanced = Eigen::Matrix<double, -1, -1>(N_experiment, N_unbalanced);
@@ -2878,31 +3249,31 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> prior_scale_unbalanced_flat__;
-        current_statement__ = 161;
+        current_statement__ = 178;
         assign(prior_scale_unbalanced_flat__, nil_index_list(),
           context__.vals_r("prior_scale_unbalanced"),
           "assigning variable prior_scale_unbalanced_flat__");
-        current_statement__ = 161;
+        current_statement__ = 178;
         pos__ = 1;
-        current_statement__ = 161;
+        current_statement__ = 178;
         for (int sym1__ = 1; sym1__ <= N_unbalanced; ++sym1__) {
-          current_statement__ = 161;
+          current_statement__ = 178;
           for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
-            current_statement__ = 161;
+            current_statement__ = 178;
             assign(prior_scale_unbalanced,
               cons_list(index_uni(sym2__),
                 cons_list(index_uni(sym1__), nil_index_list())),
               prior_scale_unbalanced_flat__[(pos__ - 1)],
               "assigning variable prior_scale_unbalanced");
-            current_statement__ = 161;
+            current_statement__ = 178;
             pos__ = (pos__ + 1);}}
       }
-      current_statement__ = 161;
+      current_statement__ = 178;
       for (int sym1__ = 1; sym1__ <= N_experiment; ++sym1__) {
-        current_statement__ = 161;
+        current_statement__ = 178;
         for (int sym2__ = 1; sym2__ <= N_unbalanced; ++sym2__) {
-          current_statement__ = 161;
-          current_statement__ = 161;
+          current_statement__ = 178;
+          current_statement__ = 178;
           check_greater_or_equal(function__,
                                  "prior_scale_unbalanced[sym1__, sym2__]",
                                  rvalue(prior_scale_unbalanced,
@@ -2910,12 +3281,12 @@ class inference_model_model final : public model_base_crtp<inference_model_model
                                      cons_list(index_uni(sym2__),
                                        nil_index_list())),
                                    "prior_scale_unbalanced"), 0);}}
-      current_statement__ = 162;
+      current_statement__ = 179;
       validate_non_negative_index("prior_loc_enzyme", "N_experiment",
                                   N_experiment);
-      current_statement__ = 163;
+      current_statement__ = 180;
       validate_non_negative_index("prior_loc_enzyme", "N_enzyme", N_enzyme);
-      current_statement__ = 164;
+      current_statement__ = 181;
       context__.validate_dims("data initialization","prior_loc_enzyme",
           "double",context__.to_vec(N_experiment, N_enzyme));
       prior_loc_enzyme = Eigen::Matrix<double, -1, -1>(N_experiment, N_enzyme);
@@ -2923,31 +3294,31 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> prior_loc_enzyme_flat__;
-        current_statement__ = 164;
+        current_statement__ = 181;
         assign(prior_loc_enzyme_flat__, nil_index_list(),
           context__.vals_r("prior_loc_enzyme"),
           "assigning variable prior_loc_enzyme_flat__");
-        current_statement__ = 164;
+        current_statement__ = 181;
         pos__ = 1;
-        current_statement__ = 164;
+        current_statement__ = 181;
         for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
-          current_statement__ = 164;
+          current_statement__ = 181;
           for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
-            current_statement__ = 164;
+            current_statement__ = 181;
             assign(prior_loc_enzyme,
               cons_list(index_uni(sym2__),
                 cons_list(index_uni(sym1__), nil_index_list())),
               prior_loc_enzyme_flat__[(pos__ - 1)],
               "assigning variable prior_loc_enzyme");
-            current_statement__ = 164;
+            current_statement__ = 181;
             pos__ = (pos__ + 1);}}
       }
-      current_statement__ = 165;
+      current_statement__ = 182;
       validate_non_negative_index("prior_scale_enzyme", "N_experiment",
                                   N_experiment);
-      current_statement__ = 166;
+      current_statement__ = 183;
       validate_non_negative_index("prior_scale_enzyme", "N_enzyme", N_enzyme);
-      current_statement__ = 167;
+      current_statement__ = 184;
       context__.validate_dims("data initialization","prior_scale_enzyme",
           "double",context__.to_vec(N_experiment, N_enzyme));
       prior_scale_enzyme = Eigen::Matrix<double, -1, -1>(N_experiment, N_enzyme);
@@ -2955,31 +3326,31 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> prior_scale_enzyme_flat__;
-        current_statement__ = 167;
+        current_statement__ = 184;
         assign(prior_scale_enzyme_flat__, nil_index_list(),
           context__.vals_r("prior_scale_enzyme"),
           "assigning variable prior_scale_enzyme_flat__");
-        current_statement__ = 167;
+        current_statement__ = 184;
         pos__ = 1;
-        current_statement__ = 167;
+        current_statement__ = 184;
         for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
-          current_statement__ = 167;
+          current_statement__ = 184;
           for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
-            current_statement__ = 167;
+            current_statement__ = 184;
             assign(prior_scale_enzyme,
               cons_list(index_uni(sym2__),
                 cons_list(index_uni(sym1__), nil_index_list())),
               prior_scale_enzyme_flat__[(pos__ - 1)],
               "assigning variable prior_scale_enzyme");
-            current_statement__ = 167;
+            current_statement__ = 184;
             pos__ = (pos__ + 1);}}
       }
-      current_statement__ = 167;
+      current_statement__ = 184;
       for (int sym1__ = 1; sym1__ <= N_experiment; ++sym1__) {
-        current_statement__ = 167;
+        current_statement__ = 184;
         for (int sym2__ = 1; sym2__ <= N_enzyme; ++sym2__) {
-          current_statement__ = 167;
-          current_statement__ = 167;
+          current_statement__ = 184;
+          current_statement__ = 184;
           check_greater_or_equal(function__,
                                  "prior_scale_enzyme[sym1__, sym2__]",
                                  rvalue(prior_scale_enzyme,
@@ -2987,12 +3358,12 @@ class inference_model_model final : public model_base_crtp<inference_model_model
                                      cons_list(index_uni(sym2__),
                                        nil_index_list())),
                                    "prior_scale_enzyme"), 0);}}
-      current_statement__ = 168;
+      current_statement__ = 185;
       validate_non_negative_index("prior_loc_drain", "N_experiment",
                                   N_experiment);
-      current_statement__ = 169;
+      current_statement__ = 186;
       validate_non_negative_index("prior_loc_drain", "N_drain", N_drain);
-      current_statement__ = 170;
+      current_statement__ = 187;
       context__.validate_dims("data initialization","prior_loc_drain",
           "double",context__.to_vec(N_experiment, N_drain));
       prior_loc_drain = Eigen::Matrix<double, -1, -1>(N_experiment, N_drain);
@@ -3000,31 +3371,31 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> prior_loc_drain_flat__;
-        current_statement__ = 170;
+        current_statement__ = 187;
         assign(prior_loc_drain_flat__, nil_index_list(),
           context__.vals_r("prior_loc_drain"),
           "assigning variable prior_loc_drain_flat__");
-        current_statement__ = 170;
+        current_statement__ = 187;
         pos__ = 1;
-        current_statement__ = 170;
+        current_statement__ = 187;
         for (int sym1__ = 1; sym1__ <= N_drain; ++sym1__) {
-          current_statement__ = 170;
+          current_statement__ = 187;
           for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
-            current_statement__ = 170;
+            current_statement__ = 187;
             assign(prior_loc_drain,
               cons_list(index_uni(sym2__),
                 cons_list(index_uni(sym1__), nil_index_list())),
               prior_loc_drain_flat__[(pos__ - 1)],
               "assigning variable prior_loc_drain");
-            current_statement__ = 170;
+            current_statement__ = 187;
             pos__ = (pos__ + 1);}}
       }
-      current_statement__ = 171;
+      current_statement__ = 188;
       validate_non_negative_index("prior_scale_drain", "N_experiment",
                                   N_experiment);
-      current_statement__ = 172;
+      current_statement__ = 189;
       validate_non_negative_index("prior_scale_drain", "N_drain", N_drain);
-      current_statement__ = 173;
+      current_statement__ = 190;
       context__.validate_dims("data initialization","prior_scale_drain",
           "double",context__.to_vec(N_experiment, N_drain));
       prior_scale_drain = Eigen::Matrix<double, -1, -1>(N_experiment, N_drain);
@@ -3032,31 +3403,31 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> prior_scale_drain_flat__;
-        current_statement__ = 173;
+        current_statement__ = 190;
         assign(prior_scale_drain_flat__, nil_index_list(),
           context__.vals_r("prior_scale_drain"),
           "assigning variable prior_scale_drain_flat__");
-        current_statement__ = 173;
+        current_statement__ = 190;
         pos__ = 1;
-        current_statement__ = 173;
+        current_statement__ = 190;
         for (int sym1__ = 1; sym1__ <= N_drain; ++sym1__) {
-          current_statement__ = 173;
+          current_statement__ = 190;
           for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
-            current_statement__ = 173;
+            current_statement__ = 190;
             assign(prior_scale_drain,
               cons_list(index_uni(sym2__),
                 cons_list(index_uni(sym1__), nil_index_list())),
               prior_scale_drain_flat__[(pos__ - 1)],
               "assigning variable prior_scale_drain");
-            current_statement__ = 173;
+            current_statement__ = 190;
             pos__ = (pos__ + 1);}}
       }
-      current_statement__ = 173;
+      current_statement__ = 190;
       for (int sym1__ = 1; sym1__ <= N_experiment; ++sym1__) {
-        current_statement__ = 173;
+        current_statement__ = 190;
         for (int sym2__ = 1; sym2__ <= N_drain; ++sym2__) {
-          current_statement__ = 173;
-          current_statement__ = 173;
+          current_statement__ = 190;
+          current_statement__ = 190;
           check_greater_or_equal(function__,
                                  "prior_scale_drain[sym1__, sym2__]",
                                  rvalue(prior_scale_drain,
@@ -3064,11 +3435,11 @@ class inference_model_model final : public model_base_crtp<inference_model_model
                                      cons_list(index_uni(sym2__),
                                        nil_index_list())),
                                    "prior_scale_drain"), 0);}}
-      current_statement__ = 174;
+      current_statement__ = 191;
       validate_non_negative_index("S_enz", "N_mic", N_mic);
-      current_statement__ = 175;
+      current_statement__ = 192;
       validate_non_negative_index("S_enz", "N_enzyme", N_enzyme);
-      current_statement__ = 176;
+      current_statement__ = 193;
       context__.validate_dims("data initialization","S_enz","double",
           context__.to_vec(N_mic, N_enzyme));
       S_enz = Eigen::Matrix<double, -1, -1>(N_mic, N_enzyme);
@@ -3076,28 +3447,28 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> S_enz_flat__;
-        current_statement__ = 176;
+        current_statement__ = 193;
         assign(S_enz_flat__, nil_index_list(), context__.vals_r("S_enz"),
           "assigning variable S_enz_flat__");
-        current_statement__ = 176;
+        current_statement__ = 193;
         pos__ = 1;
-        current_statement__ = 176;
+        current_statement__ = 193;
         for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
-          current_statement__ = 176;
+          current_statement__ = 193;
           for (int sym2__ = 1; sym2__ <= N_mic; ++sym2__) {
-            current_statement__ = 176;
+            current_statement__ = 193;
             assign(S_enz,
               cons_list(index_uni(sym2__),
                 cons_list(index_uni(sym1__), nil_index_list())),
               S_enz_flat__[(pos__ - 1)], "assigning variable S_enz");
-            current_statement__ = 176;
+            current_statement__ = 193;
             pos__ = (pos__ + 1);}}
       }
-      current_statement__ = 177;
+      current_statement__ = 194;
       validate_non_negative_index("S_drain", "N_mic", N_mic);
-      current_statement__ = 178;
+      current_statement__ = 195;
       validate_non_negative_index("S_drain", "N_drain", N_drain);
-      current_statement__ = 179;
+      current_statement__ = 196;
       context__.validate_dims("data initialization","S_drain","double",
           context__.to_vec(N_mic, N_drain));
       S_drain = Eigen::Matrix<double, -1, -1>(N_mic, N_drain);
@@ -3105,29 +3476,29 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> S_drain_flat__;
-        current_statement__ = 179;
+        current_statement__ = 196;
         assign(S_drain_flat__, nil_index_list(), context__.vals_r("S_drain"),
           "assigning variable S_drain_flat__");
-        current_statement__ = 179;
+        current_statement__ = 196;
         pos__ = 1;
-        current_statement__ = 179;
+        current_statement__ = 196;
         for (int sym1__ = 1; sym1__ <= N_drain; ++sym1__) {
-          current_statement__ = 179;
+          current_statement__ = 196;
           for (int sym2__ = 1; sym2__ <= N_mic; ++sym2__) {
-            current_statement__ = 179;
+            current_statement__ = 196;
             assign(S_drain,
               cons_list(index_uni(sym2__),
                 cons_list(index_uni(sym1__), nil_index_list())),
               S_drain_flat__[(pos__ - 1)], "assigning variable S_drain");
-            current_statement__ = 179;
+            current_statement__ = 196;
             pos__ = (pos__ + 1);}}
       }
-      current_statement__ = 180;
+      current_statement__ = 197;
       validate_non_negative_index("S_full", "N_mic", N_mic);
-      current_statement__ = 181;
+      current_statement__ = 198;
       validate_non_negative_index("S_full", "N_drain + N_enzyme",
                                   (N_drain + N_enzyme));
-      current_statement__ = 182;
+      current_statement__ = 199;
       context__.validate_dims("data initialization","S_full","double",
           context__.to_vec(N_mic, (N_drain + N_enzyme)));
       S_full = Eigen::Matrix<double, -1, -1>(N_mic, (N_drain + N_enzyme));
@@ -3135,48 +3506,48 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> S_full_flat__;
-        current_statement__ = 182;
+        current_statement__ = 199;
         assign(S_full_flat__, nil_index_list(), context__.vals_r("S_full"),
           "assigning variable S_full_flat__");
-        current_statement__ = 182;
+        current_statement__ = 199;
         pos__ = 1;
-        current_statement__ = 182;
+        current_statement__ = 199;
         for (int sym1__ = 1; sym1__ <= (N_drain + N_enzyme); ++sym1__) {
-          current_statement__ = 182;
+          current_statement__ = 199;
           for (int sym2__ = 1; sym2__ <= N_mic; ++sym2__) {
-            current_statement__ = 182;
+            current_statement__ = 199;
             assign(S_full,
               cons_list(index_uni(sym2__),
                 cons_list(index_uni(sym1__), nil_index_list())),
               S_full_flat__[(pos__ - 1)], "assigning variable S_full");
-            current_statement__ = 182;
+            current_statement__ = 199;
             pos__ = (pos__ + 1);}}
       }
-      current_statement__ = 183;
+      current_statement__ = 200;
       validate_non_negative_index("mic_to_met", "N_mic", N_mic);
-      current_statement__ = 184;
+      current_statement__ = 201;
       context__.validate_dims("data initialization","mic_to_met","int",
           context__.to_vec(N_mic));
       mic_to_met = std::vector<int>(N_mic, std::numeric_limits<int>::min());
       
-      current_statement__ = 184;
+      current_statement__ = 201;
       assign(mic_to_met, nil_index_list(), context__.vals_i("mic_to_met"),
         "assigning variable mic_to_met");
-      current_statement__ = 184;
+      current_statement__ = 201;
       for (int sym1__ = 1; sym1__ <= N_mic; ++sym1__) {
-        current_statement__ = 184;
-        current_statement__ = 184;
+        current_statement__ = 201;
+        current_statement__ = 201;
         check_greater_or_equal(function__, "mic_to_met[sym1__]",
                                mic_to_met[(sym1__ - 1)], 1);}
-      current_statement__ = 184;
+      current_statement__ = 201;
       for (int sym1__ = 1; sym1__ <= N_mic; ++sym1__) {
-        current_statement__ = 184;
-        current_statement__ = 184;
+        current_statement__ = 201;
+        current_statement__ = 201;
         check_less_or_equal(function__, "mic_to_met[sym1__]",
                             mic_to_met[(sym1__ - 1)], N_metabolite);}
-      current_statement__ = 185;
+      current_statement__ = 202;
       validate_non_negative_index("water_stoichiometry", "N_enzyme", N_enzyme);
-      current_statement__ = 186;
+      current_statement__ = 203;
       context__.validate_dims("data initialization","water_stoichiometry",
           "double",context__.to_vec(N_enzyme));
       water_stoichiometry = Eigen::Matrix<double, -1, 1>(N_enzyme);
@@ -3184,27 +3555,27 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> water_stoichiometry_flat__;
-        current_statement__ = 186;
+        current_statement__ = 203;
         assign(water_stoichiometry_flat__, nil_index_list(),
           context__.vals_r("water_stoichiometry"),
           "assigning variable water_stoichiometry_flat__");
-        current_statement__ = 186;
+        current_statement__ = 203;
         pos__ = 1;
-        current_statement__ = 186;
+        current_statement__ = 203;
         for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
-          current_statement__ = 186;
+          current_statement__ = 203;
           assign(water_stoichiometry,
             cons_list(index_uni(sym1__), nil_index_list()),
             water_stoichiometry_flat__[(pos__ - 1)],
             "assigning variable water_stoichiometry");
-          current_statement__ = 186;
+          current_statement__ = 203;
           pos__ = (pos__ + 1);}
       }
-      current_statement__ = 187;
+      current_statement__ = 204;
       validate_non_negative_index("S_to_flux_map", "N_reaction", N_reaction);
-      current_statement__ = 188;
+      current_statement__ = 205;
       validate_non_negative_index("S_to_flux_map", "N_enzyme", N_enzyme);
-      current_statement__ = 189;
+      current_statement__ = 206;
       context__.validate_dims("data initialization","S_to_flux_map","double",
           context__.to_vec(N_reaction, N_enzyme));
       S_to_flux_map = Eigen::Matrix<double, -1, -1>(N_reaction, N_enzyme);
@@ -3212,30 +3583,30 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> S_to_flux_map_flat__;
-        current_statement__ = 189;
+        current_statement__ = 206;
         assign(S_to_flux_map_flat__, nil_index_list(),
           context__.vals_r("S_to_flux_map"),
           "assigning variable S_to_flux_map_flat__");
-        current_statement__ = 189;
+        current_statement__ = 206;
         pos__ = 1;
-        current_statement__ = 189;
+        current_statement__ = 206;
         for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
-          current_statement__ = 189;
+          current_statement__ = 206;
           for (int sym2__ = 1; sym2__ <= N_reaction; ++sym2__) {
-            current_statement__ = 189;
+            current_statement__ = 206;
             assign(S_to_flux_map,
               cons_list(index_uni(sym2__),
                 cons_list(index_uni(sym1__), nil_index_list())),
               S_to_flux_map_flat__[(pos__ - 1)],
               "assigning variable S_to_flux_map");
-            current_statement__ = 189;
+            current_statement__ = 206;
             pos__ = (pos__ + 1);}}
       }
-      current_statement__ = 190;
+      current_statement__ = 207;
       validate_non_negative_index("is_knockout", "N_experiment", N_experiment);
-      current_statement__ = 191;
+      current_statement__ = 208;
       validate_non_negative_index("is_knockout", "N_enzyme", N_enzyme);
-      current_statement__ = 192;
+      current_statement__ = 209;
       context__.validate_dims("data initialization","is_knockout","double",
           context__.to_vec(N_experiment, N_enzyme));
       is_knockout = Eigen::Matrix<double, -1, -1>(N_experiment, N_enzyme);
@@ -3243,249 +3614,417 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> is_knockout_flat__;
-        current_statement__ = 192;
+        current_statement__ = 209;
         assign(is_knockout_flat__, nil_index_list(),
           context__.vals_r("is_knockout"),
           "assigning variable is_knockout_flat__");
-        current_statement__ = 192;
+        current_statement__ = 209;
         pos__ = 1;
-        current_statement__ = 192;
+        current_statement__ = 209;
         for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
-          current_statement__ = 192;
+          current_statement__ = 209;
           for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
-            current_statement__ = 192;
+            current_statement__ = 209;
             assign(is_knockout,
               cons_list(index_uni(sym2__),
                 cons_list(index_uni(sym1__), nil_index_list())),
               is_knockout_flat__[(pos__ - 1)],
               "assigning variable is_knockout");
-            current_statement__ = 192;
+            current_statement__ = 209;
             pos__ = (pos__ + 1);}}
       }
-      current_statement__ = 192;
+      current_statement__ = 209;
       for (int sym1__ = 1; sym1__ <= N_experiment; ++sym1__) {
-        current_statement__ = 192;
+        current_statement__ = 209;
         for (int sym2__ = 1; sym2__ <= N_enzyme; ++sym2__) {
-          current_statement__ = 192;
-          current_statement__ = 192;
+          current_statement__ = 209;
+          current_statement__ = 209;
           check_greater_or_equal(function__, "is_knockout[sym1__, sym2__]",
                                  rvalue(is_knockout,
                                    cons_list(index_uni(sym1__),
                                      cons_list(index_uni(sym2__),
                                        nil_index_list())), "is_knockout"), 0);
         }}
-      current_statement__ = 192;
+      current_statement__ = 209;
       for (int sym1__ = 1; sym1__ <= N_experiment; ++sym1__) {
-        current_statement__ = 192;
+        current_statement__ = 209;
         for (int sym2__ = 1; sym2__ <= N_enzyme; ++sym2__) {
-          current_statement__ = 192;
-          current_statement__ = 192;
+          current_statement__ = 209;
+          current_statement__ = 209;
           check_less_or_equal(function__, "is_knockout[sym1__, sym2__]",
                               rvalue(is_knockout,
                                 cons_list(index_uni(sym1__),
                                   cons_list(index_uni(sym2__),
                                     nil_index_list())), "is_knockout"), 1);}}
-      current_statement__ = 193;
+      current_statement__ = 210;
+      validate_non_negative_index("is_phos_knockout", "N_experiment",
+                                  N_experiment);
+      current_statement__ = 211;
+      validate_non_negative_index("is_phos_knockout",
+                                  "N_phosphorylation_enzymes",
+                                  N_phosphorylation_enzymes);
+      current_statement__ = 212;
+      context__.validate_dims("data initialization","is_phos_knockout",
+          "double",
+          context__.to_vec(N_experiment, N_phosphorylation_enzymes));
+      is_phos_knockout = Eigen::Matrix<double, -1, -1>(N_experiment, N_phosphorylation_enzymes);
+      stan::math::fill(is_phos_knockout, std::numeric_limits<double>::quiet_NaN());
+      
+      {
+        std::vector<local_scalar_t__> is_phos_knockout_flat__;
+        current_statement__ = 212;
+        assign(is_phos_knockout_flat__, nil_index_list(),
+          context__.vals_r("is_phos_knockout"),
+          "assigning variable is_phos_knockout_flat__");
+        current_statement__ = 212;
+        pos__ = 1;
+        current_statement__ = 212;
+        for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+          current_statement__ = 212;
+          for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
+            current_statement__ = 212;
+            assign(is_phos_knockout,
+              cons_list(index_uni(sym2__),
+                cons_list(index_uni(sym1__), nil_index_list())),
+              is_phos_knockout_flat__[(pos__ - 1)],
+              "assigning variable is_phos_knockout");
+            current_statement__ = 212;
+            pos__ = (pos__ + 1);}}
+      }
+      current_statement__ = 212;
+      for (int sym1__ = 1; sym1__ <= N_experiment; ++sym1__) {
+        current_statement__ = 212;
+        for (int sym2__ = 1; sym2__ <= N_phosphorylation_enzymes; ++sym2__) {
+          current_statement__ = 212;
+          current_statement__ = 212;
+          check_greater_or_equal(function__,
+                                 "is_phos_knockout[sym1__, sym2__]",
+                                 rvalue(is_phos_knockout,
+                                   cons_list(index_uni(sym1__),
+                                     cons_list(index_uni(sym2__),
+                                       nil_index_list())),
+                                   "is_phos_knockout"), 0);}}
+      current_statement__ = 212;
+      for (int sym1__ = 1; sym1__ <= N_experiment; ++sym1__) {
+        current_statement__ = 212;
+        for (int sym2__ = 1; sym2__ <= N_phosphorylation_enzymes; ++sym2__) {
+          current_statement__ = 212;
+          current_statement__ = 212;
+          check_less_or_equal(function__, "is_phos_knockout[sym1__, sym2__]",
+                              rvalue(is_phos_knockout,
+                                cons_list(index_uni(sym1__),
+                                  cons_list(index_uni(sym2__),
+                                    nil_index_list())), "is_phos_knockout"),
+                              1);}}
+      current_statement__ = 213;
+      validate_non_negative_index("S_phos_act", "N_phosphorylation_enzymes",
+                                  N_phosphorylation_enzymes);
+      current_statement__ = 214;
+      validate_non_negative_index("S_phos_act", "N_enzyme", N_enzyme);
+      current_statement__ = 215;
+      context__.validate_dims("data initialization","S_phos_act","double",
+          context__.to_vec(N_phosphorylation_enzymes, N_enzyme));
+      S_phos_act = Eigen::Matrix<double, -1, -1>(N_phosphorylation_enzymes, N_enzyme);
+      stan::math::fill(S_phos_act, std::numeric_limits<double>::quiet_NaN());
+      
+      {
+        std::vector<local_scalar_t__> S_phos_act_flat__;
+        current_statement__ = 215;
+        assign(S_phos_act_flat__, nil_index_list(),
+          context__.vals_r("S_phos_act"),
+          "assigning variable S_phos_act_flat__");
+        current_statement__ = 215;
+        pos__ = 1;
+        current_statement__ = 215;
+        for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
+          current_statement__ = 215;
+          for (int sym2__ = 1; sym2__ <= N_phosphorylation_enzymes; ++sym2__) {
+            current_statement__ = 215;
+            assign(S_phos_act,
+              cons_list(index_uni(sym2__),
+                cons_list(index_uni(sym1__), nil_index_list())),
+              S_phos_act_flat__[(pos__ - 1)], "assigning variable S_phos_act");
+            current_statement__ = 215;
+            pos__ = (pos__ + 1);}}
+      }
+      current_statement__ = 215;
+      for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+        current_statement__ = 215;
+        for (int sym2__ = 1; sym2__ <= N_enzyme; ++sym2__) {
+          current_statement__ = 215;
+          current_statement__ = 215;
+          check_greater_or_equal(function__, "S_phos_act[sym1__, sym2__]",
+                                 rvalue(S_phos_act,
+                                   cons_list(index_uni(sym1__),
+                                     cons_list(index_uni(sym2__),
+                                       nil_index_list())), "S_phos_act"), 0);
+        }}
+      current_statement__ = 215;
+      for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+        current_statement__ = 215;
+        for (int sym2__ = 1; sym2__ <= N_enzyme; ++sym2__) {
+          current_statement__ = 215;
+          current_statement__ = 215;
+          check_less_or_equal(function__, "S_phos_act[sym1__, sym2__]",
+                              rvalue(S_phos_act,
+                                cons_list(index_uni(sym1__),
+                                  cons_list(index_uni(sym2__),
+                                    nil_index_list())), "S_phos_act"), 1);}}
+      current_statement__ = 216;
+      validate_non_negative_index("S_phos_inh", "N_phosphorylation_enzymes",
+                                  N_phosphorylation_enzymes);
+      current_statement__ = 217;
+      validate_non_negative_index("S_phos_inh", "N_enzyme", N_enzyme);
+      current_statement__ = 218;
+      context__.validate_dims("data initialization","S_phos_inh","double",
+          context__.to_vec(N_phosphorylation_enzymes, N_enzyme));
+      S_phos_inh = Eigen::Matrix<double, -1, -1>(N_phosphorylation_enzymes, N_enzyme);
+      stan::math::fill(S_phos_inh, std::numeric_limits<double>::quiet_NaN());
+      
+      {
+        std::vector<local_scalar_t__> S_phos_inh_flat__;
+        current_statement__ = 218;
+        assign(S_phos_inh_flat__, nil_index_list(),
+          context__.vals_r("S_phos_inh"),
+          "assigning variable S_phos_inh_flat__");
+        current_statement__ = 218;
+        pos__ = 1;
+        current_statement__ = 218;
+        for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
+          current_statement__ = 218;
+          for (int sym2__ = 1; sym2__ <= N_phosphorylation_enzymes; ++sym2__) {
+            current_statement__ = 218;
+            assign(S_phos_inh,
+              cons_list(index_uni(sym2__),
+                cons_list(index_uni(sym1__), nil_index_list())),
+              S_phos_inh_flat__[(pos__ - 1)], "assigning variable S_phos_inh");
+            current_statement__ = 218;
+            pos__ = (pos__ + 1);}}
+      }
+      current_statement__ = 218;
+      for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+        current_statement__ = 218;
+        for (int sym2__ = 1; sym2__ <= N_enzyme; ++sym2__) {
+          current_statement__ = 218;
+          current_statement__ = 218;
+          check_greater_or_equal(function__, "S_phos_inh[sym1__, sym2__]",
+                                 rvalue(S_phos_inh,
+                                   cons_list(index_uni(sym1__),
+                                     cons_list(index_uni(sym2__),
+                                       nil_index_list())), "S_phos_inh"), 0);
+        }}
+      current_statement__ = 218;
+      for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+        current_statement__ = 218;
+        for (int sym2__ = 1; sym2__ <= N_enzyme; ++sym2__) {
+          current_statement__ = 218;
+          current_statement__ = 218;
+          check_less_or_equal(function__, "S_phos_inh[sym1__, sym2__]",
+                              rvalue(S_phos_inh,
+                                cons_list(index_uni(sym1__),
+                                  cons_list(index_uni(sym2__),
+                                    nil_index_list())), "S_phos_inh"), 1);}}
+      current_statement__ = 219;
       validate_non_negative_index("km_lookup", "N_mic", N_mic);
-      current_statement__ = 194;
+      current_statement__ = 220;
       validate_non_negative_index("km_lookup", "N_enzyme", N_enzyme);
-      current_statement__ = 195;
+      current_statement__ = 221;
       context__.validate_dims("data initialization","km_lookup","int",
           context__.to_vec(N_mic, N_enzyme));
       km_lookup = std::vector<std::vector<int>>(N_mic, std::vector<int>(N_enzyme, std::numeric_limits<int>::min()));
       
       {
         std::vector<int> km_lookup_flat__;
-        current_statement__ = 195;
+        current_statement__ = 221;
         assign(km_lookup_flat__, nil_index_list(),
           context__.vals_i("km_lookup"),
           "assigning variable km_lookup_flat__");
-        current_statement__ = 195;
+        current_statement__ = 221;
         pos__ = 1;
-        current_statement__ = 195;
+        current_statement__ = 221;
         for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
-          current_statement__ = 195;
+          current_statement__ = 221;
           for (int sym2__ = 1; sym2__ <= N_mic; ++sym2__) {
-            current_statement__ = 195;
+            current_statement__ = 221;
             assign(km_lookup,
               cons_list(index_uni(sym2__),
                 cons_list(index_uni(sym1__), nil_index_list())),
               km_lookup_flat__[(pos__ - 1)], "assigning variable km_lookup");
-            current_statement__ = 195;
+            current_statement__ = 221;
             pos__ = (pos__ + 1);}}
       }
-      current_statement__ = 195;
+      current_statement__ = 221;
       for (int sym1__ = 1; sym1__ <= N_mic; ++sym1__) {
-        current_statement__ = 195;
+        current_statement__ = 221;
         for (int sym2__ = 1; sym2__ <= N_enzyme; ++sym2__) {
-          current_statement__ = 195;
-          current_statement__ = 195;
+          current_statement__ = 221;
+          current_statement__ = 221;
           check_greater_or_equal(function__, "km_lookup[sym1__, sym2__]",
                                  km_lookup[(sym1__ - 1)][(sym2__ - 1)], 0);}}
-      current_statement__ = 195;
+      current_statement__ = 221;
       for (int sym1__ = 1; sym1__ <= N_mic; ++sym1__) {
-        current_statement__ = 195;
+        current_statement__ = 221;
         for (int sym2__ = 1; sym2__ <= N_enzyme; ++sym2__) {
-          current_statement__ = 195;
-          current_statement__ = 195;
+          current_statement__ = 221;
+          current_statement__ = 221;
           check_less_or_equal(function__, "km_lookup[sym1__, sym2__]",
                               km_lookup[(sym1__ - 1)][(sym2__ - 1)], N_km);}}
-      current_statement__ = 196;
+      current_statement__ = 222;
       validate_non_negative_index("n_ci", "N_enzyme", N_enzyme);
-      current_statement__ = 197;
+      current_statement__ = 223;
       context__.validate_dims("data initialization","n_ci","int",
           context__.to_vec(N_enzyme));
       n_ci = std::vector<int>(N_enzyme, std::numeric_limits<int>::min());
       
-      current_statement__ = 197;
+      current_statement__ = 223;
       assign(n_ci, nil_index_list(), context__.vals_i("n_ci"),
         "assigning variable n_ci");
-      current_statement__ = 197;
+      current_statement__ = 223;
       for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
-        current_statement__ = 197;
-        current_statement__ = 197;
+        current_statement__ = 223;
+        current_statement__ = 223;
         check_greater_or_equal(function__, "n_ci[sym1__]",
                                n_ci[(sym1__ - 1)], 0);}
-      current_statement__ = 197;
+      current_statement__ = 223;
       for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
-        current_statement__ = 197;
-        current_statement__ = 197;
+        current_statement__ = 223;
+        current_statement__ = 223;
         check_less_or_equal(function__, "n_ci[sym1__]", n_ci[(sym1__ - 1)],
                             N_mic);}
-      current_statement__ = 198;
+      current_statement__ = 224;
       validate_non_negative_index("n_ai", "N_enzyme", N_enzyme);
-      current_statement__ = 199;
+      current_statement__ = 225;
       context__.validate_dims("data initialization","n_ai","int",
           context__.to_vec(N_enzyme));
       n_ai = std::vector<int>(N_enzyme, std::numeric_limits<int>::min());
       
-      current_statement__ = 199;
+      current_statement__ = 225;
       assign(n_ai, nil_index_list(), context__.vals_i("n_ai"),
         "assigning variable n_ai");
-      current_statement__ = 199;
+      current_statement__ = 225;
       for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
-        current_statement__ = 199;
-        current_statement__ = 199;
+        current_statement__ = 225;
+        current_statement__ = 225;
         check_greater_or_equal(function__, "n_ai[sym1__]",
                                n_ai[(sym1__ - 1)], 0);}
-      current_statement__ = 199;
+      current_statement__ = 225;
       for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
-        current_statement__ = 199;
-        current_statement__ = 199;
+        current_statement__ = 225;
+        current_statement__ = 225;
         check_less_or_equal(function__, "n_ai[sym1__]", n_ai[(sym1__ - 1)],
                             N_mic);}
-      current_statement__ = 200;
+      current_statement__ = 226;
       validate_non_negative_index("n_aa", "N_enzyme", N_enzyme);
-      current_statement__ = 201;
+      current_statement__ = 227;
       context__.validate_dims("data initialization","n_aa","int",
           context__.to_vec(N_enzyme));
       n_aa = std::vector<int>(N_enzyme, std::numeric_limits<int>::min());
       
-      current_statement__ = 201;
+      current_statement__ = 227;
       assign(n_aa, nil_index_list(), context__.vals_i("n_aa"),
         "assigning variable n_aa");
-      current_statement__ = 201;
+      current_statement__ = 227;
       for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
-        current_statement__ = 201;
-        current_statement__ = 201;
+        current_statement__ = 227;
+        current_statement__ = 227;
         check_greater_or_equal(function__, "n_aa[sym1__]",
                                n_aa[(sym1__ - 1)], 0);}
-      current_statement__ = 201;
+      current_statement__ = 227;
       for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
-        current_statement__ = 201;
-        current_statement__ = 201;
+        current_statement__ = 227;
+        current_statement__ = 227;
         check_less_or_equal(function__, "n_aa[sym1__]", n_aa[(sym1__ - 1)],
                             N_mic);}
-      current_statement__ = 202;
+      current_statement__ = 228;
       validate_non_negative_index("ci_ix", "N_competitive_inhibitor",
                                   N_competitive_inhibitor);
-      current_statement__ = 203;
+      current_statement__ = 229;
       context__.validate_dims("data initialization","ci_ix","int",
           context__.to_vec(N_competitive_inhibitor));
       ci_ix = std::vector<int>(N_competitive_inhibitor, std::numeric_limits<int>::min());
       
-      current_statement__ = 203;
+      current_statement__ = 229;
       assign(ci_ix, nil_index_list(), context__.vals_i("ci_ix"),
         "assigning variable ci_ix");
-      current_statement__ = 203;
+      current_statement__ = 229;
       for (int sym1__ = 1; sym1__ <= N_competitive_inhibitor; ++sym1__) {
-        current_statement__ = 203;
-        current_statement__ = 203;
+        current_statement__ = 229;
+        current_statement__ = 229;
         check_greater_or_equal(function__, "ci_ix[sym1__]",
                                ci_ix[(sym1__ - 1)], 0);}
-      current_statement__ = 203;
+      current_statement__ = 229;
       for (int sym1__ = 1; sym1__ <= N_competitive_inhibitor; ++sym1__) {
-        current_statement__ = 203;
-        current_statement__ = 203;
+        current_statement__ = 229;
+        current_statement__ = 229;
         check_less_or_equal(function__, "ci_ix[sym1__]", ci_ix[(sym1__ - 1)],
                             N_mic);}
-      current_statement__ = 204;
+      current_statement__ = 230;
       validate_non_negative_index("ai_ix", "N_allosteric_inhibitor",
                                   N_allosteric_inhibitor);
-      current_statement__ = 205;
+      current_statement__ = 231;
       context__.validate_dims("data initialization","ai_ix","int",
           context__.to_vec(N_allosteric_inhibitor));
       ai_ix = std::vector<int>(N_allosteric_inhibitor, std::numeric_limits<int>::min());
       
-      current_statement__ = 205;
+      current_statement__ = 231;
       assign(ai_ix, nil_index_list(), context__.vals_i("ai_ix"),
         "assigning variable ai_ix");
-      current_statement__ = 205;
+      current_statement__ = 231;
       for (int sym1__ = 1; sym1__ <= N_allosteric_inhibitor; ++sym1__) {
-        current_statement__ = 205;
-        current_statement__ = 205;
+        current_statement__ = 231;
+        current_statement__ = 231;
         check_greater_or_equal(function__, "ai_ix[sym1__]",
                                ai_ix[(sym1__ - 1)], 0);}
-      current_statement__ = 205;
+      current_statement__ = 231;
       for (int sym1__ = 1; sym1__ <= N_allosteric_inhibitor; ++sym1__) {
-        current_statement__ = 205;
-        current_statement__ = 205;
+        current_statement__ = 231;
+        current_statement__ = 231;
         check_less_or_equal(function__, "ai_ix[sym1__]", ai_ix[(sym1__ - 1)],
                             N_mic);}
-      current_statement__ = 206;
+      current_statement__ = 232;
       validate_non_negative_index("aa_ix", "N_allosteric_activator",
                                   N_allosteric_activator);
-      current_statement__ = 207;
+      current_statement__ = 233;
       context__.validate_dims("data initialization","aa_ix","int",
           context__.to_vec(N_allosteric_activator));
       aa_ix = std::vector<int>(N_allosteric_activator, std::numeric_limits<int>::min());
       
-      current_statement__ = 207;
+      current_statement__ = 233;
       assign(aa_ix, nil_index_list(), context__.vals_i("aa_ix"),
         "assigning variable aa_ix");
-      current_statement__ = 207;
+      current_statement__ = 233;
       for (int sym1__ = 1; sym1__ <= N_allosteric_activator; ++sym1__) {
-        current_statement__ = 207;
-        current_statement__ = 207;
+        current_statement__ = 233;
+        current_statement__ = 233;
         check_greater_or_equal(function__, "aa_ix[sym1__]",
                                aa_ix[(sym1__ - 1)], 0);}
-      current_statement__ = 207;
+      current_statement__ = 233;
       for (int sym1__ = 1; sym1__ <= N_allosteric_activator; ++sym1__) {
-        current_statement__ = 207;
-        current_statement__ = 207;
+        current_statement__ = 233;
+        current_statement__ = 233;
         check_less_or_equal(function__, "aa_ix[sym1__]", aa_ix[(sym1__ - 1)],
                             N_mic);}
-      current_statement__ = 208;
+      current_statement__ = 234;
       validate_non_negative_index("subunits", "N_enzyme", N_enzyme);
-      current_statement__ = 209;
+      current_statement__ = 235;
       context__.validate_dims("data initialization","subunits","int",
           context__.to_vec(N_enzyme));
       subunits = std::vector<int>(N_enzyme, std::numeric_limits<int>::min());
       
-      current_statement__ = 209;
+      current_statement__ = 235;
       assign(subunits, nil_index_list(), context__.vals_i("subunits"),
         "assigning variable subunits");
-      current_statement__ = 209;
+      current_statement__ = 235;
       for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
-        current_statement__ = 209;
-        current_statement__ = 209;
+        current_statement__ = 235;
+        current_statement__ = 235;
         check_greater_or_equal(function__, "subunits[sym1__]",
                                subunits[(sym1__ - 1)], 0);}
-      current_statement__ = 210;
+      current_statement__ = 236;
       validate_non_negative_index("conc_init", "N_experiment", N_experiment);
-      current_statement__ = 211;
+      current_statement__ = 237;
       validate_non_negative_index("conc_init", "N_mic", N_mic);
-      current_statement__ = 212;
+      current_statement__ = 238;
       context__.validate_dims("data initialization","conc_init","double",
           context__.to_vec(N_experiment, N_mic));
       conc_init = std::vector<Eigen::Matrix<double, -1, 1>>(N_experiment, Eigen::Matrix<double, -1, 1>(N_mic));
@@ -3493,189 +4032,223 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> conc_init_flat__;
-        current_statement__ = 212;
+        current_statement__ = 238;
         assign(conc_init_flat__, nil_index_list(),
           context__.vals_r("conc_init"),
           "assigning variable conc_init_flat__");
-        current_statement__ = 212;
+        current_statement__ = 238;
         pos__ = 1;
-        current_statement__ = 212;
+        current_statement__ = 238;
         for (int sym1__ = 1; sym1__ <= N_mic; ++sym1__) {
-          current_statement__ = 212;
+          current_statement__ = 238;
           for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
-            current_statement__ = 212;
+            current_statement__ = 238;
             assign(conc_init,
               cons_list(index_uni(sym2__),
                 cons_list(index_uni(sym1__), nil_index_list())),
               conc_init_flat__[(pos__ - 1)], "assigning variable conc_init");
-            current_statement__ = 212;
+            current_statement__ = 238;
             pos__ = (pos__ + 1);}}
       }
-      current_statement__ = 212;
+      current_statement__ = 238;
       for (int sym1__ = 1; sym1__ <= N_experiment; ++sym1__) {
-        current_statement__ = 212;
+        current_statement__ = 238;
         for (int sym2__ = 1; sym2__ <= N_mic; ++sym2__) {
-          current_statement__ = 212;
-          current_statement__ = 212;
+          current_statement__ = 238;
+          current_statement__ = 238;
           check_greater_or_equal(function__, "conc_init[sym1__, sym2__]",
                                  conc_init[(sym1__ - 1)][(sym2__ - 1)], 0);}}
-      current_statement__ = 213;
+      current_statement__ = 239;
       context__.validate_dims("data initialization","rel_tol","double",
           context__.to_vec());
       rel_tol = std::numeric_limits<double>::quiet_NaN();
       
-      current_statement__ = 213;
+      current_statement__ = 239;
       rel_tol = context__.vals_r("rel_tol")[(1 - 1)];
-      current_statement__ = 214;
+      current_statement__ = 240;
       context__.validate_dims("data initialization","abs_tol","double",
           context__.to_vec());
       abs_tol = std::numeric_limits<double>::quiet_NaN();
       
-      current_statement__ = 214;
+      current_statement__ = 240;
       abs_tol = context__.vals_r("abs_tol")[(1 - 1)];
-      current_statement__ = 215;
+      current_statement__ = 241;
       context__.validate_dims("data initialization","max_num_steps","int",
           context__.to_vec());
       max_num_steps = std::numeric_limits<int>::min();
       
-      current_statement__ = 215;
+      current_statement__ = 241;
       max_num_steps = context__.vals_i("max_num_steps")[(1 - 1)];
-      current_statement__ = 216;
+      current_statement__ = 242;
       context__.validate_dims("data initialization","LIKELIHOOD","int",
           context__.to_vec());
       LIKELIHOOD = std::numeric_limits<int>::min();
       
-      current_statement__ = 216;
+      current_statement__ = 242;
       LIKELIHOOD = context__.vals_i("LIKELIHOOD")[(1 - 1)];
-      current_statement__ = 216;
-      current_statement__ = 216;
+      current_statement__ = 242;
+      current_statement__ = 242;
       check_greater_or_equal(function__, "LIKELIHOOD", LIKELIHOOD, 0);
-      current_statement__ = 216;
-      current_statement__ = 216;
+      current_statement__ = 242;
+      current_statement__ = 242;
       check_less_or_equal(function__, "LIKELIHOOD", LIKELIHOOD, 1);
-      current_statement__ = 217;
+      current_statement__ = 243;
       context__.validate_dims("data initialization","timepoint","double",
           context__.to_vec());
       timepoint = std::numeric_limits<double>::quiet_NaN();
       
-      current_statement__ = 217;
+      current_statement__ = 243;
       timepoint = context__.vals_r("timepoint")[(1 - 1)];
-      current_statement__ = 217;
-      current_statement__ = 217;
+      current_statement__ = 243;
+      current_statement__ = 243;
       check_greater_or_equal(function__, "timepoint", timepoint, 0);
-      current_statement__ = 218;
+      current_statement__ = 244;
       initial_time = std::numeric_limits<double>::quiet_NaN();
       
-      current_statement__ = 218;
+      current_statement__ = 244;
       initial_time = 0;
-      current_statement__ = 219;
+      current_statement__ = 245;
       validate_non_negative_index("knockout", "N_experiment", N_experiment);
-      current_statement__ = 220;
+      current_statement__ = 246;
       validate_non_negative_index("knockout", "N_enzyme", N_enzyme);
-      current_statement__ = 221;
+      current_statement__ = 247;
       knockout = Eigen::Matrix<double, -1, -1>(N_experiment, N_enzyme);
       stan::math::fill(knockout, std::numeric_limits<double>::quiet_NaN());
       
-      current_statement__ = 221;
+      current_statement__ = 247;
       assign(knockout, nil_index_list(),
         subtract(rep_matrix(1, N_experiment, N_enzyme), is_knockout),
         "assigning variable knockout");
-      current_statement__ = 222;
+      current_statement__ = 248;
+      validate_non_negative_index("phos_knockout", "N_experiment",
+                                  N_experiment);
+      current_statement__ = 249;
+      validate_non_negative_index("phos_knockout",
+                                  "N_phosphorylation_enzymes",
+                                  N_phosphorylation_enzymes);
+      current_statement__ = 250;
+      phos_knockout = Eigen::Matrix<double, -1, -1>(N_experiment, N_phosphorylation_enzymes);
+      stan::math::fill(phos_knockout, std::numeric_limits<double>::quiet_NaN());
+      
+      current_statement__ = 250;
+      assign(phos_knockout, nil_index_list(),
+        subtract(rep_matrix(1, N_experiment, N_phosphorylation_enzymes),
+          is_phos_knockout), "assigning variable phos_knockout");
+      current_statement__ = 251;
       validate_non_negative_index("formation_energy_z", "N_metabolite",
                                   N_metabolite);
-      current_statement__ = 223;
+      current_statement__ = 252;
       validate_non_negative_index("drain_z", "N_experiment", N_experiment);
-      current_statement__ = 224;
+      current_statement__ = 253;
       validate_non_negative_index("drain_z", "N_drain", N_drain);
-      current_statement__ = 225;
+      current_statement__ = 254;
       validate_non_negative_index("log_kcat_z", "N_enzyme", N_enzyme);
-      current_statement__ = 226;
+      current_statement__ = 255;
       validate_non_negative_index("log_km_z", "N_km", N_km);
-      current_statement__ = 227;
+      current_statement__ = 256;
+      validate_non_negative_index("log_phos_kcat_z",
+                                  "N_phosphorylation_enzymes",
+                                  N_phosphorylation_enzymes);
+      current_statement__ = 257;
       validate_non_negative_index("log_enzyme_z", "N_experiment",
                                   N_experiment);
-      current_statement__ = 228;
+      current_statement__ = 258;
       validate_non_negative_index("log_enzyme_z", "N_enzyme", N_enzyme);
-      current_statement__ = 229;
+      current_statement__ = 259;
+      validate_non_negative_index("log_phos_conc_z", "N_experiment",
+                                  N_experiment);
+      current_statement__ = 260;
+      validate_non_negative_index("log_phos_conc_z",
+                                  "N_phosphorylation_enzymes",
+                                  N_phosphorylation_enzymes);
+      current_statement__ = 261;
       validate_non_negative_index("log_conc_unbalanced_z", "N_experiment",
                                   N_experiment);
-      current_statement__ = 230;
+      current_statement__ = 262;
       validate_non_negative_index("log_conc_unbalanced_z", "N_unbalanced",
                                   N_unbalanced);
-      current_statement__ = 231;
+      current_statement__ = 263;
       validate_non_negative_index("log_ki_z", "N_competitive_inhibitor",
                                   N_competitive_inhibitor);
-      current_statement__ = 232;
+      current_statement__ = 264;
       validate_non_negative_index("log_dissociation_constant_t_z",
                                   "N_allosteric_inhibitor",
                                   N_allosteric_inhibitor);
-      current_statement__ = 233;
+      current_statement__ = 265;
       validate_non_negative_index("log_dissociation_constant_r_z",
                                   "N_allosteric_activator",
                                   N_allosteric_activator);
-      current_statement__ = 234;
+      current_statement__ = 266;
       validate_non_negative_index("log_transfer_constant_z",
                                   "N_allosteric_enzyme", N_allosteric_enzyme);
-      current_statement__ = 235;
+      current_statement__ = 267;
       validate_non_negative_index("formation_energy", "N_metabolite",
                                   N_metabolite);
-      current_statement__ = 236;
+      current_statement__ = 268;
       validate_non_negative_index("km", "N_km", N_km);
-      current_statement__ = 237;
+      current_statement__ = 269;
       validate_non_negative_index("ki", "N_competitive_inhibitor",
                                   N_competitive_inhibitor);
-      current_statement__ = 238;
+      current_statement__ = 270;
       validate_non_negative_index("kcat", "N_enzyme", N_enzyme);
-      current_statement__ = 239;
+      current_statement__ = 271;
       validate_non_negative_index("dissociation_constant_t",
                                   "N_allosteric_inhibitor",
                                   N_allosteric_inhibitor);
-      current_statement__ = 240;
+      current_statement__ = 272;
       validate_non_negative_index("dissociation_constant_r",
                                   "N_allosteric_activator",
                                   N_allosteric_activator);
-      current_statement__ = 241;
+      current_statement__ = 273;
       validate_non_negative_index("transfer_constant", "N_allosteric_enzyme",
                                   N_allosteric_enzyme);
-      current_statement__ = 242;
+      current_statement__ = 274;
+      validate_non_negative_index("phos_enzyme_kcat",
+                                  "N_phosphorylation_enzymes",
+                                  N_phosphorylation_enzymes);
+      current_statement__ = 275;
       validate_non_negative_index("drain", "N_experiment", N_experiment);
-      current_statement__ = 243;
+      current_statement__ = 276;
       validate_non_negative_index("drain", "N_drain", N_drain);
-      current_statement__ = 244;
+      current_statement__ = 277;
       validate_non_negative_index("enzyme", "N_experiment", N_experiment);
-      current_statement__ = 245;
+      current_statement__ = 278;
       validate_non_negative_index("enzyme", "N_enzyme", N_enzyme);
-      current_statement__ = 246;
+      current_statement__ = 279;
       validate_non_negative_index("conc_unbalanced", "N_experiment",
                                   N_experiment);
-      current_statement__ = 247;
+      current_statement__ = 280;
       validate_non_negative_index("conc_unbalanced", "N_unbalanced",
                                   N_unbalanced);
-      current_statement__ = 248;
+      current_statement__ = 281;
+      validate_non_negative_index("phos_enzyme_conc", "N_experiment",
+                                  N_experiment);
+      current_statement__ = 282;
+      validate_non_negative_index("phos_enzyme_conc",
+                                  "N_phosphorylation_enzymes",
+                                  N_phosphorylation_enzymes);
+      current_statement__ = 283;
       validate_non_negative_index("conc", "N_experiment", N_experiment);
-      current_statement__ = 249;
+      current_statement__ = 284;
       validate_non_negative_index("conc", "N_mic", N_mic);
-      current_statement__ = 250;
+      current_statement__ = 285;
       validate_non_negative_index("flux", "N_experiment", N_experiment);
-      current_statement__ = 251;
+      current_statement__ = 286;
       validate_non_negative_index("flux", "N_reaction", N_reaction);
-      current_statement__ = 252;
+      current_statement__ = 287;
       validate_non_negative_index("keq", "N_enzyme", N_enzyme);
-      current_statement__ = 253;
+      current_statement__ = 288;
       validate_non_negative_index("yconc_sim", "N_conc_measurement",
                                   N_conc_measurement);
-      current_statement__ = 254;
+      current_statement__ = 289;
       validate_non_negative_index("yflux_sim", "N_flux_measurement",
                                   N_flux_measurement);
-      current_statement__ = 255;
-      log_lik_1dim__ = std::numeric_limits<int>::min();
-      
-      current_statement__ = 255;
-      log_lik_1dim__ = (N_flux_measurement + N_conc_measurement);
-      current_statement__ = 255;
-      validate_non_negative_index("log_lik",
-                                  "N_flux_measurement + N_conc_measurement",
-                                  log_lik_1dim__);
+      current_statement__ = 290;
+      validate_non_negative_index("log_lik_conc", "N_conc_measurement",
+                                  N_conc_measurement);
+      current_statement__ = 291;
+      validate_non_negative_index("log_lik_flux", "N_flux_measurement",
+                                  N_flux_measurement);
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
       // Next line prevents compiler griping about no return
@@ -3688,7 +4261,9 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       num_params_r__ += N_experiment * N_drain;
       num_params_r__ += N_enzyme;
       num_params_r__ += N_km;
+      num_params_r__ += N_phosphorylation_enzymes;
       num_params_r__ += N_experiment * N_enzyme;
+      num_params_r__ += N_experiment * N_phosphorylation_enzymes;
       num_params_r__ += N_experiment * N_unbalanced;
       num_params_r__ += N_competitive_inhibitor;
       num_params_r__ += N_allosteric_inhibitor;
@@ -3740,47 +4315,59 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       current_statement__ = 4;
       log_km_z = in__.vector(N_km);
+      Eigen::Matrix<local_scalar_t__, -1, 1> log_phos_kcat_z;
+      log_phos_kcat_z = Eigen::Matrix<local_scalar_t__, -1, 1>(N_phosphorylation_enzymes);
+      stan::math::fill(log_phos_kcat_z, DUMMY_VAR__);
+      
+      current_statement__ = 5;
+      log_phos_kcat_z = in__.vector(N_phosphorylation_enzymes);
       Eigen::Matrix<local_scalar_t__, -1, -1> log_enzyme_z;
       log_enzyme_z = Eigen::Matrix<local_scalar_t__, -1, -1>(N_experiment, N_enzyme);
       stan::math::fill(log_enzyme_z, DUMMY_VAR__);
       
-      current_statement__ = 5;
+      current_statement__ = 6;
       log_enzyme_z = in__.matrix(N_experiment, N_enzyme);
+      Eigen::Matrix<local_scalar_t__, -1, -1> log_phos_conc_z;
+      log_phos_conc_z = Eigen::Matrix<local_scalar_t__, -1, -1>(N_experiment, N_phosphorylation_enzymes);
+      stan::math::fill(log_phos_conc_z, DUMMY_VAR__);
+      
+      current_statement__ = 7;
+      log_phos_conc_z = in__.matrix(N_experiment, N_phosphorylation_enzymes);
       Eigen::Matrix<local_scalar_t__, -1, -1> log_conc_unbalanced_z;
       log_conc_unbalanced_z = Eigen::Matrix<local_scalar_t__, -1, -1>(N_experiment, N_unbalanced);
       stan::math::fill(log_conc_unbalanced_z, DUMMY_VAR__);
       
-      current_statement__ = 6;
+      current_statement__ = 8;
       log_conc_unbalanced_z = in__.matrix(N_experiment, N_unbalanced);
       Eigen::Matrix<local_scalar_t__, -1, 1> log_ki_z;
       log_ki_z = Eigen::Matrix<local_scalar_t__, -1, 1>(N_competitive_inhibitor);
       stan::math::fill(log_ki_z, DUMMY_VAR__);
       
-      current_statement__ = 7;
+      current_statement__ = 9;
       log_ki_z = in__.vector(N_competitive_inhibitor);
       Eigen::Matrix<local_scalar_t__, -1, 1> log_dissociation_constant_t_z;
       log_dissociation_constant_t_z = Eigen::Matrix<local_scalar_t__, -1, 1>(N_allosteric_inhibitor);
       stan::math::fill(log_dissociation_constant_t_z, DUMMY_VAR__);
       
-      current_statement__ = 8;
+      current_statement__ = 10;
       log_dissociation_constant_t_z = in__.vector(N_allosteric_inhibitor);
       Eigen::Matrix<local_scalar_t__, -1, 1> log_dissociation_constant_r_z;
       log_dissociation_constant_r_z = Eigen::Matrix<local_scalar_t__, -1, 1>(N_allosteric_activator);
       stan::math::fill(log_dissociation_constant_r_z, DUMMY_VAR__);
       
-      current_statement__ = 9;
+      current_statement__ = 11;
       log_dissociation_constant_r_z = in__.vector(N_allosteric_activator);
       Eigen::Matrix<local_scalar_t__, -1, 1> log_transfer_constant_z;
       log_transfer_constant_z = Eigen::Matrix<local_scalar_t__, -1, 1>(N_allosteric_enzyme);
       stan::math::fill(log_transfer_constant_z, DUMMY_VAR__);
       
-      current_statement__ = 10;
+      current_statement__ = 12;
       log_transfer_constant_z = in__.vector(N_allosteric_enzyme);
       Eigen::Matrix<local_scalar_t__, -1, 1> formation_energy;
       formation_energy = Eigen::Matrix<local_scalar_t__, -1, 1>(N_metabolite);
       stan::math::fill(formation_energy, DUMMY_VAR__);
       
-      current_statement__ = 11;
+      current_statement__ = 13;
       assign(formation_energy, nil_index_list(),
         add(prior_loc_formation_energy,
           elt_multiply(formation_energy_z, prior_scale_formation_energy)),
@@ -3789,7 +4376,7 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       km = Eigen::Matrix<local_scalar_t__, -1, 1>(N_km);
       stan::math::fill(km, DUMMY_VAR__);
       
-      current_statement__ = 12;
+      current_statement__ = 14;
       assign(km, nil_index_list(),
         stan::math::exp(
           add(stan::math::log(prior_loc_km),
@@ -3798,7 +4385,7 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       ki = Eigen::Matrix<local_scalar_t__, -1, 1>(N_competitive_inhibitor);
       stan::math::fill(ki, DUMMY_VAR__);
       
-      current_statement__ = 13;
+      current_statement__ = 15;
       assign(ki, nil_index_list(),
         stan::math::exp(
           add(stan::math::log(prior_loc_ki),
@@ -3807,7 +4394,7 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       kcat = Eigen::Matrix<local_scalar_t__, -1, 1>(N_enzyme);
       stan::math::fill(kcat, DUMMY_VAR__);
       
-      current_statement__ = 14;
+      current_statement__ = 16;
       assign(kcat, nil_index_list(),
         stan::math::exp(
           add(stan::math::log(prior_loc_kcat),
@@ -3817,7 +4404,7 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       dissociation_constant_t = Eigen::Matrix<local_scalar_t__, -1, 1>(N_allosteric_inhibitor);
       stan::math::fill(dissociation_constant_t, DUMMY_VAR__);
       
-      current_statement__ = 15;
+      current_statement__ = 17;
       assign(dissociation_constant_t, nil_index_list(),
         stan::math::exp(
           add(stan::math::log(prior_loc_diss_t),
@@ -3827,7 +4414,7 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       dissociation_constant_r = Eigen::Matrix<local_scalar_t__, -1, 1>(N_allosteric_activator);
       stan::math::fill(dissociation_constant_r, DUMMY_VAR__);
       
-      current_statement__ = 16;
+      current_statement__ = 18;
       assign(dissociation_constant_r, nil_index_list(),
         stan::math::exp(
           add(stan::math::log(prior_loc_diss_r),
@@ -3837,12 +4424,22 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       transfer_constant = Eigen::Matrix<local_scalar_t__, -1, 1>(N_allosteric_enzyme);
       stan::math::fill(transfer_constant, DUMMY_VAR__);
       
-      current_statement__ = 17;
+      current_statement__ = 19;
       assign(transfer_constant, nil_index_list(),
         stan::math::exp(
           add(stan::math::log(prior_loc_tc),
             elt_multiply(log_transfer_constant_z, prior_scale_tc))),
         "assigning variable transfer_constant");
+      Eigen::Matrix<local_scalar_t__, -1, 1> phos_enzyme_kcat;
+      phos_enzyme_kcat = Eigen::Matrix<local_scalar_t__, -1, 1>(N_phosphorylation_enzymes);
+      stan::math::fill(phos_enzyme_kcat, DUMMY_VAR__);
+      
+      current_statement__ = 20;
+      assign(phos_enzyme_kcat, nil_index_list(),
+        stan::math::exp(
+          add(stan::math::log(prior_loc_phos_kcat),
+            elt_multiply(log_phos_kcat_z, prior_scale_phos_kcat))),
+        "assigning variable phos_enzyme_kcat");
       Eigen::Matrix<local_scalar_t__, -1, -1> drain;
       drain = Eigen::Matrix<local_scalar_t__, -1, -1>(N_experiment, N_drain);
       stan::math::fill(drain, DUMMY_VAR__);
@@ -3855,9 +4452,13 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       conc_unbalanced = Eigen::Matrix<local_scalar_t__, -1, -1>(N_experiment, N_unbalanced);
       stan::math::fill(conc_unbalanced, DUMMY_VAR__);
       
-      current_statement__ = 28;
+      Eigen::Matrix<local_scalar_t__, -1, -1> phos_enzyme_conc;
+      phos_enzyme_conc = Eigen::Matrix<local_scalar_t__, -1, -1>(N_experiment, N_phosphorylation_enzymes);
+      stan::math::fill(phos_enzyme_conc, DUMMY_VAR__);
+      
+      current_statement__ = 33;
       for (int ex = 1; ex <= N_experiment; ++ex) {
-        current_statement__ = 24;
+        current_statement__ = 28;
         assign(drain, cons_list(index_uni(ex), nil_index_list()),
           add(
             rvalue(prior_loc_drain,
@@ -3868,7 +4469,7 @@ class inference_model_model final : public model_base_crtp<inference_model_model
               rvalue(prior_scale_drain,
                 cons_list(index_uni(ex), nil_index_list()),
                 "prior_scale_drain"))), "assigning variable drain");
-        current_statement__ = 25;
+        current_statement__ = 29;
         assign(enzyme, cons_list(index_uni(ex), nil_index_list()),
           stan::math::exp(
             add(
@@ -3882,7 +4483,7 @@ class inference_model_model final : public model_base_crtp<inference_model_model
                 rvalue(prior_scale_enzyme,
                   cons_list(index_uni(ex), nil_index_list()),
                   "prior_scale_enzyme")))), "assigning variable enzyme");
-        current_statement__ = 26;
+        current_statement__ = 30;
         assign(conc_unbalanced, cons_list(index_uni(ex), nil_index_list()),
           stan::math::exp(
             add(
@@ -3897,7 +4498,23 @@ class inference_model_model final : public model_base_crtp<inference_model_model
                 rvalue(prior_scale_unbalanced,
                   cons_list(index_uni(ex), nil_index_list()),
                   "prior_scale_unbalanced")))),
-          "assigning variable conc_unbalanced");}
+          "assigning variable conc_unbalanced");
+        current_statement__ = 31;
+        assign(phos_enzyme_conc, cons_list(index_uni(ex), nil_index_list()),
+          stan::math::exp(
+            add(
+              stan::math::log(
+                rvalue(prior_loc_phos_conc,
+                  cons_list(index_uni(ex), nil_index_list()),
+                  "prior_loc_phos_conc")),
+              elt_multiply(
+                rvalue(log_phos_conc_z,
+                  cons_list(index_uni(ex), nil_index_list()),
+                  "log_phos_conc_z"),
+                rvalue(prior_scale_phos_conc,
+                  cons_list(index_uni(ex), nil_index_list()),
+                  "prior_scale_phos_conc")))),
+          "assigning variable phos_enzyme_conc");}
       std::vector<Eigen::Matrix<local_scalar_t__, -1, 1>> conc;
       conc = std::vector<Eigen::Matrix<local_scalar_t__, -1, 1>>(N_experiment, Eigen::Matrix<local_scalar_t__, -1, 1>(N_mic));
       stan::math::fill(conc, DUMMY_VAR__);
@@ -3910,19 +4527,19 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       keq = Eigen::Matrix<local_scalar_t__, -1, 1>(N_enzyme);
       stan::math::fill(keq, DUMMY_VAR__);
       
-      current_statement__ = 23;
+      current_statement__ = 27;
       assign(keq, nil_index_list(),
         get_keq(S_enz, formation_energy, mic_to_met,
           water_stoichiometry, pstream__), "assigning variable keq");
-      current_statement__ = 54;
+      current_statement__ = 61;
       for (int e = 1; e <= N_experiment; ++e) {
-        current_statement__ = 29;
+        current_statement__ = 34;
         validate_non_negative_index("experiment_enzyme", "N_enzyme", N_enzyme);
         Eigen::Matrix<local_scalar_t__, -1, 1> experiment_enzyme;
         experiment_enzyme = Eigen::Matrix<local_scalar_t__, -1, 1>(N_enzyme);
         stan::math::fill(experiment_enzyme, DUMMY_VAR__);
         
-        current_statement__ = 30;
+        current_statement__ = 35;
         assign(experiment_enzyme, nil_index_list(),
           elt_multiply(
             transpose(
@@ -3931,7 +4548,26 @@ class inference_model_model final : public model_base_crtp<inference_model_model
             transpose(
               rvalue(knockout, cons_list(index_uni(e), nil_index_list()),
                 "knockout"))), "assigning variable experiment_enzyme");
-        current_statement__ = 31;
+        current_statement__ = 36;
+        validate_non_negative_index("experiment_phos_conc",
+                                    "N_phosphorylation_enzymes",
+                                    N_phosphorylation_enzymes);
+        Eigen::Matrix<local_scalar_t__, -1, 1> experiment_phos_conc;
+        experiment_phos_conc = Eigen::Matrix<local_scalar_t__, -1, 1>(N_phosphorylation_enzymes);
+        stan::math::fill(experiment_phos_conc, DUMMY_VAR__);
+        
+        current_statement__ = 37;
+        assign(experiment_phos_conc, nil_index_list(),
+          elt_multiply(
+            transpose(
+              rvalue(phos_enzyme_conc,
+                cons_list(index_uni(e), nil_index_list()),
+                "phos_enzyme_conc")),
+            transpose(
+              rvalue(phos_knockout,
+                cons_list(index_uni(e), nil_index_list()), "phos_knockout"))),
+          "assigning variable experiment_phos_conc");
+        current_statement__ = 38;
         validate_non_negative_index("conc_balanced", "N_mic - N_unbalanced",
                                     (N_mic - N_unbalanced));
         std::vector<Eigen::Matrix<local_scalar_t__, -1, 1>> conc_balanced;
@@ -3939,7 +4575,7 @@ class inference_model_model final : public model_base_crtp<inference_model_model
           (N_mic - N_unbalanced)));
         stan::math::fill(conc_balanced, DUMMY_VAR__);
         
-        current_statement__ = 32;
+        current_statement__ = 39;
         assign(conc_balanced, nil_index_list(),
           ode_bdf_tol(dbalanced_dt_odefunctor__(),
             rvalue(conc_init,
@@ -3955,17 +4591,18 @@ class inference_model_model final : public model_base_crtp<inference_model_model
             km_lookup, S_enz, S_drain, S_full, kcat, keq, ci_ix, ai_ix,
             aa_ix, n_ci, n_ai, n_aa, ki, dissociation_constant_t,
             dissociation_constant_r, transfer_constant, subunits,
+            experiment_phos_conc, phos_enzyme_kcat, S_phos_act, S_phos_inh,
             transpose(
               rvalue(drain,
                 cons_list(index_uni(e),
                   cons_list(index_omni(), nil_index_list())), "drain"))),
           "assigning variable conc_balanced");
-        current_statement__ = 33;
+        current_statement__ = 40;
         assign(conc,
           cons_list(index_uni(e),
             cons_list(index_multi(balanced_mic_ix), nil_index_list())),
           conc_balanced[(1 - 1)], "assigning variable conc");
-        current_statement__ = 34;
+        current_statement__ = 41;
         assign(conc,
           cons_list(index_uni(e),
             cons_list(index_multi(unbalanced_mic_ix), nil_index_list())),
@@ -3973,27 +4610,31 @@ class inference_model_model final : public model_base_crtp<inference_model_model
             rvalue(conc_unbalanced,
               cons_list(index_uni(e), nil_index_list()), "conc_unbalanced")),
           "assigning variable conc");
-        current_statement__ = 35;
+        current_statement__ = 42;
         assign(flux, cons_list(index_uni(e), nil_index_list()),
           transpose(
             multiply(S_to_flux_map,
               get_flux_enz(conc[(e - 1)], experiment_enzyme, km, km_lookup,
                 S_enz, kcat, keq, ci_ix, ai_ix, aa_ix, n_ci, n_ai, n_aa, ki,
                 dissociation_constant_t, dissociation_constant_r,
-                transfer_constant, subunits, pstream__))),
-          "assigning variable flux");
-        current_statement__ = 39;
+                transfer_constant, subunits,
+                transpose(
+                  rvalue(phos_enzyme_conc,
+                    cons_list(index_uni(e), nil_index_list()),
+                    "phos_enzyme_conc")), phos_enzyme_kcat, S_phos_act,
+                S_phos_inh, pstream__))), "assigning variable flux");
+        current_statement__ = 46;
         if (logical_gt(
               squared_distance(conc_balanced[(1 - 1)],
                 conc_balanced[(2 - 1)]), 1)) {
-          current_statement__ = 36;
+          current_statement__ = 43;
           if (pstream__) {
             stan_print(pstream__, "Balanced metabolite concentration at ");
             stan_print(pstream__, timepoint);
             stan_print(pstream__, " seconds is not steady.");
             stan_print(pstream__, "\n");
           }
-          current_statement__ = 37;
+          current_statement__ = 44;
           if (pstream__) {
             stan_print(pstream__, "Found ");
             stan_print(pstream__, conc_balanced[(1 - 1)]);
@@ -4007,40 +4648,40 @@ class inference_model_model final : public model_base_crtp<inference_model_model
             stan_print(pstream__, "\n");
           }
         } 
-        current_statement__ = 52;
+        current_statement__ = 59;
         if (logical_gt(sum(conc[(e - 1)]), 100)) {
-          current_statement__ = 40;
+          current_statement__ = 47;
           if (pstream__) {
             stan_print(pstream__, "Metabolite concentration is really high in experiment ");
             stan_print(pstream__, e);
             stan_print(pstream__, ".");
             stan_print(pstream__, "\n");
           }
-          current_statement__ = 41;
+          current_statement__ = 48;
           if (pstream__) {
             stan_print(pstream__, "metabolite concentration: ");
             stan_print(pstream__, conc[(e - 1)]);
             stan_print(pstream__, "\n");
           }
-          current_statement__ = 42;
+          current_statement__ = 49;
           if (pstream__) {
             stan_print(pstream__, "kcat: ");
             stan_print(pstream__, kcat);
             stan_print(pstream__, "\n");
           }
-          current_statement__ = 43;
+          current_statement__ = 50;
           if (pstream__) {
             stan_print(pstream__, "km: ");
             stan_print(pstream__, km);
             stan_print(pstream__, "\n");
           }
-          current_statement__ = 44;
+          current_statement__ = 51;
           if (pstream__) {
             stan_print(pstream__, "keq: ");
             stan_print(pstream__, keq);
             stan_print(pstream__, "\n");
           }
-          current_statement__ = 45;
+          current_statement__ = 52;
           if (pstream__) {
             stan_print(pstream__, "flux: ");
             stan_print(pstream__, rvalue(flux,
@@ -4048,7 +4689,7 @@ class inference_model_model final : public model_base_crtp<inference_model_model
                                     "flux"));
             stan_print(pstream__, "\n");
           }
-          current_statement__ = 46;
+          current_statement__ = 53;
           if (pstream__) {
             stan_print(pstream__, "enzyme concentration: ");
             stan_print(pstream__, rvalue(enzyme,
@@ -4056,72 +4697,76 @@ class inference_model_model final : public model_base_crtp<inference_model_model
                                     "enzyme"));
             stan_print(pstream__, "\n");
           }
-          current_statement__ = 47;
+          current_statement__ = 54;
           if (pstream__) {
             stan_print(pstream__, "ki: ");
             stan_print(pstream__, ki);
             stan_print(pstream__, "\n");
           }
-          current_statement__ = 48;
+          current_statement__ = 55;
           if (pstream__) {
             stan_print(pstream__, "tense dissociation constants: ");
             stan_print(pstream__, dissociation_constant_t);
             stan_print(pstream__, "\n");
           }
-          current_statement__ = 49;
+          current_statement__ = 56;
           if (pstream__) {
             stan_print(pstream__, "relaxed dissociation constants: ");
             stan_print(pstream__, dissociation_constant_r);
             stan_print(pstream__, "\n");
           }
-          current_statement__ = 50;
+          current_statement__ = 57;
           if (pstream__) {
             stan_print(pstream__, "transfer constants: ");
             stan_print(pstream__, transfer_constant);
             stan_print(pstream__, "\n");
           }
         } }
-      current_statement__ = 21;
+      current_statement__ = 25;
       for (int sym1__ = 1; sym1__ <= N_experiment; ++sym1__) {
-        current_statement__ = 21;
+        current_statement__ = 25;
         for (int sym2__ = 1; sym2__ <= N_mic; ++sym2__) {
-          current_statement__ = 21;
-          current_statement__ = 21;
+          current_statement__ = 25;
+          current_statement__ = 25;
           check_greater_or_equal(function__, "conc[sym1__, sym2__]",
                                  conc[(sym1__ - 1)][(sym2__ - 1)], 0);}}
       {
-        current_statement__ = 70;
-        lp_accum__.add(std_normal_lpdf<false>(log_kcat_z));
-        current_statement__ = 71;
-        lp_accum__.add(std_normal_lpdf<false>(log_km_z));
-        current_statement__ = 72;
-        lp_accum__.add(std_normal_lpdf<false>(log_ki_z));
-        current_statement__ = 73;
-        lp_accum__.add(std_normal_lpdf<false>(log_dissociation_constant_t_z));
         current_statement__ = 74;
-        lp_accum__.add(std_normal_lpdf<false>(log_dissociation_constant_r_z));
+        lp_accum__.add(std_normal_lpdf<false>(log_kcat_z));
         current_statement__ = 75;
-        lp_accum__.add(std_normal_lpdf<false>(log_transfer_constant_z));
+        lp_accum__.add(std_normal_lpdf<false>(log_km_z));
         current_statement__ = 76;
-        lp_accum__.add(std_normal_lpdf<false>(formation_energy_z));
+        lp_accum__.add(std_normal_lpdf<false>(log_ki_z));
         current_statement__ = 77;
+        lp_accum__.add(std_normal_lpdf<false>(log_dissociation_constant_t_z));
+        current_statement__ = 78;
+        lp_accum__.add(std_normal_lpdf<false>(log_dissociation_constant_r_z));
+        current_statement__ = 79;
+        lp_accum__.add(std_normal_lpdf<false>(log_transfer_constant_z));
+        current_statement__ = 80;
+        lp_accum__.add(std_normal_lpdf<false>(formation_energy_z));
+        current_statement__ = 81;
+        lp_accum__.add(std_normal_lpdf<false>(log_phos_kcat_z));
+        current_statement__ = 82;
         lp_accum__.add(
           std_normal_lpdf<false>(to_vector(log_conc_unbalanced_z)));
-        current_statement__ = 78;
+        current_statement__ = 83;
         lp_accum__.add(std_normal_lpdf<false>(to_vector(log_enzyme_z)));
-        current_statement__ = 79;
-        lp_accum__.add(std_normal_lpdf<false>(to_vector(drain_z)));
         current_statement__ = 84;
+        lp_accum__.add(std_normal_lpdf<false>(to_vector(log_phos_conc_z)));
+        current_statement__ = 85;
+        lp_accum__.add(std_normal_lpdf<false>(to_vector(drain_z)));
+        current_statement__ = 90;
         if (logical_eq(LIKELIHOOD, 1)) {
-          current_statement__ = 80;
+          current_statement__ = 86;
           lp_accum__.add(
             reduce_sum<partial_sum_conc_rsfunctor__>(yconc, 1, pstream__,
               conc, experiment_yconc, mic_ix_yconc, sigma_conc));
-          current_statement__ = 81;
+          current_statement__ = 87;
           lp_accum__.add(
             reduce_sum<partial_sum_enz_rsfunctor__>(yenz, 1, pstream__,
               enzyme, experiment_yenz, enzyme_yenz, sigma_enz));
-          current_statement__ = 82;
+          current_statement__ = 88;
           lp_accum__.add(
             reduce_sum<partial_sum_flux_rsfunctor__>(yflux, 1, pstream__,
               flux, experiment_yflux, reaction_yflux, sigma_flux));
@@ -4183,41 +4828,53 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       current_statement__ = 4;
       log_km_z = in__.vector(N_km);
+      Eigen::Matrix<double, -1, 1> log_phos_kcat_z;
+      log_phos_kcat_z = Eigen::Matrix<double, -1, 1>(N_phosphorylation_enzymes);
+      stan::math::fill(log_phos_kcat_z, std::numeric_limits<double>::quiet_NaN());
+      
+      current_statement__ = 5;
+      log_phos_kcat_z = in__.vector(N_phosphorylation_enzymes);
       Eigen::Matrix<double, -1, -1> log_enzyme_z;
       log_enzyme_z = Eigen::Matrix<double, -1, -1>(N_experiment, N_enzyme);
       stan::math::fill(log_enzyme_z, std::numeric_limits<double>::quiet_NaN());
       
-      current_statement__ = 5;
+      current_statement__ = 6;
       log_enzyme_z = in__.matrix(N_experiment, N_enzyme);
+      Eigen::Matrix<double, -1, -1> log_phos_conc_z;
+      log_phos_conc_z = Eigen::Matrix<double, -1, -1>(N_experiment, N_phosphorylation_enzymes);
+      stan::math::fill(log_phos_conc_z, std::numeric_limits<double>::quiet_NaN());
+      
+      current_statement__ = 7;
+      log_phos_conc_z = in__.matrix(N_experiment, N_phosphorylation_enzymes);
       Eigen::Matrix<double, -1, -1> log_conc_unbalanced_z;
       log_conc_unbalanced_z = Eigen::Matrix<double, -1, -1>(N_experiment, N_unbalanced);
       stan::math::fill(log_conc_unbalanced_z, std::numeric_limits<double>::quiet_NaN());
       
-      current_statement__ = 6;
+      current_statement__ = 8;
       log_conc_unbalanced_z = in__.matrix(N_experiment, N_unbalanced);
       Eigen::Matrix<double, -1, 1> log_ki_z;
       log_ki_z = Eigen::Matrix<double, -1, 1>(N_competitive_inhibitor);
       stan::math::fill(log_ki_z, std::numeric_limits<double>::quiet_NaN());
       
-      current_statement__ = 7;
+      current_statement__ = 9;
       log_ki_z = in__.vector(N_competitive_inhibitor);
       Eigen::Matrix<double, -1, 1> log_dissociation_constant_t_z;
       log_dissociation_constant_t_z = Eigen::Matrix<double, -1, 1>(N_allosteric_inhibitor);
       stan::math::fill(log_dissociation_constant_t_z, std::numeric_limits<double>::quiet_NaN());
       
-      current_statement__ = 8;
+      current_statement__ = 10;
       log_dissociation_constant_t_z = in__.vector(N_allosteric_inhibitor);
       Eigen::Matrix<double, -1, 1> log_dissociation_constant_r_z;
       log_dissociation_constant_r_z = Eigen::Matrix<double, -1, 1>(N_allosteric_activator);
       stan::math::fill(log_dissociation_constant_r_z, std::numeric_limits<double>::quiet_NaN());
       
-      current_statement__ = 9;
+      current_statement__ = 11;
       log_dissociation_constant_r_z = in__.vector(N_allosteric_activator);
       Eigen::Matrix<double, -1, 1> log_transfer_constant_z;
       log_transfer_constant_z = Eigen::Matrix<double, -1, 1>(N_allosteric_enzyme);
       stan::math::fill(log_transfer_constant_z, std::numeric_limits<double>::quiet_NaN());
       
-      current_statement__ = 10;
+      current_statement__ = 12;
       log_transfer_constant_z = in__.vector(N_allosteric_enzyme);
       Eigen::Matrix<double, -1, 1> formation_energy;
       formation_energy = Eigen::Matrix<double, -1, 1>(N_metabolite);
@@ -4247,6 +4904,10 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       transfer_constant = Eigen::Matrix<double, -1, 1>(N_allosteric_enzyme);
       stan::math::fill(transfer_constant, std::numeric_limits<double>::quiet_NaN());
       
+      Eigen::Matrix<double, -1, 1> phos_enzyme_kcat;
+      phos_enzyme_kcat = Eigen::Matrix<double, -1, 1>(N_phosphorylation_enzymes);
+      stan::math::fill(phos_enzyme_kcat, std::numeric_limits<double>::quiet_NaN());
+      
       Eigen::Matrix<double, -1, -1> drain;
       drain = Eigen::Matrix<double, -1, -1>(N_experiment, N_drain);
       stan::math::fill(drain, std::numeric_limits<double>::quiet_NaN());
@@ -4258,6 +4919,10 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       Eigen::Matrix<double, -1, -1> conc_unbalanced;
       conc_unbalanced = Eigen::Matrix<double, -1, -1>(N_experiment, N_unbalanced);
       stan::math::fill(conc_unbalanced, std::numeric_limits<double>::quiet_NaN());
+      
+      Eigen::Matrix<double, -1, -1> phos_enzyme_conc;
+      phos_enzyme_conc = Eigen::Matrix<double, -1, -1>(N_experiment, N_phosphorylation_enzymes);
+      stan::math::fill(phos_enzyme_conc, std::numeric_limits<double>::quiet_NaN());
       
       std::vector<Eigen::Matrix<double, -1, 1>> conc;
       conc = std::vector<Eigen::Matrix<double, -1, 1>>(N_experiment, Eigen::Matrix<double, -1, 1>(N_mic));
@@ -4284,6 +4949,8 @@ class inference_model_model final : public model_base_crtp<inference_model_model
         vars__.emplace_back(log_kcat_z[(sym1__ - 1)]);}
       for (int sym1__ = 1; sym1__ <= N_km; ++sym1__) {
         vars__.emplace_back(log_km_z[(sym1__ - 1)]);}
+      for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+        vars__.emplace_back(log_phos_kcat_z[(sym1__ - 1)]);}
       for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
         for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
           vars__.emplace_back(
@@ -4291,6 +4958,13 @@ class inference_model_model final : public model_base_crtp<inference_model_model
               cons_list(index_uni(sym2__),
                 cons_list(index_uni(sym1__), nil_index_list())),
               "log_enzyme_z"));}}
+      for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+        for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
+          vars__.emplace_back(
+            rvalue(log_phos_conc_z,
+              cons_list(index_uni(sym2__),
+                cons_list(index_uni(sym1__), nil_index_list())),
+              "log_phos_conc_z"));}}
       for (int sym1__ = 1; sym1__ <= N_unbalanced; ++sym1__) {
         for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
           vars__.emplace_back(
@@ -4310,48 +4984,54 @@ class inference_model_model final : public model_base_crtp<inference_model_model
             primitive_value(emit_generated_quantities__)))) {
         return ;
       } 
-      current_statement__ = 11;
+      current_statement__ = 13;
       assign(formation_energy, nil_index_list(),
         add(prior_loc_formation_energy,
           elt_multiply(formation_energy_z, prior_scale_formation_energy)),
         "assigning variable formation_energy");
-      current_statement__ = 12;
+      current_statement__ = 14;
       assign(km, nil_index_list(),
         stan::math::exp(
           add(stan::math::log(prior_loc_km),
             elt_multiply(log_km_z, prior_scale_km))), "assigning variable km");
-      current_statement__ = 13;
+      current_statement__ = 15;
       assign(ki, nil_index_list(),
         stan::math::exp(
           add(stan::math::log(prior_loc_ki),
             elt_multiply(log_ki_z, prior_scale_ki))), "assigning variable ki");
-      current_statement__ = 14;
+      current_statement__ = 16;
       assign(kcat, nil_index_list(),
         stan::math::exp(
           add(stan::math::log(prior_loc_kcat),
             elt_multiply(log_kcat_z, prior_scale_kcat))),
         "assigning variable kcat");
-      current_statement__ = 15;
+      current_statement__ = 17;
       assign(dissociation_constant_t, nil_index_list(),
         stan::math::exp(
           add(stan::math::log(prior_loc_diss_t),
             elt_multiply(log_dissociation_constant_t_z, prior_scale_diss_t))),
         "assigning variable dissociation_constant_t");
-      current_statement__ = 16;
+      current_statement__ = 18;
       assign(dissociation_constant_r, nil_index_list(),
         stan::math::exp(
           add(stan::math::log(prior_loc_diss_r),
             elt_multiply(log_dissociation_constant_r_z, prior_scale_diss_r))),
         "assigning variable dissociation_constant_r");
-      current_statement__ = 17;
+      current_statement__ = 19;
       assign(transfer_constant, nil_index_list(),
         stan::math::exp(
           add(stan::math::log(prior_loc_tc),
             elt_multiply(log_transfer_constant_z, prior_scale_tc))),
         "assigning variable transfer_constant");
-      current_statement__ = 28;
+      current_statement__ = 20;
+      assign(phos_enzyme_kcat, nil_index_list(),
+        stan::math::exp(
+          add(stan::math::log(prior_loc_phos_kcat),
+            elt_multiply(log_phos_kcat_z, prior_scale_phos_kcat))),
+        "assigning variable phos_enzyme_kcat");
+      current_statement__ = 33;
       for (int ex = 1; ex <= N_experiment; ++ex) {
-        current_statement__ = 24;
+        current_statement__ = 28;
         assign(drain, cons_list(index_uni(ex), nil_index_list()),
           add(
             rvalue(prior_loc_drain,
@@ -4362,7 +5042,7 @@ class inference_model_model final : public model_base_crtp<inference_model_model
               rvalue(prior_scale_drain,
                 cons_list(index_uni(ex), nil_index_list()),
                 "prior_scale_drain"))), "assigning variable drain");
-        current_statement__ = 25;
+        current_statement__ = 29;
         assign(enzyme, cons_list(index_uni(ex), nil_index_list()),
           stan::math::exp(
             add(
@@ -4376,7 +5056,7 @@ class inference_model_model final : public model_base_crtp<inference_model_model
                 rvalue(prior_scale_enzyme,
                   cons_list(index_uni(ex), nil_index_list()),
                   "prior_scale_enzyme")))), "assigning variable enzyme");
-        current_statement__ = 26;
+        current_statement__ = 30;
         assign(conc_unbalanced, cons_list(index_uni(ex), nil_index_list()),
           stan::math::exp(
             add(
@@ -4391,20 +5071,36 @@ class inference_model_model final : public model_base_crtp<inference_model_model
                 rvalue(prior_scale_unbalanced,
                   cons_list(index_uni(ex), nil_index_list()),
                   "prior_scale_unbalanced")))),
-          "assigning variable conc_unbalanced");}
-      current_statement__ = 23;
+          "assigning variable conc_unbalanced");
+        current_statement__ = 31;
+        assign(phos_enzyme_conc, cons_list(index_uni(ex), nil_index_list()),
+          stan::math::exp(
+            add(
+              stan::math::log(
+                rvalue(prior_loc_phos_conc,
+                  cons_list(index_uni(ex), nil_index_list()),
+                  "prior_loc_phos_conc")),
+              elt_multiply(
+                rvalue(log_phos_conc_z,
+                  cons_list(index_uni(ex), nil_index_list()),
+                  "log_phos_conc_z"),
+                rvalue(prior_scale_phos_conc,
+                  cons_list(index_uni(ex), nil_index_list()),
+                  "prior_scale_phos_conc")))),
+          "assigning variable phos_enzyme_conc");}
+      current_statement__ = 27;
       assign(keq, nil_index_list(),
         get_keq(S_enz, formation_energy, mic_to_met,
           water_stoichiometry, pstream__), "assigning variable keq");
-      current_statement__ = 54;
+      current_statement__ = 61;
       for (int e = 1; e <= N_experiment; ++e) {
-        current_statement__ = 29;
+        current_statement__ = 34;
         validate_non_negative_index("experiment_enzyme", "N_enzyme", N_enzyme);
         Eigen::Matrix<double, -1, 1> experiment_enzyme;
         experiment_enzyme = Eigen::Matrix<double, -1, 1>(N_enzyme);
         stan::math::fill(experiment_enzyme, std::numeric_limits<double>::quiet_NaN());
         
-        current_statement__ = 30;
+        current_statement__ = 35;
         assign(experiment_enzyme, nil_index_list(),
           elt_multiply(
             transpose(
@@ -4413,7 +5109,26 @@ class inference_model_model final : public model_base_crtp<inference_model_model
             transpose(
               rvalue(knockout, cons_list(index_uni(e), nil_index_list()),
                 "knockout"))), "assigning variable experiment_enzyme");
-        current_statement__ = 31;
+        current_statement__ = 36;
+        validate_non_negative_index("experiment_phos_conc",
+                                    "N_phosphorylation_enzymes",
+                                    N_phosphorylation_enzymes);
+        Eigen::Matrix<double, -1, 1> experiment_phos_conc;
+        experiment_phos_conc = Eigen::Matrix<double, -1, 1>(N_phosphorylation_enzymes);
+        stan::math::fill(experiment_phos_conc, std::numeric_limits<double>::quiet_NaN());
+        
+        current_statement__ = 37;
+        assign(experiment_phos_conc, nil_index_list(),
+          elt_multiply(
+            transpose(
+              rvalue(phos_enzyme_conc,
+                cons_list(index_uni(e), nil_index_list()),
+                "phos_enzyme_conc")),
+            transpose(
+              rvalue(phos_knockout,
+                cons_list(index_uni(e), nil_index_list()), "phos_knockout"))),
+          "assigning variable experiment_phos_conc");
+        current_statement__ = 38;
         validate_non_negative_index("conc_balanced", "N_mic - N_unbalanced",
                                     (N_mic - N_unbalanced));
         std::vector<Eigen::Matrix<double, -1, 1>> conc_balanced;
@@ -4421,7 +5136,7 @@ class inference_model_model final : public model_base_crtp<inference_model_model
           (N_mic - N_unbalanced)));
         stan::math::fill(conc_balanced, std::numeric_limits<double>::quiet_NaN());
         
-        current_statement__ = 32;
+        current_statement__ = 39;
         assign(conc_balanced, nil_index_list(),
           ode_bdf_tol(dbalanced_dt_odefunctor__(),
             rvalue(conc_init,
@@ -4437,17 +5152,18 @@ class inference_model_model final : public model_base_crtp<inference_model_model
             km_lookup, S_enz, S_drain, S_full, kcat, keq, ci_ix, ai_ix,
             aa_ix, n_ci, n_ai, n_aa, ki, dissociation_constant_t,
             dissociation_constant_r, transfer_constant, subunits,
+            experiment_phos_conc, phos_enzyme_kcat, S_phos_act, S_phos_inh,
             transpose(
               rvalue(drain,
                 cons_list(index_uni(e),
                   cons_list(index_omni(), nil_index_list())), "drain"))),
           "assigning variable conc_balanced");
-        current_statement__ = 33;
+        current_statement__ = 40;
         assign(conc,
           cons_list(index_uni(e),
             cons_list(index_multi(balanced_mic_ix), nil_index_list())),
           conc_balanced[(1 - 1)], "assigning variable conc");
-        current_statement__ = 34;
+        current_statement__ = 41;
         assign(conc,
           cons_list(index_uni(e),
             cons_list(index_multi(unbalanced_mic_ix), nil_index_list())),
@@ -4455,27 +5171,31 @@ class inference_model_model final : public model_base_crtp<inference_model_model
             rvalue(conc_unbalanced,
               cons_list(index_uni(e), nil_index_list()), "conc_unbalanced")),
           "assigning variable conc");
-        current_statement__ = 35;
+        current_statement__ = 42;
         assign(flux, cons_list(index_uni(e), nil_index_list()),
           transpose(
             multiply(S_to_flux_map,
               get_flux_enz(conc[(e - 1)], experiment_enzyme, km, km_lookup,
                 S_enz, kcat, keq, ci_ix, ai_ix, aa_ix, n_ci, n_ai, n_aa, ki,
                 dissociation_constant_t, dissociation_constant_r,
-                transfer_constant, subunits, pstream__))),
-          "assigning variable flux");
-        current_statement__ = 39;
+                transfer_constant, subunits,
+                transpose(
+                  rvalue(phos_enzyme_conc,
+                    cons_list(index_uni(e), nil_index_list()),
+                    "phos_enzyme_conc")), phos_enzyme_kcat, S_phos_act,
+                S_phos_inh, pstream__))), "assigning variable flux");
+        current_statement__ = 46;
         if (logical_gt(
               squared_distance(conc_balanced[(1 - 1)],
                 conc_balanced[(2 - 1)]), 1)) {
-          current_statement__ = 36;
+          current_statement__ = 43;
           if (pstream__) {
             stan_print(pstream__, "Balanced metabolite concentration at ");
             stan_print(pstream__, timepoint);
             stan_print(pstream__, " seconds is not steady.");
             stan_print(pstream__, "\n");
           }
-          current_statement__ = 37;
+          current_statement__ = 44;
           if (pstream__) {
             stan_print(pstream__, "Found ");
             stan_print(pstream__, conc_balanced[(1 - 1)]);
@@ -4489,40 +5209,40 @@ class inference_model_model final : public model_base_crtp<inference_model_model
             stan_print(pstream__, "\n");
           }
         } 
-        current_statement__ = 52;
+        current_statement__ = 59;
         if (logical_gt(sum(conc[(e - 1)]), 100)) {
-          current_statement__ = 40;
+          current_statement__ = 47;
           if (pstream__) {
             stan_print(pstream__, "Metabolite concentration is really high in experiment ");
             stan_print(pstream__, e);
             stan_print(pstream__, ".");
             stan_print(pstream__, "\n");
           }
-          current_statement__ = 41;
+          current_statement__ = 48;
           if (pstream__) {
             stan_print(pstream__, "metabolite concentration: ");
             stan_print(pstream__, conc[(e - 1)]);
             stan_print(pstream__, "\n");
           }
-          current_statement__ = 42;
+          current_statement__ = 49;
           if (pstream__) {
             stan_print(pstream__, "kcat: ");
             stan_print(pstream__, kcat);
             stan_print(pstream__, "\n");
           }
-          current_statement__ = 43;
+          current_statement__ = 50;
           if (pstream__) {
             stan_print(pstream__, "km: ");
             stan_print(pstream__, km);
             stan_print(pstream__, "\n");
           }
-          current_statement__ = 44;
+          current_statement__ = 51;
           if (pstream__) {
             stan_print(pstream__, "keq: ");
             stan_print(pstream__, keq);
             stan_print(pstream__, "\n");
           }
-          current_statement__ = 45;
+          current_statement__ = 52;
           if (pstream__) {
             stan_print(pstream__, "flux: ");
             stan_print(pstream__, rvalue(flux,
@@ -4530,7 +5250,7 @@ class inference_model_model final : public model_base_crtp<inference_model_model
                                     "flux"));
             stan_print(pstream__, "\n");
           }
-          current_statement__ = 46;
+          current_statement__ = 53;
           if (pstream__) {
             stan_print(pstream__, "enzyme concentration: ");
             stan_print(pstream__, rvalue(enzyme,
@@ -4538,37 +5258,37 @@ class inference_model_model final : public model_base_crtp<inference_model_model
                                     "enzyme"));
             stan_print(pstream__, "\n");
           }
-          current_statement__ = 47;
+          current_statement__ = 54;
           if (pstream__) {
             stan_print(pstream__, "ki: ");
             stan_print(pstream__, ki);
             stan_print(pstream__, "\n");
           }
-          current_statement__ = 48;
+          current_statement__ = 55;
           if (pstream__) {
             stan_print(pstream__, "tense dissociation constants: ");
             stan_print(pstream__, dissociation_constant_t);
             stan_print(pstream__, "\n");
           }
-          current_statement__ = 49;
+          current_statement__ = 56;
           if (pstream__) {
             stan_print(pstream__, "relaxed dissociation constants: ");
             stan_print(pstream__, dissociation_constant_r);
             stan_print(pstream__, "\n");
           }
-          current_statement__ = 50;
+          current_statement__ = 57;
           if (pstream__) {
             stan_print(pstream__, "transfer constants: ");
             stan_print(pstream__, transfer_constant);
             stan_print(pstream__, "\n");
           }
         } }
-      current_statement__ = 21;
+      current_statement__ = 25;
       for (int sym1__ = 1; sym1__ <= N_experiment; ++sym1__) {
-        current_statement__ = 21;
+        current_statement__ = 25;
         for (int sym2__ = 1; sym2__ <= N_mic; ++sym2__) {
-          current_statement__ = 21;
-          current_statement__ = 21;
+          current_statement__ = 25;
+          current_statement__ = 25;
           check_greater_or_equal(function__, "conc[sym1__, sym2__]",
                                  conc[(sym1__ - 1)][(sym2__ - 1)], 0);}}
       if (emit_transformed_parameters__) {
@@ -4586,6 +5306,8 @@ class inference_model_model final : public model_base_crtp<inference_model_model
           vars__.emplace_back(dissociation_constant_r[(sym1__ - 1)]);}
         for (int sym1__ = 1; sym1__ <= N_allosteric_enzyme; ++sym1__) {
           vars__.emplace_back(transfer_constant[(sym1__ - 1)]);}
+        for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+          vars__.emplace_back(phos_enzyme_kcat[(sym1__ - 1)]);}
         for (int sym1__ = 1; sym1__ <= N_drain; ++sym1__) {
           for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
             vars__.emplace_back(
@@ -4607,6 +5329,13 @@ class inference_model_model final : public model_base_crtp<inference_model_model
                 cons_list(index_uni(sym2__),
                   cons_list(index_uni(sym1__), nil_index_list())),
                 "conc_unbalanced"));}}
+        for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+          for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
+            vars__.emplace_back(
+              rvalue(phos_enzyme_conc,
+                cons_list(index_uni(sym2__),
+                  cons_list(index_uni(sym1__), nil_index_list())),
+                "phos_enzyme_conc"));}}
         for (int sym1__ = 1; sym1__ <= N_mic; ++sym1__) {
           for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
             vars__.emplace_back(conc[(sym2__ - 1)][(sym1__ - 1)]);}}
@@ -4631,56 +5360,56 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       yflux_sim = Eigen::Matrix<double, -1, 1>(N_flux_measurement);
       stan::math::fill(yflux_sim, std::numeric_limits<double>::quiet_NaN());
       
-      Eigen::Matrix<double, -1, 1> log_lik;
-      log_lik = Eigen::Matrix<double, -1, 1>(log_lik_1dim__);
-      stan::math::fill(log_lik, std::numeric_limits<double>::quiet_NaN());
+      Eigen::Matrix<double, -1, 1> log_lik_conc;
+      log_lik_conc = Eigen::Matrix<double, -1, 1>(N_conc_measurement);
+      stan::math::fill(log_lik_conc, std::numeric_limits<double>::quiet_NaN());
       
-      current_statement__ = 60;
-      for (int f = 1; f <= N_flux_measurement; ++f) {
-        current_statement__ = 58;
-        assign(log_lik, cons_list(index_uni(f), nil_index_list()),
-          normal_lpdf<false>(yflux[(f - 1)],
-            rvalue(flux,
-              cons_list(index_uni(experiment_yflux[(f - 1)]),
-                cons_list(index_uni(reaction_yflux[(f - 1)]),
-                  nil_index_list())), "flux"), sigma_flux[(f - 1)]),
-          "assigning variable log_lik");}
-      current_statement__ = 63;
+      Eigen::Matrix<double, -1, 1> log_lik_flux;
+      log_lik_flux = Eigen::Matrix<double, -1, 1>(N_flux_measurement);
+      stan::math::fill(log_lik_flux, std::numeric_limits<double>::quiet_NaN());
+      
+      current_statement__ = 69;
       for (int c = 1; c <= N_conc_measurement; ++c) {
-        current_statement__ = 61;
-        assign(log_lik,
-          cons_list(index_uni((N_flux_measurement + c)), nil_index_list()),
-          lognormal_lpdf<false>(yconc[(c - 1)],
-            stan::math::log(
-              conc[(experiment_yconc[(c - 1)] - 1)][(mic_ix_yconc[(c - 1)] -
-                                                      1)]),
-            sigma_conc[(c - 1)]), "assigning variable log_lik");}
-      current_statement__ = 66;
-      for (int c = 1; c <= N_conc_measurement; ++c) {
-        current_statement__ = 64;
+        current_statement__ = 66;
         assign(yconc_sim, cons_list(index_uni(c), nil_index_list()),
           lognormal_rng(
             stan::math::log(
               conc[(experiment_yconc[(c - 1)] - 1)][(mic_ix_yconc[(c - 1)] -
                                                       1)]),
             sigma_conc[(c - 1)], base_rng__), "assigning variable yconc_sim");
-      }
-      current_statement__ = 69;
-      for (int f = 1; f <= N_flux_measurement; ++f) {
         current_statement__ = 67;
+        assign(log_lik_conc, cons_list(index_uni(c), nil_index_list()),
+          lognormal_lpdf<false>(yconc[(c - 1)],
+            stan::math::log(
+              conc[(experiment_yconc[(c - 1)] - 1)][(mic_ix_yconc[(c - 1)] -
+                                                      1)]),
+            sigma_conc[(c - 1)]), "assigning variable log_lik_conc");}
+      current_statement__ = 73;
+      for (int f = 1; f <= N_flux_measurement; ++f) {
+        current_statement__ = 70;
         assign(yflux_sim, cons_list(index_uni(f), nil_index_list()),
           normal_rng(
             rvalue(flux,
               cons_list(index_uni(experiment_yflux[(f - 1)]),
                 cons_list(index_uni(reaction_yflux[(f - 1)]),
                   nil_index_list())), "flux"), sigma_flux[(f - 1)],
-            base_rng__), "assigning variable yflux_sim");}
+            base_rng__), "assigning variable yflux_sim");
+        current_statement__ = 71;
+        assign(log_lik_flux, cons_list(index_uni(f), nil_index_list()),
+          normal_lpdf<false>(yflux[(f - 1)],
+            rvalue(flux,
+              cons_list(index_uni(experiment_yflux[(f - 1)]),
+                cons_list(index_uni(reaction_yflux[(f - 1)]),
+                  nil_index_list())), "flux"), sigma_flux[(f - 1)]),
+          "assigning variable log_lik_flux");}
       for (int sym1__ = 1; sym1__ <= N_conc_measurement; ++sym1__) {
         vars__.emplace_back(yconc_sim[(sym1__ - 1)]);}
       for (int sym1__ = 1; sym1__ <= N_flux_measurement; ++sym1__) {
         vars__.emplace_back(yflux_sim[(sym1__ - 1)]);}
-      for (int sym1__ = 1; sym1__ <= log_lik_1dim__; ++sym1__) {
-        vars__.emplace_back(log_lik[(sym1__ - 1)]);}
+      for (int sym1__ = 1; sym1__ <= N_conc_measurement; ++sym1__) {
+        vars__.emplace_back(log_lik_conc[(sym1__ - 1)]);}
+      for (int sym1__ = 1; sym1__ <= N_flux_measurement; ++sym1__) {
+        vars__.emplace_back(log_lik_flux[(sym1__ - 1)]);}
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
       // Next line prevents compiler griping about no return
@@ -4786,29 +5515,76 @@ class inference_model_model final : public model_base_crtp<inference_model_model
           current_statement__ = 4;
           pos__ = (pos__ + 1);}
       }
+      Eigen::Matrix<double, -1, 1> log_phos_kcat_z;
+      log_phos_kcat_z = Eigen::Matrix<double, -1, 1>(N_phosphorylation_enzymes);
+      stan::math::fill(log_phos_kcat_z, std::numeric_limits<double>::quiet_NaN());
+      
+      {
+        std::vector<local_scalar_t__> log_phos_kcat_z_flat__;
+        current_statement__ = 5;
+        assign(log_phos_kcat_z_flat__, nil_index_list(),
+          context__.vals_r("log_phos_kcat_z"),
+          "assigning variable log_phos_kcat_z_flat__");
+        current_statement__ = 5;
+        pos__ = 1;
+        current_statement__ = 5;
+        for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+          current_statement__ = 5;
+          assign(log_phos_kcat_z,
+            cons_list(index_uni(sym1__), nil_index_list()),
+            log_phos_kcat_z_flat__[(pos__ - 1)],
+            "assigning variable log_phos_kcat_z");
+          current_statement__ = 5;
+          pos__ = (pos__ + 1);}
+      }
       Eigen::Matrix<double, -1, -1> log_enzyme_z;
       log_enzyme_z = Eigen::Matrix<double, -1, -1>(N_experiment, N_enzyme);
       stan::math::fill(log_enzyme_z, std::numeric_limits<double>::quiet_NaN());
       
       {
         std::vector<local_scalar_t__> log_enzyme_z_flat__;
-        current_statement__ = 5;
+        current_statement__ = 6;
         assign(log_enzyme_z_flat__, nil_index_list(),
           context__.vals_r("log_enzyme_z"),
           "assigning variable log_enzyme_z_flat__");
-        current_statement__ = 5;
+        current_statement__ = 6;
         pos__ = 1;
-        current_statement__ = 5;
+        current_statement__ = 6;
         for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
-          current_statement__ = 5;
+          current_statement__ = 6;
           for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
-            current_statement__ = 5;
+            current_statement__ = 6;
             assign(log_enzyme_z,
               cons_list(index_uni(sym2__),
                 cons_list(index_uni(sym1__), nil_index_list())),
               log_enzyme_z_flat__[(pos__ - 1)],
               "assigning variable log_enzyme_z");
-            current_statement__ = 5;
+            current_statement__ = 6;
+            pos__ = (pos__ + 1);}}
+      }
+      Eigen::Matrix<double, -1, -1> log_phos_conc_z;
+      log_phos_conc_z = Eigen::Matrix<double, -1, -1>(N_experiment, N_phosphorylation_enzymes);
+      stan::math::fill(log_phos_conc_z, std::numeric_limits<double>::quiet_NaN());
+      
+      {
+        std::vector<local_scalar_t__> log_phos_conc_z_flat__;
+        current_statement__ = 7;
+        assign(log_phos_conc_z_flat__, nil_index_list(),
+          context__.vals_r("log_phos_conc_z"),
+          "assigning variable log_phos_conc_z_flat__");
+        current_statement__ = 7;
+        pos__ = 1;
+        current_statement__ = 7;
+        for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+          current_statement__ = 7;
+          for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
+            current_statement__ = 7;
+            assign(log_phos_conc_z,
+              cons_list(index_uni(sym2__),
+                cons_list(index_uni(sym1__), nil_index_list())),
+              log_phos_conc_z_flat__[(pos__ - 1)],
+              "assigning variable log_phos_conc_z");
+            current_statement__ = 7;
             pos__ = (pos__ + 1);}}
       }
       Eigen::Matrix<double, -1, -1> log_conc_unbalanced_z;
@@ -4817,23 +5593,23 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> log_conc_unbalanced_z_flat__;
-        current_statement__ = 6;
+        current_statement__ = 8;
         assign(log_conc_unbalanced_z_flat__, nil_index_list(),
           context__.vals_r("log_conc_unbalanced_z"),
           "assigning variable log_conc_unbalanced_z_flat__");
-        current_statement__ = 6;
+        current_statement__ = 8;
         pos__ = 1;
-        current_statement__ = 6;
+        current_statement__ = 8;
         for (int sym1__ = 1; sym1__ <= N_unbalanced; ++sym1__) {
-          current_statement__ = 6;
+          current_statement__ = 8;
           for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
-            current_statement__ = 6;
+            current_statement__ = 8;
             assign(log_conc_unbalanced_z,
               cons_list(index_uni(sym2__),
                 cons_list(index_uni(sym1__), nil_index_list())),
               log_conc_unbalanced_z_flat__[(pos__ - 1)],
               "assigning variable log_conc_unbalanced_z");
-            current_statement__ = 6;
+            current_statement__ = 8;
             pos__ = (pos__ + 1);}}
       }
       Eigen::Matrix<double, -1, 1> log_ki_z;
@@ -4842,17 +5618,17 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> log_ki_z_flat__;
-        current_statement__ = 7;
+        current_statement__ = 9;
         assign(log_ki_z_flat__, nil_index_list(),
           context__.vals_r("log_ki_z"), "assigning variable log_ki_z_flat__");
-        current_statement__ = 7;
+        current_statement__ = 9;
         pos__ = 1;
-        current_statement__ = 7;
+        current_statement__ = 9;
         for (int sym1__ = 1; sym1__ <= N_competitive_inhibitor; ++sym1__) {
-          current_statement__ = 7;
+          current_statement__ = 9;
           assign(log_ki_z, cons_list(index_uni(sym1__), nil_index_list()),
             log_ki_z_flat__[(pos__ - 1)], "assigning variable log_ki_z");
-          current_statement__ = 7;
+          current_statement__ = 9;
           pos__ = (pos__ + 1);}
       }
       Eigen::Matrix<double, -1, 1> log_dissociation_constant_t_z;
@@ -4861,20 +5637,20 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> log_dissociation_constant_t_z_flat__;
-        current_statement__ = 8;
+        current_statement__ = 10;
         assign(log_dissociation_constant_t_z_flat__, nil_index_list(),
           context__.vals_r("log_dissociation_constant_t_z"),
           "assigning variable log_dissociation_constant_t_z_flat__");
-        current_statement__ = 8;
+        current_statement__ = 10;
         pos__ = 1;
-        current_statement__ = 8;
+        current_statement__ = 10;
         for (int sym1__ = 1; sym1__ <= N_allosteric_inhibitor; ++sym1__) {
-          current_statement__ = 8;
+          current_statement__ = 10;
           assign(log_dissociation_constant_t_z,
             cons_list(index_uni(sym1__), nil_index_list()),
             log_dissociation_constant_t_z_flat__[(pos__ - 1)],
             "assigning variable log_dissociation_constant_t_z");
-          current_statement__ = 8;
+          current_statement__ = 10;
           pos__ = (pos__ + 1);}
       }
       Eigen::Matrix<double, -1, 1> log_dissociation_constant_r_z;
@@ -4883,20 +5659,20 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> log_dissociation_constant_r_z_flat__;
-        current_statement__ = 9;
+        current_statement__ = 11;
         assign(log_dissociation_constant_r_z_flat__, nil_index_list(),
           context__.vals_r("log_dissociation_constant_r_z"),
           "assigning variable log_dissociation_constant_r_z_flat__");
-        current_statement__ = 9;
+        current_statement__ = 11;
         pos__ = 1;
-        current_statement__ = 9;
+        current_statement__ = 11;
         for (int sym1__ = 1; sym1__ <= N_allosteric_activator; ++sym1__) {
-          current_statement__ = 9;
+          current_statement__ = 11;
           assign(log_dissociation_constant_r_z,
             cons_list(index_uni(sym1__), nil_index_list()),
             log_dissociation_constant_r_z_flat__[(pos__ - 1)],
             "assigning variable log_dissociation_constant_r_z");
-          current_statement__ = 9;
+          current_statement__ = 11;
           pos__ = (pos__ + 1);}
       }
       Eigen::Matrix<double, -1, 1> log_transfer_constant_z;
@@ -4905,20 +5681,20 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       
       {
         std::vector<local_scalar_t__> log_transfer_constant_z_flat__;
-        current_statement__ = 10;
+        current_statement__ = 12;
         assign(log_transfer_constant_z_flat__, nil_index_list(),
           context__.vals_r("log_transfer_constant_z"),
           "assigning variable log_transfer_constant_z_flat__");
-        current_statement__ = 10;
+        current_statement__ = 12;
         pos__ = 1;
-        current_statement__ = 10;
+        current_statement__ = 12;
         for (int sym1__ = 1; sym1__ <= N_allosteric_enzyme; ++sym1__) {
-          current_statement__ = 10;
+          current_statement__ = 12;
           assign(log_transfer_constant_z,
             cons_list(index_uni(sym1__), nil_index_list()),
             log_transfer_constant_z_flat__[(pos__ - 1)],
             "assigning variable log_transfer_constant_z");
-          current_statement__ = 10;
+          current_statement__ = 12;
           pos__ = (pos__ + 1);}
       }
       for (int sym1__ = 1; sym1__ <= N_metabolite; ++sym1__) {
@@ -4934,6 +5710,8 @@ class inference_model_model final : public model_base_crtp<inference_model_model
         vars__.emplace_back(log_kcat_z[(sym1__ - 1)]);}
       for (int sym1__ = 1; sym1__ <= N_km; ++sym1__) {
         vars__.emplace_back(log_km_z[(sym1__ - 1)]);}
+      for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+        vars__.emplace_back(log_phos_kcat_z[(sym1__ - 1)]);}
       for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
         for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
           vars__.emplace_back(
@@ -4941,6 +5719,13 @@ class inference_model_model final : public model_base_crtp<inference_model_model
               cons_list(index_uni(sym2__),
                 cons_list(index_uni(sym1__), nil_index_list())),
               "log_enzyme_z"));}}
+      for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+        for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
+          vars__.emplace_back(
+            rvalue(log_phos_conc_z,
+              cons_list(index_uni(sym2__),
+                cons_list(index_uni(sym1__), nil_index_list())),
+              "log_phos_conc_z"));}}
       for (int sym1__ = 1; sym1__ <= N_unbalanced; ++sym1__) {
         for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
           vars__.emplace_back(
@@ -4970,7 +5755,9 @@ class inference_model_model final : public model_base_crtp<inference_model_model
     names__.emplace_back("drain_z");
     names__.emplace_back("log_kcat_z");
     names__.emplace_back("log_km_z");
+    names__.emplace_back("log_phos_kcat_z");
     names__.emplace_back("log_enzyme_z");
+    names__.emplace_back("log_phos_conc_z");
     names__.emplace_back("log_conc_unbalanced_z");
     names__.emplace_back("log_ki_z");
     names__.emplace_back("log_dissociation_constant_t_z");
@@ -4983,15 +5770,18 @@ class inference_model_model final : public model_base_crtp<inference_model_model
     names__.emplace_back("dissociation_constant_t");
     names__.emplace_back("dissociation_constant_r");
     names__.emplace_back("transfer_constant");
+    names__.emplace_back("phos_enzyme_kcat");
     names__.emplace_back("drain");
     names__.emplace_back("enzyme");
     names__.emplace_back("conc_unbalanced");
+    names__.emplace_back("phos_enzyme_conc");
     names__.emplace_back("conc");
     names__.emplace_back("flux");
     names__.emplace_back("keq");
     names__.emplace_back("yconc_sim");
     names__.emplace_back("yflux_sim");
-    names__.emplace_back("log_lik");
+    names__.emplace_back("log_lik_conc");
+    names__.emplace_back("log_lik_flux");
     } // get_param_names() 
     
   inline void get_dims(std::vector<std::vector<size_t>>& dimss__) const
@@ -5009,8 +5799,18 @@ class inference_model_model final : public model_base_crtp<inference_model_model
     dimss__.emplace_back(std::vector<size_t>{static_cast<size_t>(N_km)});
     
     dimss__.emplace_back(std::vector<size_t>{
+                                             static_cast<size_t>(N_phosphorylation_enzymes)
+                                             });
+    
+    dimss__.emplace_back(std::vector<size_t>{
                                              static_cast<size_t>(N_experiment)
                                              , static_cast<size_t>(N_enzyme)});
+    
+    dimss__.emplace_back(std::vector<size_t>{
+                                             static_cast<size_t>(N_experiment)
+                                             ,
+                                             static_cast<size_t>(N_phosphorylation_enzymes)
+                                             });
     
     dimss__.emplace_back(std::vector<size_t>{
                                              static_cast<size_t>(N_experiment)
@@ -5057,6 +5857,10 @@ class inference_model_model final : public model_base_crtp<inference_model_model
                                              });
     
     dimss__.emplace_back(std::vector<size_t>{
+                                             static_cast<size_t>(N_phosphorylation_enzymes)
+                                             });
+    
+    dimss__.emplace_back(std::vector<size_t>{
                                              static_cast<size_t>(N_experiment)
                                              , static_cast<size_t>(N_drain)});
     
@@ -5068,6 +5872,12 @@ class inference_model_model final : public model_base_crtp<inference_model_model
                                              static_cast<size_t>(N_experiment)
                                              ,
                                              static_cast<size_t>(N_unbalanced)});
+    
+    dimss__.emplace_back(std::vector<size_t>{
+                                             static_cast<size_t>(N_experiment)
+                                             ,
+                                             static_cast<size_t>(N_phosphorylation_enzymes)
+                                             });
     
     dimss__.emplace_back(std::vector<size_t>{
                                              static_cast<size_t>(N_experiment)
@@ -5089,7 +5899,11 @@ class inference_model_model final : public model_base_crtp<inference_model_model
                                              });
     
     dimss__.emplace_back(std::vector<size_t>{
-                                             static_cast<size_t>(log_lik_1dim__)
+                                             static_cast<size_t>(N_conc_measurement)
+                                             });
+    
+    dimss__.emplace_back(std::vector<size_t>{
+                                             static_cast<size_t>(N_flux_measurement)
                                              });
     
     } // get_dims() 
@@ -5119,11 +5933,22 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       {
         param_names__.emplace_back(std::string() + "log_km_z" + '.' + std::to_string(sym1__));
       }}
+    for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+      {
+        param_names__.emplace_back(std::string() + "log_phos_kcat_z" + '.' + std::to_string(sym1__));
+      }}
     for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
       {
         for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
           {
             param_names__.emplace_back(std::string() + "log_enzyme_z" + '.' + std::to_string(sym2__) + '.' + std::to_string(sym1__));
+          }}
+      }}
+    for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+      {
+        for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
+          {
+            param_names__.emplace_back(std::string() + "log_phos_conc_z" + '.' + std::to_string(sym2__) + '.' + std::to_string(sym1__));
           }}
       }}
     for (int sym1__ = 1; sym1__ <= N_unbalanced; ++sym1__) {
@@ -5178,6 +6003,10 @@ class inference_model_model final : public model_base_crtp<inference_model_model
         {
           param_names__.emplace_back(std::string() + "transfer_constant" + '.' + std::to_string(sym1__));
         }}
+      for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "phos_enzyme_kcat" + '.' + std::to_string(sym1__));
+        }}
       for (int sym1__ = 1; sym1__ <= N_drain; ++sym1__) {
         {
           for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
@@ -5197,6 +6026,13 @@ class inference_model_model final : public model_base_crtp<inference_model_model
           for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
             {
               param_names__.emplace_back(std::string() + "conc_unbalanced" + '.' + std::to_string(sym2__) + '.' + std::to_string(sym1__));
+            }}
+        }}
+      for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+        {
+          for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
+            {
+              param_names__.emplace_back(std::string() + "phos_enzyme_conc" + '.' + std::to_string(sym2__) + '.' + std::to_string(sym1__));
             }}
         }}
       for (int sym1__ = 1; sym1__ <= N_mic; ++sym1__) {
@@ -5228,9 +6064,13 @@ class inference_model_model final : public model_base_crtp<inference_model_model
         {
           param_names__.emplace_back(std::string() + "yflux_sim" + '.' + std::to_string(sym1__));
         }}
-      for (int sym1__ = 1; sym1__ <= log_lik_1dim__; ++sym1__) {
+      for (int sym1__ = 1; sym1__ <= N_conc_measurement; ++sym1__) {
         {
-          param_names__.emplace_back(std::string() + "log_lik" + '.' + std::to_string(sym1__));
+          param_names__.emplace_back(std::string() + "log_lik_conc" + '.' + std::to_string(sym1__));
+        }}
+      for (int sym1__ = 1; sym1__ <= N_flux_measurement; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "log_lik_flux" + '.' + std::to_string(sym1__));
         }}
     }
     
@@ -5261,11 +6101,22 @@ class inference_model_model final : public model_base_crtp<inference_model_model
       {
         param_names__.emplace_back(std::string() + "log_km_z" + '.' + std::to_string(sym1__));
       }}
+    for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+      {
+        param_names__.emplace_back(std::string() + "log_phos_kcat_z" + '.' + std::to_string(sym1__));
+      }}
     for (int sym1__ = 1; sym1__ <= N_enzyme; ++sym1__) {
       {
         for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
           {
             param_names__.emplace_back(std::string() + "log_enzyme_z" + '.' + std::to_string(sym2__) + '.' + std::to_string(sym1__));
+          }}
+      }}
+    for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+      {
+        for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
+          {
+            param_names__.emplace_back(std::string() + "log_phos_conc_z" + '.' + std::to_string(sym2__) + '.' + std::to_string(sym1__));
           }}
       }}
     for (int sym1__ = 1; sym1__ <= N_unbalanced; ++sym1__) {
@@ -5320,6 +6171,10 @@ class inference_model_model final : public model_base_crtp<inference_model_model
         {
           param_names__.emplace_back(std::string() + "transfer_constant" + '.' + std::to_string(sym1__));
         }}
+      for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "phos_enzyme_kcat" + '.' + std::to_string(sym1__));
+        }}
       for (int sym1__ = 1; sym1__ <= N_drain; ++sym1__) {
         {
           for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
@@ -5339,6 +6194,13 @@ class inference_model_model final : public model_base_crtp<inference_model_model
           for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
             {
               param_names__.emplace_back(std::string() + "conc_unbalanced" + '.' + std::to_string(sym2__) + '.' + std::to_string(sym1__));
+            }}
+        }}
+      for (int sym1__ = 1; sym1__ <= N_phosphorylation_enzymes; ++sym1__) {
+        {
+          for (int sym2__ = 1; sym2__ <= N_experiment; ++sym2__) {
+            {
+              param_names__.emplace_back(std::string() + "phos_enzyme_conc" + '.' + std::to_string(sym2__) + '.' + std::to_string(sym1__));
             }}
         }}
       for (int sym1__ = 1; sym1__ <= N_mic; ++sym1__) {
@@ -5370,9 +6232,13 @@ class inference_model_model final : public model_base_crtp<inference_model_model
         {
           param_names__.emplace_back(std::string() + "yflux_sim" + '.' + std::to_string(sym1__));
         }}
-      for (int sym1__ = 1; sym1__ <= log_lik_1dim__; ++sym1__) {
+      for (int sym1__ = 1; sym1__ <= N_conc_measurement; ++sym1__) {
         {
-          param_names__.emplace_back(std::string() + "log_lik" + '.' + std::to_string(sym1__));
+          param_names__.emplace_back(std::string() + "log_lik_conc" + '.' + std::to_string(sym1__));
+        }}
+      for (int sym1__ = 1; sym1__ <= N_flux_measurement; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "log_lik_flux" + '.' + std::to_string(sym1__));
         }}
     }
     
@@ -5380,13 +6246,13 @@ class inference_model_model final : public model_base_crtp<inference_model_model
     
   inline std::string get_constrained_sizedtypes() const {
     stringstream s__;
-    s__ << "[{\"name\":\"formation_energy_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_metabolite << "},\"block\":\"parameters\"},{\"name\":\"drain_z\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_drain << "},\"block\":\"parameters\"},{\"name\":\"log_kcat_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_enzyme << "},\"block\":\"parameters\"},{\"name\":\"log_km_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_km << "},\"block\":\"parameters\"},{\"name\":\"log_enzyme_z\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_enzyme << "},\"block\":\"parameters\"},{\"name\":\"log_conc_unbalanced_z\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_unbalanced << "},\"block\":\"parameters\"},{\"name\":\"log_ki_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_competitive_inhibitor << "},\"block\":\"parameters\"},{\"name\":\"log_dissociation_constant_t_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_inhibitor << "},\"block\":\"parameters\"},{\"name\":\"log_dissociation_constant_r_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_activator << "},\"block\":\"parameters\"},{\"name\":\"log_transfer_constant_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_enzyme << "},\"block\":\"parameters\"},{\"name\":\"formation_energy\",\"type\":{\"name\":\"vector\",\"length\":" << N_metabolite << "},\"block\":\"transformed_parameters\"},{\"name\":\"km\",\"type\":{\"name\":\"vector\",\"length\":" << N_km << "},\"block\":\"transformed_parameters\"},{\"name\":\"ki\",\"type\":{\"name\":\"vector\",\"length\":" << N_competitive_inhibitor << "},\"block\":\"transformed_parameters\"},{\"name\":\"kcat\",\"type\":{\"name\":\"vector\",\"length\":" << N_enzyme << "},\"block\":\"transformed_parameters\"},{\"name\":\"dissociation_constant_t\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_inhibitor << "},\"block\":\"transformed_parameters\"},{\"name\":\"dissociation_constant_r\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_activator << "},\"block\":\"transformed_parameters\"},{\"name\":\"transfer_constant\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_enzyme << "},\"block\":\"transformed_parameters\"},{\"name\":\"drain\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_drain << "},\"block\":\"transformed_parameters\"},{\"name\":\"enzyme\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_enzyme << "},\"block\":\"transformed_parameters\"},{\"name\":\"conc_unbalanced\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_unbalanced << "},\"block\":\"transformed_parameters\"},{\"name\":\"conc\",\"type\":{\"name\":\"array\",\"length\":" << N_experiment << ",\"element_type\":{\"name\":\"vector\",\"length\":" << N_mic << "}},\"block\":\"transformed_parameters\"},{\"name\":\"flux\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_reaction << "},\"block\":\"transformed_parameters\"},{\"name\":\"keq\",\"type\":{\"name\":\"vector\",\"length\":" << N_enzyme << "},\"block\":\"transformed_parameters\"},{\"name\":\"yconc_sim\",\"type\":{\"name\":\"vector\",\"length\":" << N_conc_measurement << "},\"block\":\"generated_quantities\"},{\"name\":\"yflux_sim\",\"type\":{\"name\":\"vector\",\"length\":" << N_flux_measurement << "},\"block\":\"generated_quantities\"},{\"name\":\"log_lik\",\"type\":{\"name\":\"vector\",\"length\":" << log_lik_1dim__ << "},\"block\":\"generated_quantities\"}]";
+    s__ << "[{\"name\":\"formation_energy_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_metabolite << "},\"block\":\"parameters\"},{\"name\":\"drain_z\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_drain << "},\"block\":\"parameters\"},{\"name\":\"log_kcat_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_enzyme << "},\"block\":\"parameters\"},{\"name\":\"log_km_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_km << "},\"block\":\"parameters\"},{\"name\":\"log_phos_kcat_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_phosphorylation_enzymes << "},\"block\":\"parameters\"},{\"name\":\"log_enzyme_z\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_enzyme << "},\"block\":\"parameters\"},{\"name\":\"log_phos_conc_z\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_phosphorylation_enzymes << "},\"block\":\"parameters\"},{\"name\":\"log_conc_unbalanced_z\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_unbalanced << "},\"block\":\"parameters\"},{\"name\":\"log_ki_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_competitive_inhibitor << "},\"block\":\"parameters\"},{\"name\":\"log_dissociation_constant_t_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_inhibitor << "},\"block\":\"parameters\"},{\"name\":\"log_dissociation_constant_r_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_activator << "},\"block\":\"parameters\"},{\"name\":\"log_transfer_constant_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_enzyme << "},\"block\":\"parameters\"},{\"name\":\"formation_energy\",\"type\":{\"name\":\"vector\",\"length\":" << N_metabolite << "},\"block\":\"transformed_parameters\"},{\"name\":\"km\",\"type\":{\"name\":\"vector\",\"length\":" << N_km << "},\"block\":\"transformed_parameters\"},{\"name\":\"ki\",\"type\":{\"name\":\"vector\",\"length\":" << N_competitive_inhibitor << "},\"block\":\"transformed_parameters\"},{\"name\":\"kcat\",\"type\":{\"name\":\"vector\",\"length\":" << N_enzyme << "},\"block\":\"transformed_parameters\"},{\"name\":\"dissociation_constant_t\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_inhibitor << "},\"block\":\"transformed_parameters\"},{\"name\":\"dissociation_constant_r\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_activator << "},\"block\":\"transformed_parameters\"},{\"name\":\"transfer_constant\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_enzyme << "},\"block\":\"transformed_parameters\"},{\"name\":\"phos_enzyme_kcat\",\"type\":{\"name\":\"vector\",\"length\":" << N_phosphorylation_enzymes << "},\"block\":\"transformed_parameters\"},{\"name\":\"drain\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_drain << "},\"block\":\"transformed_parameters\"},{\"name\":\"enzyme\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_enzyme << "},\"block\":\"transformed_parameters\"},{\"name\":\"conc_unbalanced\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_unbalanced << "},\"block\":\"transformed_parameters\"},{\"name\":\"phos_enzyme_conc\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_phosphorylation_enzymes << "},\"block\":\"transformed_parameters\"},{\"name\":\"conc\",\"type\":{\"name\":\"array\",\"length\":" << N_experiment << ",\"element_type\":{\"name\":\"vector\",\"length\":" << N_mic << "}},\"block\":\"transformed_parameters\"},{\"name\":\"flux\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_reaction << "},\"block\":\"transformed_parameters\"},{\"name\":\"keq\",\"type\":{\"name\":\"vector\",\"length\":" << N_enzyme << "},\"block\":\"transformed_parameters\"},{\"name\":\"yconc_sim\",\"type\":{\"name\":\"vector\",\"length\":" << N_conc_measurement << "},\"block\":\"generated_quantities\"},{\"name\":\"yflux_sim\",\"type\":{\"name\":\"vector\",\"length\":" << N_flux_measurement << "},\"block\":\"generated_quantities\"},{\"name\":\"log_lik_conc\",\"type\":{\"name\":\"vector\",\"length\":" << N_conc_measurement << "},\"block\":\"generated_quantities\"},{\"name\":\"log_lik_flux\",\"type\":{\"name\":\"vector\",\"length\":" << N_flux_measurement << "},\"block\":\"generated_quantities\"}]";
     return s__.str();
     } // get_constrained_sizedtypes() 
     
   inline std::string get_unconstrained_sizedtypes() const {
     stringstream s__;
-    s__ << "[{\"name\":\"formation_energy_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_metabolite << "},\"block\":\"parameters\"},{\"name\":\"drain_z\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_drain << "},\"block\":\"parameters\"},{\"name\":\"log_kcat_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_enzyme << "},\"block\":\"parameters\"},{\"name\":\"log_km_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_km << "},\"block\":\"parameters\"},{\"name\":\"log_enzyme_z\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_enzyme << "},\"block\":\"parameters\"},{\"name\":\"log_conc_unbalanced_z\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_unbalanced << "},\"block\":\"parameters\"},{\"name\":\"log_ki_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_competitive_inhibitor << "},\"block\":\"parameters\"},{\"name\":\"log_dissociation_constant_t_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_inhibitor << "},\"block\":\"parameters\"},{\"name\":\"log_dissociation_constant_r_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_activator << "},\"block\":\"parameters\"},{\"name\":\"log_transfer_constant_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_enzyme << "},\"block\":\"parameters\"},{\"name\":\"formation_energy\",\"type\":{\"name\":\"vector\",\"length\":" << N_metabolite << "},\"block\":\"transformed_parameters\"},{\"name\":\"km\",\"type\":{\"name\":\"vector\",\"length\":" << N_km << "},\"block\":\"transformed_parameters\"},{\"name\":\"ki\",\"type\":{\"name\":\"vector\",\"length\":" << N_competitive_inhibitor << "},\"block\":\"transformed_parameters\"},{\"name\":\"kcat\",\"type\":{\"name\":\"vector\",\"length\":" << N_enzyme << "},\"block\":\"transformed_parameters\"},{\"name\":\"dissociation_constant_t\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_inhibitor << "},\"block\":\"transformed_parameters\"},{\"name\":\"dissociation_constant_r\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_activator << "},\"block\":\"transformed_parameters\"},{\"name\":\"transfer_constant\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_enzyme << "},\"block\":\"transformed_parameters\"},{\"name\":\"drain\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_drain << "},\"block\":\"transformed_parameters\"},{\"name\":\"enzyme\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_enzyme << "},\"block\":\"transformed_parameters\"},{\"name\":\"conc_unbalanced\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_unbalanced << "},\"block\":\"transformed_parameters\"},{\"name\":\"conc\",\"type\":{\"name\":\"array\",\"length\":" << N_experiment << ",\"element_type\":{\"name\":\"vector\",\"length\":" << N_mic << "}},\"block\":\"transformed_parameters\"},{\"name\":\"flux\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_reaction << "},\"block\":\"transformed_parameters\"},{\"name\":\"keq\",\"type\":{\"name\":\"vector\",\"length\":" << N_enzyme << "},\"block\":\"transformed_parameters\"},{\"name\":\"yconc_sim\",\"type\":{\"name\":\"vector\",\"length\":" << N_conc_measurement << "},\"block\":\"generated_quantities\"},{\"name\":\"yflux_sim\",\"type\":{\"name\":\"vector\",\"length\":" << N_flux_measurement << "},\"block\":\"generated_quantities\"},{\"name\":\"log_lik\",\"type\":{\"name\":\"vector\",\"length\":" << log_lik_1dim__ << "},\"block\":\"generated_quantities\"}]";
+    s__ << "[{\"name\":\"formation_energy_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_metabolite << "},\"block\":\"parameters\"},{\"name\":\"drain_z\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_drain << "},\"block\":\"parameters\"},{\"name\":\"log_kcat_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_enzyme << "},\"block\":\"parameters\"},{\"name\":\"log_km_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_km << "},\"block\":\"parameters\"},{\"name\":\"log_phos_kcat_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_phosphorylation_enzymes << "},\"block\":\"parameters\"},{\"name\":\"log_enzyme_z\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_enzyme << "},\"block\":\"parameters\"},{\"name\":\"log_phos_conc_z\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_phosphorylation_enzymes << "},\"block\":\"parameters\"},{\"name\":\"log_conc_unbalanced_z\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_unbalanced << "},\"block\":\"parameters\"},{\"name\":\"log_ki_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_competitive_inhibitor << "},\"block\":\"parameters\"},{\"name\":\"log_dissociation_constant_t_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_inhibitor << "},\"block\":\"parameters\"},{\"name\":\"log_dissociation_constant_r_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_activator << "},\"block\":\"parameters\"},{\"name\":\"log_transfer_constant_z\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_enzyme << "},\"block\":\"parameters\"},{\"name\":\"formation_energy\",\"type\":{\"name\":\"vector\",\"length\":" << N_metabolite << "},\"block\":\"transformed_parameters\"},{\"name\":\"km\",\"type\":{\"name\":\"vector\",\"length\":" << N_km << "},\"block\":\"transformed_parameters\"},{\"name\":\"ki\",\"type\":{\"name\":\"vector\",\"length\":" << N_competitive_inhibitor << "},\"block\":\"transformed_parameters\"},{\"name\":\"kcat\",\"type\":{\"name\":\"vector\",\"length\":" << N_enzyme << "},\"block\":\"transformed_parameters\"},{\"name\":\"dissociation_constant_t\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_inhibitor << "},\"block\":\"transformed_parameters\"},{\"name\":\"dissociation_constant_r\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_activator << "},\"block\":\"transformed_parameters\"},{\"name\":\"transfer_constant\",\"type\":{\"name\":\"vector\",\"length\":" << N_allosteric_enzyme << "},\"block\":\"transformed_parameters\"},{\"name\":\"phos_enzyme_kcat\",\"type\":{\"name\":\"vector\",\"length\":" << N_phosphorylation_enzymes << "},\"block\":\"transformed_parameters\"},{\"name\":\"drain\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_drain << "},\"block\":\"transformed_parameters\"},{\"name\":\"enzyme\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_enzyme << "},\"block\":\"transformed_parameters\"},{\"name\":\"conc_unbalanced\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_unbalanced << "},\"block\":\"transformed_parameters\"},{\"name\":\"phos_enzyme_conc\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_phosphorylation_enzymes << "},\"block\":\"transformed_parameters\"},{\"name\":\"conc\",\"type\":{\"name\":\"array\",\"length\":" << N_experiment << ",\"element_type\":{\"name\":\"vector\",\"length\":" << N_mic << "}},\"block\":\"transformed_parameters\"},{\"name\":\"flux\",\"type\":{\"name\":\"matrix\",\"rows\":" << N_experiment << ",\"cols\":" << N_reaction << "},\"block\":\"transformed_parameters\"},{\"name\":\"keq\",\"type\":{\"name\":\"vector\",\"length\":" << N_enzyme << "},\"block\":\"transformed_parameters\"},{\"name\":\"yconc_sim\",\"type\":{\"name\":\"vector\",\"length\":" << N_conc_measurement << "},\"block\":\"generated_quantities\"},{\"name\":\"yflux_sim\",\"type\":{\"name\":\"vector\",\"length\":" << N_flux_measurement << "},\"block\":\"generated_quantities\"},{\"name\":\"log_lik_conc\",\"type\":{\"name\":\"vector\",\"length\":" << N_conc_measurement << "},\"block\":\"generated_quantities\"},{\"name\":\"log_lik_flux\",\"type\":{\"name\":\"vector\",\"length\":" << N_flux_measurement << "},\"block\":\"generated_quantities\"}]";
     return s__.str();
     } // get_unconstrained_sizedtypes() 
     
