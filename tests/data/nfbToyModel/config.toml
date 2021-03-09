@@ -1,4 +1,4 @@
-name = "linear"
+name = "nfbToyModel"
 kinetic_model = "kinetic_model.toml"
 priors = "priors.csv"
 experiments = "experiments.csv"
