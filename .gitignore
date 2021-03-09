@@ -32,5 +32,6 @@ docs/_templates/*
 .tox
 venv/*
 maud_venv/*
+venv_maud/*
 src/maud.egg-info
 pip-wheel-metadata
