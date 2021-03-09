@@ -1,10 +1,10 @@
 parameter_type,metabolite_id,mic_id,enzyme_id,drain_id,experiment_id,location,scale,pct1,pct99
 kcat,,,r1,,,1,0.6,,
 kcat,,,r2,,,1,0.6,,
-kcat,,,r3,,,1,0.6,,
 km,,M1_c,r1,,,1,0.6,,
+km,,M2_c,r1,,,100,0.6,,
 km,,M2_c,r2,,,1,0.6,,
-km,,M2_c,r3,,,1,0.6,,
+km,,M3_c,r2,,,100,0.6,,
 formation_energy,M1,,,,,-1,0.05,,
 formation_energy,M2,,,,,-2,0.05,,
 inhibition_constant,,M3_c,r1,,,1,0.6,,
